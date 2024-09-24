@@ -1,0 +1,33 @@
+.comps-cabecalho {
+    display: flex;
+    flex-direction: row;
+
+    background-color: #A6896B;
+    border: 0px solid #000;
+    align-items: center;
+    padding: 5px;
+
+    a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .logo {
+        padding-left: 30px;
+        flex-grow: 2;
+
+    }
+
+    .item {
+        font-family: 'Urbanist-var';
+        flex-grow: 1;
+        font-size: 20px;
+        margin: 12px 0px;
+        padding: 0px 12px;
+    }
+
+    .interface {
+        border: 0px solid #000;
+        height: 400px;
+    }
+}
