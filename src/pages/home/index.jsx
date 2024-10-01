@@ -1,14 +1,41 @@
-import Cabecalho from '../../components/cabecalho';
+
 import './index.scss';
 
 export default function Home() {
 
 
   return (
-    <section className='secao-1'>
-      <div className="pagina-home">
-        <Cabecalho />
-      </div >
-    </section>
+    <div className="pagina-home">
+      <section className='secao-1'>
+
+        <div className="cabecalho">
+
+          <div class="logo">
+            <img src="/assets/images/logo-tcc.png" alt="" height="80px" />
+          </div>
+
+          <div class="item">
+            <a href="">Início</a>
+          </div>
+          <div class="item">
+            <a href="">Sobre Mim</a>
+          </div>
+          <div class="item">
+            <a href="">Projetos</a>
+          </div>
+
+          <div class="item">
+            <a href="">Dicas</a>
+          </div>
+
+          <div class="item">
+            <a href="">Entrar</a>
+          </div>
+          <div class="item">
+            <img src="/assets/images/person-icon.png" alt="" height="50px" />
+          </div>
+        </div>
+      </section>
+    </div >
   );
 }
