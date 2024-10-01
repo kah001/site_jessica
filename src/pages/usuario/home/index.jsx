@@ -6,8 +6,8 @@ export default function Home() {
 
   return (
     <div className="pagina-home">
+
       <section className='secao-1'>
-        <img className='fundo' src="/assets/images/back-home.png" alt="" />
       
         <div className="cabecalho">
           <div class="logo">
@@ -35,9 +35,9 @@ export default function Home() {
             <img src="/assets/images/person-icon.png" alt="" height="50px" />
           </div>
         </div>
-      </section>
 
-      <Rodapé/>
+        <Rodapé/>
+      </section>
     </div >
   );
 }

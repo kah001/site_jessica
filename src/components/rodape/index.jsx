@@ -2,7 +2,7 @@ import './index.scss';
 
 
 
-export default function Rodapé () {
+export default function Rodapé() {
 
 
 
@@ -14,7 +14,6 @@ export default function Rodapé () {
                     <h1>Páginas</h1>
                     <a href=""></a>
                 </div>
-                <img className='Logo' src="/assets/images/back-home.png" alt="Logo Jessica Lima Arquitetura" />
                 <div className="Minha-Conta">
 
                 </div>
