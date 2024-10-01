@@ -1,3 +1,4 @@
+import Rodapé from '../../../components/rodape';
 import './index.scss';
 
 export default function Home() {
