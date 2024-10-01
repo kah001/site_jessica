@@ -7,7 +7,8 @@ export default function Home() {
   return (
     <div className="pagina-home">
       <section className='secao-1'>
-
+      <img className='fundo' src="/assets/images/back-home.png" alt="" />
+      
         <div className="cabecalho">
 
           <div class="logo">
