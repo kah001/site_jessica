@@ -35,9 +35,9 @@ export default function Home() {
             <img src="/assets/images/person-icon.png" alt="" height="50px" />
           </div>
         </div>
-
-        <Rodapé/>
       </section>
+
+      <Rodapé/>
     </div >
   );
 }

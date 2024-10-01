@@ -13,7 +13,7 @@ export default function Rodapé () {
                 <div className="Paginas">
 
                 </div>
-                <img className='Logo' src="" alt="Logo Jessica Lima Arquitetura" />
+                <img className='Logo' src="/assets/images/back-home.png" alt="Logo Jessica Lima Arquitetura" />
                 <div className="Minha-Conta">
 
                 </div>
