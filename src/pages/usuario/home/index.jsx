@@ -1,4 +1,3 @@
-
 import './index.scss';
 
 export default function Home() {
@@ -7,10 +6,9 @@ export default function Home() {
   return (
     <div className="pagina-home">
       <section className='secao-1'>
-      <img className='fundo' src="/assets/images/back-home.png" alt="" />
+        <img className='fundo' src="/assets/images/back-home.png" alt="" />
       
         <div className="cabecalho">
-
           <div class="logo">
             <img src="/assets/images/logo-tcc.png" alt="" height="80px" />
           </div>
@@ -36,6 +34,8 @@ export default function Home() {
             <img src="/assets/images/person-icon.png" alt="" height="50px" />
           </div>
         </div>
+
+        <Rodapé/>
       </section>
     </div >
   );
