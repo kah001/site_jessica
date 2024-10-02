@@ -6,7 +6,7 @@ export default function Home() {
 
 
     return (
-        <div className="pagina-home" >
+        <div className="pagina-home">
 
             <section className='secao-1'>
 
@@ -68,6 +68,6 @@ export default function Home() {
 
                 <Rodape />
             </section>
-        </div >
+        </div>
     );
 }

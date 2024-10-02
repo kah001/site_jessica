@@ -8,16 +8,12 @@ export default function Rodape() {
             <div className="Links">
                 <div className="Paginas">
                     <h1>Páginas</h1>
-                    <a href=""></a>
+                    <a href="">&nbsp;</a>
                 </div>
-                <div className="Minha-Conta">
-
-                </div>
+                <div className="Minha-Conta">&nbsp;</div>
             </div>
-            <div className="Linha-Branca"></div>
-            <div className="Icones-Contato">
-
-            </div>
+            <div className="Linha-Branca">&nbsp;</div>
+            <div className="Icones-Contato">&nbsp;</div>
         </div>
     )
 }
