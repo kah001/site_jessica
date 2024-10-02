@@ -1,4 +1,4 @@
-import Rodapé from '../../../components/rodape';
+import Rodape from '../../../components/rodape';
 import './index.scss';
 
 export default function Home() {
@@ -36,7 +36,7 @@ export default function Home() {
           </div>
         </div>
 
-        <Rodapé/>
+        <Rodape/>
       </section>
     </div >
   );

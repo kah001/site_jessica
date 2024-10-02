@@ -1,14 +1,10 @@
 import './index.scss';
 
-
-
-export default function Rodapé() {
-
-
+export default function Rodape() {
 
 
     return (
-        <div className='Rodapé'>
+        <div className='comps-rodape'>
             <div className="Links">
                 <div className="Paginas">
                     <h1>Páginas</h1>
