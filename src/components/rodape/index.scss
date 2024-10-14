@@ -1,16 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+
 .comps-rodape {
     background-color: #665441;
     width: 1345px;
-    height: 300px;
+    height: 500px;
 
     .Links {
 
+        .Titulo1{
+            font: 400;
+            color: #FFFFFF;
+            font-family:'Krona One';
+            padding-top: 60px;
+            padding-left: 200px;
+        }
 
+        .Link {
+            text-decoration: none;
+            color: #FFFFFF;
+            font: 400;
+            font-size: 18px;
+        }
     }
 
-    .Linha-Branca {
-        background-color: #FFFFFF;
-        width: 1345px;
-        height: 2px;
+    .Espaço-Linha {
+        padding-top: 176px;
+
+        .Linha-Branca {
+            background-color: #FFFFFF;
+            width: 1345px;
+            height: 2px;
+        }
     }
 }
