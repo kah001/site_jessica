@@ -30,9 +30,9 @@ export default function Rodape() {
                 <div className="Linha-Branca"></div>
             </div>
             <div className="Icones-Contato">
-                <img src="/assets/images/instagram.png" alt="Logo da Empresa" height={48} width={49.23}/> 
-                <img src="/assets/images/whatsapp.png" alt="Logo da Empresa" height={48} width={49.23}/> 
-                <img src="/assets/images/email.png" alt="Logo da Empresa" height={48} width={49.23}/> 
+                <img className='icon-instagram' src="/assets/images/instagram.png" alt="Logo da Empresa" height={48} width={49.23}/> 
+                <img className='icon-whatsapp' src="/assets/images/whatsapp.png" alt="Logo da Empresa" height={48} width={49.23}/> 
+                <img className='icon-email' src="/assets/images/email.png" alt="Logo da Empresa" height={48} width={49.23}/> 
             </div>
         </div>
     )
