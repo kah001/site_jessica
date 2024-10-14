@@ -55,7 +55,7 @@ export default function Home() {
                     </div>
 
                 </div>
-                <img className='background' src="/assets/images/back-home.png" alt="" />
+                {/* <img className='background' src="/assets/images/back-home.png" alt="" /> */}
 
                 <div className="text-block">
                     <div className="text">
@@ -65,9 +65,8 @@ export default function Home() {
                     <h2>Planejamento, previsão de gastos e cronograma da obra</h2>
                     </div>
                 </div>
-
-                <Rodape />
             </section>
+                <Rodape />
         </div>
     );
 }
