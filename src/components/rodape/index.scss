@@ -1,16 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 .comps-rodape {
     background-color: #665441;
     width: 1345px;
-    height: 300px;
+    height: 500px;
 
-    .Links {
+    .pages {
+        display: flex;
 
+        .Paginas {
+            display: flex;
+            flex-direction: column;
 
+            .Titulo1{
+                color: #FFFFFF;
+                font-family:'Krona One';
+                padding-top: 60px;
+                padding-left: 190px;
+            }
+            
+            .Links {
+                display: flex;
+                flex-direction: column;
+                margin-top: 30px;
+                margin-left: 200px;
+
+                .Link1 {
+                    text-decoration: none;
+                    font-family: 'Poppins';
+                    color: #FFFFFF;
+                    font-size: 18px;
+                    margin-bottom: 15px;
+                }
+    
+                .Link2 {
+                    text-decoration: none;
+                    font-family: 'Poppins';
+                    color: #FFFFFF;
+                    font-size: 18px;
+                    margin-bottom: 15px;
+                }
+    
+                .Link3 {
+                    text-decoration: none;
+                    font-family: 'Poppins';
+                    color: #FFFFFF;
+                    font-size: 18px;
+                    margin-bottom: 15px;
+                }
+    
+                .Link4 {
+                    text-decoration: none;
+                    font-family: 'Poppins';
+                    color: #FFFFFF;
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .Espaço-Logo {
+            margin-top: 70px;
+            margin-left: 150px;
+            margin-right: 110px;
+        }
+
+        .Minha-Conta {
+            display: flex;
+            flex-direction: column;
+
+            .Titulo1{
+                color: #FFFFFF;
+                font-family:'Krona One';
+                padding-top: 60px;
+            }
+            
+            .Links {
+                display: flex;
+                flex-direction: column;
+                margin-top: 30px;
+
+                .Link1 {
+                    text-decoration: none;
+                    font-family: 'Poppins';
+                    color: #FFFFFF;
+                    font-size: 18px;
+                    margin-bottom: 15px;
+                }
+    
+                .Link2 {
+                    text-decoration: none;
+                    font-family: 'Poppins';
+                    color: #FFFFFF;
+                    font-size: 18px;
+                }
+            }
+        }
     }
 
-    .Linha-Branca {
-        background-color: #FFFFFF;
-        width: 1345px;
-        height: 2px;
+    .Espaço-Linha {
+        padding-top: 50px;
+
+        .Linha-Branca {
+            background-color: #FFFFFF;
+            width: 1345px;
+            height: 2px;
+        }
+    }
+
+    .Icones-Contato {
+        margin-left: 60px;
+
+        .icon-instagram {
+            margin-top: 50px;
+            margin-right: 30px;
+        }
+
+        .icon-whatsapp {
+            margin-top: 50px;
+            margin-right: 30px;
+        }
+
+        .icon-email {
+            margin-top: 50px;
+        }
     }
 }
