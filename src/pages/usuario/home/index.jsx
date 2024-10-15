@@ -14,7 +14,7 @@ export default function Home() {
 
                     <div class="logo">
                         <Link to='/'>
-                            <img src="/assets/images/logo-tcc.png" alt="" height="80px" />
+                            <img src="/assets/images/logo-tcc.png" alt="" height="120px" />
                         </Link>
                     </div>
 
@@ -55,18 +55,17 @@ export default function Home() {
                     </div>
 
                 </div>
-                {/* <img className='background' src="/assets/images/back-home.png" alt="" /> */}
 
                 <div className="text-block">
                     <div className="text">
 
-                    <h1>Construa sua casa com harmonia</h1>
+                        <h1>Construa sua casa com harmonia</h1>
 
-                    <h2>Planejamento, previsão de gastos e cronograma da obra</h2>
+                        <h2>Planejamento, previsão de gastos e cronograma da obra</h2>
                     </div>
                 </div>
             </section>
-                <Rodape />
+            <Rodape />
         </div>
     );
 }
