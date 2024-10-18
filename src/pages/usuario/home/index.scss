@@ -3,31 +3,8 @@
     .secao-1 {        
         background-image: url(../../../../public/assets/images/background-home.png);
         background-size: cover;
-        padding-bottom: 500px;        
-
-        .text-block {
-            background-color: #b1a18f;
-            width: 630px;
-
-            top: 120;
-            left: 150;
-            .text {
-                padding: 35px;
-                color: #fff;
-
-                h1 {
-                    font-size: 60px;
-                    font-weight: 700;
-                    line-height: 60px;
-                }
-                
-                h2 {
-                    margin-top: 10px;
-                    font-size: 40px;
-                    font-weight: 400;
-                }
-            }
-        }
+        height: 70vh;       
+        
         .cabecalho {
             position: absolute;
             
@@ -54,7 +31,7 @@
                 font-family: 'Inter';
                 font-weight: 400;
                 flex-grow: 1;
-                font-size: 30px;
+                font-size: 20px;
                 margin: 12px 0px;
                 padding: 0px 12px;
             }
@@ -62,6 +39,31 @@
             .interface {
                 border: 0px solid #000;
                 height: 400px;
+            }
+        }
+        
+        .text-block {
+            background-color: #b1a18f;
+            position: absolute;
+            width: 630px;
+
+            top: 120px;
+            left: 150px;
+            .text {
+                padding: 35px;
+                color: #fff;
+
+                h1 {
+                    font-size: 60px;
+                    font-weight: 700;
+                    line-height: 60px;
+                }
+                
+                h2 {
+                    margin-top: 10px;
+                    font-size: 40px;
+                    font-weight: 400;
+                }
             }
         }
     }
