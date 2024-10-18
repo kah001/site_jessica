@@ -48,14 +48,15 @@
             width: 640px;
 
             top: 19dvw;
-            left: 15dvw;
+            left: 12dvw;
+
             .text {
                 padding: 35px;
                 color: #fff;
 
                 h1 {
-                    font-size: 60px;
-                    font-weight: 700;
+                    font-size: 55px;
+                    font-weight: 600;
                     line-height: 60px;
                 }
                 
@@ -69,22 +70,37 @@
     }
 
     .secao-2 {
-
-
+        
         .beneficios {
+            border: 1px solid red;
 
-            .linha {
+            h1 {
+                font-size: 40px;
+                font-weight: 500;
 
+                text-align: center;
             }
 
-            .item {
+            .linha {
+                display: flex; 
+                border: 2px solid #000;
+                width: 80%;
+            }
 
+            
+            .itens {
+                
+                .item {
+                    
+                }
             }
         }
 
         .destaque {
-
-
+            display: flex;
+            border: 1px solid blue;  
+            flex-direction: row;
+            
             .item {
                 
             }
