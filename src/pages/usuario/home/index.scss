@@ -1,13 +1,12 @@
 .pagina-home {
 
-    .secao-1 {        
-        background-image: url(../../../../public/assets/images/background-home.png);
-        background-size: cover;
-        height: 70vh;       
-        
+    .secao-1 {    
+        img {
+            position: relative;
+        }
+    
         .cabecalho {
             position: absolute;
-            
             display: flex;
             flex-direction: row;
             
@@ -16,6 +15,7 @@
             align-items: center;
             padding: 10px;
             width: 100%;
+            top: 0px;
             
             a {
                 text-decoration: none;
@@ -41,14 +41,14 @@
                 height: 400px;
             }
         }
-        
-        .text-block {
-            background-color: #b1a18f;
-            position: absolute;
-            width: 630px;
 
-            top: 120px;
-            left: 150px;
+        .text-block {
+            background-color: transparentize($color: #A6896B, $amount: 0.3);
+            position: absolute;
+            width: 640px;
+
+            top: 19dvw;
+            left: 15dvw;
             .text {
                 padding: 35px;
                 color: #fff;
@@ -64,6 +64,29 @@
                     font-size: 40px;
                     font-weight: 400;
                 }
+            }
+        }
+    }
+
+    .secao-2 {
+
+
+        .beneficios {
+
+            .linha {
+
+            }
+
+            .item {
+
+            }
+        }
+
+        .destaque {
+
+
+            .item {
+                
             }
         }
     }
