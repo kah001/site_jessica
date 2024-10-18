@@ -8,6 +8,7 @@ export default function Home() {
     return (
         <div className="pagina-home">
             <section className='secao-1'>
+                <img className='background-img' src="../../../../assets/images/background-home.PNG" alt="" width='100%' />
                 <div className="cabecalho">
 
                     <div class="logo">
@@ -62,6 +63,40 @@ export default function Home() {
                         <h2>Planejamento, previsão de gastos e cronograma da obra</h2>
                     </div>
                 </div>
+            </section>
+
+            <section className='secao-2'>
+
+                <div className="beneficios">
+                    <h1>BENEFÍCIOS</h1>
+                    <div className="linha">&nbsp;</div>
+
+                    <div className="item">
+                        <img src="" alt="" />
+                        <p></p>
+                    </div>
+
+                    <div className="item">
+                        <img src="" alt="" />
+                        <p></p>
+                    </div>
+
+                    <div className="item">
+                        <img src="" alt="" />
+                        <p></p>
+                    </div>
+                </div>
+
+                <div className="destaque">
+                    <div className='item'>
+                        <img src="" alt="" />
+                    </div>
+
+                    <div className='item'>
+                        <img src="" alt="" />
+                    </div>
+                </div>
+
             </section>
             <Rodape />
         </div>
