@@ -42,13 +42,13 @@ export default function Home() {
                     </div>
 
                     <div class="item">
-                        <Link to='/Entrar'>
+                        <Link to='/Login'>
                             <a href="">Entrar</a>
                         </Link>
                     </div>
 
                     <div class="item">
-                        <Link to='/Entrar'>
+                        <Link to='/Login'>
                             <img src="/assets/images/person-icon.png" alt="" height="50px" />
                         </Link>
                     </div>
