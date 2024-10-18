@@ -7,14 +7,12 @@ export default function Home() {
 
     return (
         <div className="pagina-home">
-
             <section className='secao-1'>
-
                 <div className="cabecalho">
 
                     <div class="logo">
                         <Link to='/'>
-                            <img src="/assets/images/logo-tcc.png" alt="" height="120px" />
+                            <img src="/assets/images/logo-tcc.png" alt="" height="100px" />
                         </Link>
                     </div>
 
