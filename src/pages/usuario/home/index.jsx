@@ -69,31 +69,39 @@ export default function Home() {
 
                 <div className="beneficios">
                     <h1>BENEFÍCIOS</h1>
-                    <div className="linha">&nbsp;</div>
+                    <div className="linha"></div>
 
-                    <div className="item">
-                        <img src="" alt="" />
-                        <p></p>
-                    </div>
+                    <div className="itens">
 
-                    <div className="item">
-                        <img src="" alt="" />
-                        <p></p>
-                    </div>
+                        <div className="item">
+                            <img src="../../../../assets/images/tv-icon.png" alt="" />
+                            <h2>TECNOLOGIA</h2>
+                            <p>Grande uso da tecnologia, você poderá fazer um tour pela sua casa antes mesmo dela estar pronta</p>
+                        </div>
 
-                    <div className="item">
-                        <img src="" alt="" />
-                        <p></p>
+                        <div className="item">
+                            <img src="../../../../assets/images/reembolso.png" alt="" />
+                            <h2>PREÇOS</h2>
+                            <p>Acesso a todos os preços, desde o início até o fim, tanto no projeto quanto no gerenciamento do mesmo</p>
+                        </div>
+
+                        <div className="item">
+                            <img src="../../../../assets/images/barrinha.png" alt="" />
+                            <h2>PROJETOS</h2>
+                            <p></p>
+                        </div>
                     </div>
                 </div>
 
                 <div className="destaque">
                     <div className='item'>
-                        <img src="" alt="" />
+                        <img src="../../../../assets/images/desenho-projeto.png" alt="" />
+                        <h1>CONSTRUÇÃO</h1>
                     </div>
 
                     <div className='item'>
-                        <img src="" alt="" />
+                        <img src="../../../../assets/images/desenho-interior.png" alt="" />
+                        <h1>INTERIORES</h1>
                     </div>
                 </div>
 
