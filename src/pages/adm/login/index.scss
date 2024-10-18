@@ -1,13 +1,108 @@
-* {
-    margin: 0px;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-.body {
-    background-image: url(../../../../public/assets/images/image-login.png);
+.pagina-login {
+
+    .fundo {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        border-image: 20px;
+    }
+
     display: flex;
-    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     .login {
-        background-color: #665441 transparent;
+        width: 880px;
+        height: 455px;
+
+        background-color: #665441;
+        border-radius: 30px;
+
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin-top: 180px;
+
+        .espaço-seta {
+            
+
+            .seta {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        .titulo {
+            font-family: 'Poppins';
+            font-size: 36px;
+            color: #FFFFFF;
+            margin-top: 75px;
+            margin-bottom: 62px;
+        }
+
+        .inputs {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 40px;
+
+            .input1 {
+                display: flex;
+                flex-direction: column;
+                text-align: start;
+
+                p {
+                    font: 500 15px 'Poppins';
+                    margin-bottom: 4px;
+                    color: #FFFFFF;
+                }
+
+                .nome {
+                    border-radius: 2px;
+                    border-color: inherit;
+                    width: 200px;
+                    height: 40px;
+                    margin-right: 60px;
+                    font-family: 'Poppins';
+                    border: 1px;
+                }
+            }
+
+            .input2 {
+                display: flex;
+                flex-direction: column;
+                text-align: start;
+
+                p {
+                    font: 500 15px 'Poppins';
+                    margin-bottom: 4px;
+                    color: #FFFFFF;
+                }
+
+                .senha {
+                    border-radius: 2px;
+                    border-color: inherit;
+                    width: 200px;
+                    height: 40px;
+                    font-family: 'Poppins';
+                    border: 1px;
+                }
+            }
+        }
+
+        .entrar {
+            width: 280px;
+            height: 40px;
+            font-family: 'Poppins';
+            font-size: 16px;
+            background-color: #947759;
+            color: #FFFFFF;
+            border: solid 1px #947759;
+            outline: none;
+        }
     }
 }
