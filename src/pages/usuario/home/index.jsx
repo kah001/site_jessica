@@ -69,39 +69,55 @@ export default function Home() {
 
                 <div className="beneficios">
                     <h1>BENEFÍCIOS</h1>
-                    <div className="linha"></div>
+                    <div className="center">
+                        <div className="linha" />
+                    </div>
 
                     <div className="itens">
 
                         <div className="item">
                             <img src="../../../../assets/images/tv-icon.png" alt="" />
-                            <h2>TECNOLOGIA</h2>
-                            <p>Grande uso da tecnologia, você poderá fazer um tour pela sua casa antes mesmo dela estar pronta</p>
+
+                            <div className="text">
+
+                                <h2>TECNOLOGIA</h2>
+                                <p>Grande uso da tecnologia, você poderá fazer um tour pela sua casa antes mesmo dela estar pronta</p>
+                            </div>
                         </div>
 
                         <div className="item">
                             <img src="../../../../assets/images/reembolso.png" alt="" />
-                            <h2>PREÇOS</h2>
-                            <p>Acesso a todos os preços, desde o início até o fim, tanto no projeto quanto no gerenciamento do mesmo</p>
+
+                            <div className="text">
+                                <h2>PREÇOS</h2>
+                                <p>Acesso a todos os preços, desde o início até o fim, tanto no projeto quanto no gerenciamento do mesmo</p>
+                            </div>
                         </div>
 
                         <div className="item">
                             <img src="../../../../assets/images/barrinha.png" alt="" />
-                            <h2>PROJETOS</h2>
-                            <p></p>
+
+                            <div className="text">
+                                <h2>PROJETOS</h2>
+                                <p>O projeto de arquitetura é feito para você, cada detalhe escolhido por nossos clientes são essenciais</p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div className="destaque">
-                    <div className='item'>
-                        <img src="../../../../assets/images/desenho-projeto.png" alt="" />
-                        <h1>CONSTRUÇÃO</h1>
-                    </div>
 
-                    <div className='item'>
-                        <img src="../../../../assets/images/desenho-interior.png" alt="" />
-                        <h1>INTERIORES</h1>
+                    <div className="itens">
+
+                        <div className='item'>
+                            <img src="../../../../assets/images/desenho-projeto.png" alt="" />
+                                <h1>CONSTRUÇÃO</h1>
+                        </div>
+
+                        <div className='item'>
+                            <img src="../../../../assets/images/desenho-interior.png" alt="" />
+                            <h1>INTERIORES</h1>
+                        </div>
                     </div>
                 </div>
 

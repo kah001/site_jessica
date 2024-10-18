@@ -1,22 +1,22 @@
 .pagina-home {
 
-    .secao-1 {    
+    .secao-1 {
         img {
             position: relative;
         }
-    
+
         .cabecalho {
             position: absolute;
             display: flex;
             flex-direction: row;
-            
+
             background-color: transparent;
             border: 0px solid #000;
             align-items: center;
             padding: 10px;
             width: 100%;
             top: 0px;
-            
+
             a {
                 text-decoration: none;
                 color: #fff;
@@ -59,7 +59,7 @@
                     font-weight: 600;
                     line-height: 60px;
                 }
-                
+
                 h2 {
                     margin-top: 10px;
                     font-size: 40px;
@@ -70,39 +70,90 @@
     }
 
     .secao-2 {
-        
+
         .beneficios {
-            border: 1px solid red;
+            padding: 50px;
 
             h1 {
-                font-size: 40px;
+                margin: 30px 0px;
+                font-size: 50px;
                 font-weight: 500;
 
                 text-align: center;
             }
 
             .linha {
-                display: flex; 
                 border: 2px solid #000;
-                width: 80%;
             }
 
-            
-            .itens {
-                
-                .item {
-                    
-                }
+            .justify-content {
+                display: flex;
+                justify-content: center;
             }
+
+            .itens {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+
+                gap: 20px;
+                margin: 30px 0px;
+
+                .item {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 10px;
+                    flex-direction: column;
+
+                    width: 400px;
+
+
+                    .text {
+                        text-align: center;
+                        width: 330px;
+
+                        h2 {
+                            font-size: 30px;
+                            font-weight: 500;
+                        }
+
+                        p {
+                            margin-top: 10px;
+                            font-size: 25px;
+                        }
+
+                    }
+
+
+                }
+
+
+            }
+
+
         }
 
         .destaque {
-            display: flex;
-            border: 1px solid blue;  
-            flex-direction: row;
             
-            .item {
-                
+            .itens {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 50px;
+
+                .item {
+                    width: 400px;
+                    padding: 10px;
+
+                    text-align: center;
+
+                    h1 {
+                        font-size: 50px;
+                        font-weight: 500;
+                        margin: 30px 0px;
+                    }
+                }
             }
         }
     }
