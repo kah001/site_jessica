@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/usuario/home/";
 import Login from "./pages/adm/login";
+import Projetos from "./pages/usuario/projetos";
 
 export default function Navegacao() {
 
@@ -8,7 +9,8 @@ export default function Navegacao() {
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/Login" element={<Login />}/>
+                <Route path="/login" element={<Login />}/>
+                <Route path="/projetos" element={<Projetos />}/>
             </Routes>
         </BrowserRouter>
     )
