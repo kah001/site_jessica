@@ -1,5 +1,5 @@
 import './index.scss'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
@@ -16,7 +16,14 @@ export default function Login() {
         }
 
         const url = `http://localhost:5010/adm/entrar`
-        await axios.post(url, paramCorpo)
+        let resp = await axios.post(url, paramCorpo)
+
+        if (resp.data.erro != undefined) {
+            alert(resp.data.erro)
+        } else {
+            localStorage.setItem('USUARIO', resp.data.token)
+            navigate('/projetos/adm')
+        }
     }
 
     return (

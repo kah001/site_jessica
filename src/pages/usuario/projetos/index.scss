@@ -1,0 +1,124 @@
+.pagina-projetos {
+    position: relative;
+
+    .construcao {
+        h1 {
+            text-align: center;
+            padding: 20px;
+            background-color: #665441;
+            color: #fff;
+            font-size: 35px;
+            margin: 15px 0px;
+        }
+        .carrossel-construcao {
+            display: flex;
+
+            .swiper-pagination-bullet {
+                background: #bbbbbb;
+                opacity: 1;
+                padding: 5px;
+            }
+            .swiper-pagination-bullet-active {
+                background: #665441;
+            }
+            .swiper-button-next, .swiper-button-prev {
+                display: flex;
+                color: #bbbbbb;
+            }
+            .swiper-button-next {
+                right: 150px;
+            }
+            .swiper-button-prev {
+                left: 150px;
+            }
+            .item-construcao {
+                display: flex;
+                justify-content: center;
+
+                img {
+                    width: 850px;
+                    height: 500px;
+                }
+            }
+        }
+ 
+    }
+
+    .interiores {
+        h1 {
+            text-align: center;
+            background-color: #665441;
+            color: #fff;
+            font-size: 35px;
+            padding: 20px;
+            margin: 15px 0px;
+        }
+
+        .carrossel {
+            margin: 15px;
+            .swiper-pagination-bullet{
+                opacity: 1;
+                background: #bbbbbb;
+                padding: 5px;
+            }
+            .swiper-pagination-bullet-active{
+                background: #665441;
+            }
+
+            .item-carrossel {
+                display: flex;
+                justify-content: center;
+
+                img {
+                    width: 850px;
+                    height: 500px;
+                }
+
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .pagina-projetos {
+        .construcao {
+            .carrossel-construcao {
+                .item-construcao {
+                    img {
+                        width: 90%;
+                        height: 320px;
+                    }
+                }
+            }
+        }
+        .interiores {
+
+        }
+    }
+}
+
+@media (max-width: 580px) {
+    .pagina-projetos {
+        .construcao {
+            h1 {
+                font-size: 30px;
+                padding: 15px;
+            }
+            .carrossel-construcao {
+                .item-construcao {
+                    img {
+                        width: 95%;
+                        height: 260px;
+                    }
+                }
+            }
+        }
+        .interiores {
+            h1 {
+                font-size: 30px;
+                padding: 15px;
+            }
+        }
+    }
+}
+
