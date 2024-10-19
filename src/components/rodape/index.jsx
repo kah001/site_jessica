@@ -8,6 +8,10 @@ export default function Rodape() {
 
             <div className="pages">
 
+                <div className='Espaço-Logo'>
+                    <img src="/assets/images/logo-tcc.png" alt="Logo da Empresa" height={210} width={218} />
+                </div>
+
                 <div className="Paginas">
                     <h1 className='Titulo1'>Páginas</h1>
                     
@@ -17,10 +21,6 @@ export default function Rodape() {
                         <a className='Link3' href=""> Dicas </a>
                         <a className='Link4' href=""> Projetos </a>
                     </div>
-                </div>
-
-                <div className='Espaço-Logo'>
-                    <img src="/assets/images/logo-tcc.png" alt="Logo da Empresa" height={210} width={218} />
                 </div>
             </div>
 

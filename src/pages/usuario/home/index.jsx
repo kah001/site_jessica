@@ -67,9 +67,11 @@ export default function Home() {
 
             <section className='secao-2'>
 
+                <h1>BENEFÍCIOS</h1>
+
                 <div className="beneficios">
-                    <h1>BENEFÍCIOS</h1>
-                    <div className="center">
+                    
+                    <div className="justify-center">
                         <div className="linha" />
                     </div>
 
@@ -111,7 +113,7 @@ export default function Home() {
 
                         <div className='item'>
                             <img src="../../../../assets/images/desenho-projeto.png" alt="" />
-                                <h1>CONSTRUÇÃO</h1>
+                            <h1>CONSTRUÇÃO</h1>
                         </div>
 
                         <div className='item'>
