@@ -2,7 +2,6 @@ import './index.scss'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Pagination, Navigation } from 'swiper/modules'
 import { motion } from 'framer-motion'
-import Cabecalho from '../../../components/cabecalho-marrom'
 
 import image1 from '../../../images/construcao1.jpg'
 import image2 from '../../../images/construcao2.jpg'

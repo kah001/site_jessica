@@ -169,7 +169,7 @@
     }
 }
 
-@media (max-width: 1065px) {
+@media (max-width: 768px) {
     .pagina-home {
         .secao-1 {
             .text-block {
@@ -180,14 +180,14 @@
                     color: #fff;
 
                     h1 {
-                        font-size: 55px;
+                        font-size: 45px;
                         font-weight: 600;
-                        line-height: 60px;
+                        line-height: 40px;
                     }
 
                     h2 {
                         margin-top: 10px;
-                        font-size: 30px;
+                        font-size: 20px;
                         font-weight: 400;
                     }
                 }
@@ -196,7 +196,7 @@
     }
 }
 
-@media (max-width: 887px) {
+@media (max-width: 580px) {
     .pagina-home {
         .secao-1 {
 
@@ -219,14 +219,18 @@
             }
 
             .nav.open {
-                flex-direction: column;
                 position: absolute;
                 position: fixed;
+                flex-direction: column;
+                
                 top: 0px;
                 right: 0px;
+                
+                box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.59);
                 background-color: transparentize($color: #A6896B, $amount: 0.3);
-                width: 20%;
+                width: 35%;
                 height: 100%;
+
                 gap: 0px;
                 padding: 0px;
                 padding: 125px 5px;
@@ -237,29 +241,29 @@
                     padding: 10px;
                 }
             }
-            
+
             .menu-icon {
-                position: absolute;   
+                position: absolute;
                 position: fixed;
 
                 top: 30px;
                 right: 10px;
-                
+
                 cursor: pointer;
                 padding: 10px;
                 border-radius: 5px;
-                
+
                 .menu {
-                    
-                    border: 1px solid #000;             
+                    box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.59);
                     padding: 1.5px;
                     width: 45px;
                     background-color: #fff;
                     margin: 8px;
                 }
-                
+
                 .menu.toggle {
                     transform: rotate(45deg);
+                    box-shadow: none;
                     border: 0px;
                     position: absolute;
                     position: fixed;
@@ -284,25 +288,28 @@
 
             .text-block {
                 width: 50%;
-                flex-wrap: wrap;
+                margin: 10px;
+
+                top: 120px;
 
                 .text {
-                    padding: 35px;
+                    padding: 25px;
                     color: #fff;
 
                     h1 {
-                        font-size: 35px;
+                        font-size: 27px;
                         font-weight: 600;
-                        line-height: 40px;
+                        line-height: 30px;
                     }
 
                     h2 {
                         margin-top: 10px;
-                        font-size: 20px;
+                        font-size: 16px;
                         font-weight: 400;
                     }
                 }
             }
+
         }
     }
 }
