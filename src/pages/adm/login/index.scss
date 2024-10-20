@@ -22,7 +22,7 @@
         padding: 70px;
         margin: 25px;
         position: absolute;
-        top: 60px;
+        top: 75px;
 
         .titulo {
             display: flex;
@@ -100,9 +100,11 @@
     .pagina-login {
         .bloco {
             width: 80%;
+            top: 30px;
 
             .titulo {
                 margin: 10px;
+                text-align: center;
             }
             .info {
                 display: block;
