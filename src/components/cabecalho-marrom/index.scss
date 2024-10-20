@@ -57,9 +57,13 @@
             flex-direction: column;
             position: absolute;
             position: fixed;
+            
             top: 0px;
             right: 0px;
+
+            box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.59);
             background-color: transparentize($color: #A6896B, $amount: 0.3);
+            
             width: 40%;
             height: 100%;
             gap: 0px;
@@ -95,6 +99,7 @@
             .menu.toggle {
                 transform: rotate(45deg);
                 border: 0px;
+                box-shadow: none;
                 position: absolute;
                 position: fixed;
                 padding: 2px;
