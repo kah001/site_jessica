@@ -1,5 +1,4 @@
 .pagina-projetos {
-    position: relative;
 
     .construcao {
         h1 {
@@ -56,6 +55,7 @@
 
         .carrossel {
             margin: 15px;
+            
             .swiper-pagination-bullet{
                 opacity: 1;
                 background: #bbbbbb;
@@ -73,7 +73,6 @@
                     width: 850px;
                     height: 500px;
                 }
-
             }
         }
     }
@@ -83,6 +82,9 @@
     .pagina-projetos {
         .construcao {
             .carrossel-construcao {
+                .swiper-button-next, .swiper-button-prev {
+                    display: none;
+                }
                 .item-construcao {
                     img {
                         width: 90%;
@@ -92,6 +94,18 @@
             }
         }
         .interiores {
+            .carrossel {
+
+                .swiper-button-next, .swiper-button-prev {
+                    display: none;
+                }
+                .item-carrossel {
+                    img {
+                        width: 450px;
+                        height: 300px;
+                    }
+                }
+            }
 
         }
     }

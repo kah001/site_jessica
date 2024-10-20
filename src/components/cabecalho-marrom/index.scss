@@ -3,7 +3,6 @@
     justify-content: space-around;
     gap: 20px;
     padding: 10px;
-
     background-color: #A6896B;
 
     .nav {
@@ -79,8 +78,6 @@
 
         .menu-icon {
             position: absolute;
-            position: fixed;
-
             top: 30px;
             right: 10px;
 
@@ -90,10 +87,11 @@
 
             .menu {
                 box-shadow: 0px 3px 5px 1px rgba(0,0,0,0.59);
-                padding: 1.5px;
-                width: 45px;
+                padding: 3px;
+                border-radius: 15px;
+                width: 60px;
                 background-color: #fff;
-                margin: 8px;
+                margin: 10px;
             }
 
             .menu.toggle {
