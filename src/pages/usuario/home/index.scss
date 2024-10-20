@@ -205,7 +205,6 @@
             }
 
             .nav {
-                // transition: 0.10s;
 
                 .item {
                     display: none;
@@ -233,22 +232,26 @@
                 padding: 125px 5px;
                 line-height: 0px;
 
-
-
                 .item {
                     display: flex;
                     padding: 10px;
                 }
             }
-
+            
             .menu-icon {
-                position: relative;
+                position: absolute;   
+                position: fixed;
+
+                top: 30px;
+                right: 10px;
+                
                 cursor: pointer;
                 padding: 10px;
                 border-radius: 5px;
-
+                
                 .menu {
-
+                    
+                    border: 1px solid #000;             
                     padding: 1.5px;
                     width: 45px;
                     background-color: #fff;
@@ -257,6 +260,7 @@
                 
                 .menu.toggle {
                     transform: rotate(45deg);
+                    border: 0px;
                     position: absolute;
                     position: fixed;
                     padding: 2px;

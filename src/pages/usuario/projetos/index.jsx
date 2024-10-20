@@ -4,6 +4,8 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Pagination, Navigation } from 'swiper/modules'
 import { motion } from 'framer-motion'
 
+import Cabecalho from '../../../components/cabecalho-marrom'
+
 import image1 from '../../../images/construcao1.jpg'
 import image2 from '../../../images/construcao2.jpg'
 import image3 from '../../../images/construcao3.jpg'
@@ -74,6 +76,7 @@ export default function Projetos() {
 
     return (
         <div className='pagina-projetos'>
+            <Cabecalho />
             <section className='construcao'>
                 <h1>CONSTRUÇÃO</h1>
 

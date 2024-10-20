@@ -1,11 +1,18 @@
 .comps-cabecalho {
     display: flex;
-    flex-direction: row;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 10px;
 
     background-color: #A6896B;
-    border: 0px solid #000;
-    align-items: center;
-    padding: 10px;
+
+    .nav {
+        align-items: center;
+        flex-direction: row;
+        display: flex;
+        width: 100%;
+    }
+
 
     a {
         text-decoration: none;
@@ -14,11 +21,11 @@
 
     .logo {
         padding-left: 30px;
-        flex-grow: 2;
-
     }
 
     .item {
+        text-align: center;
+
         font-family: 'Inter';
         font-weight: 400;
         flex-grow: 1;
@@ -26,9 +33,94 @@
         margin: 12px 0px;
         padding: 0px 12px;
     }
+}
 
-    .interface {
-        border: 0px solid #000;
-        height: 400px;
+@media (max-width: 887px) {
+    .comps-cabecalho {
+        justify-content: space-between;
+
+        .logo {
+
+        }
+        
+        .nav {
+
+            .item {
+                display: none;
+                text-align: center;
+                font-family: 'Inter';
+                font-weight: 400;
+                flex-grow: 1;
+                font-size: 20px;
+                margin: 12px 0px;
+                padding: 0px 12px;
+            }
+        }
+
+        .nav.open {
+            flex-direction: column;
+            position: absolute;
+            position: fixed;
+            top: 0px;
+            right: 0px;
+            background-color: transparentize($color: #A6896B, $amount: 0.3);
+            width: 20%;
+            height: 100%;
+            gap: 0px;
+            padding: 0px;
+            padding: 125px 5px;
+            line-height: 0px;
+
+            .item {
+                display: flex;
+                padding: 10px;
+            }
+        }
+
+        .menu-icon {
+            position: absolute;
+            position: fixed;
+
+            top: 30px;
+            right: 10px;
+
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 5px;
+
+            .menu {
+
+                border: 1px solid #000;
+                padding: 1.5px;
+                width: 45px;
+                background-color: #fff;
+                margin: 8px;
+            }
+
+            .menu.toggle {
+                transform: rotate(45deg);
+                border: 0px;
+                position: absolute;
+                position: fixed;
+                padding: 2px;
+                top: 30px;
+                right: 10px;
+                background-color: #fff;
+            }
+
+            .menu.toggle:nth-child(2) {
+                opacity: 0;
+            }
+
+            .menu.toggle:nth-child(3) {
+                transform: rotate(-45deg);
+            }
+        }
+
+        .menu-icon:hover {
+            text-transform: uppercase;
+        }
+
     }
+
 }
