@@ -19,7 +19,6 @@ export default function Cabecalho() {
             </div>
 
             <nav className={`nav ${isOpen ? 'open' : ''} `}>
-
                 <div class="item"><Link to='/'><a href="">Início</a></Link></div>
                 <div class="item"><Link to='/Sobre-Mim'><a href="">Sobre Mim</a></Link></div>
                 <div class="item"><Link to='/Projetos'><a href="">Projetos</a></Link></div>

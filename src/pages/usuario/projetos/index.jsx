@@ -1,10 +1,7 @@
 import './index.scss'
-import { useState, useEffect } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Pagination, Navigation } from 'swiper/modules'
 import { motion } from 'framer-motion'
-import Cabecalho from '../../../components/cabecalho-marrom'
-
 import Cabecalho from '../../../components/cabecalho-marrom'
 
 import image1 from '../../../images/construcao1.jpg'
@@ -31,7 +28,6 @@ import car6img5 from '../../../images/carrossel6-5.jpg'
 
 
 export default function Projetos() {
-    const [slidesPorVez, setSlidesPorVez] = useState(null)
 
     const carrosselConstrucao = [
         { id: 1, img: image1 },
@@ -74,7 +70,6 @@ export default function Projetos() {
         { id: 4, img: car6img4 },
         { id: 5, img: car6img5 }
     ]
-
 
 
     return (
@@ -129,7 +124,7 @@ export default function Projetos() {
 
 
                 <Swiper className='carrossel carrossel2'
-                    slidesPerView={slidesPorVez}
+                    slidesPerView={1}
                     pagination={{ clickable: true }}
                     navigation
                     modules={[Autoplay]}
@@ -139,14 +134,16 @@ export default function Projetos() {
                     }}
                     loop={true}
                 >
-                    <SwiperSlide>
-
-                    </SwiperSlide>
+                    {carrossel2.map(item => (
+                        <SwiperSlide className='item-carrossel' key={item.id}>
+                            <img src={item.img} alt="" />
+                        </SwiperSlide>
+                    ))}
                 </Swiper>
 
 
                 <Swiper className='carrossel carrossel3'
-                    slidesPerView={slidesPorVez}
+                    slidesPerView={1}
                     pagination={{ clickable: true }}
                     navigation
                     modules={[Autoplay]}
@@ -156,14 +153,16 @@ export default function Projetos() {
                     }}
                     loop={true}
                 >
-                    <SwiperSlide>
-
-                    </SwiperSlide>
+                    {carrossel3.map(item => (
+                        <SwiperSlide className='item-carrossel' key={item.id}>
+                            <img src={item.img} alt="" />
+                        </SwiperSlide>
+                    ))}
                 </Swiper>
 
 
                 <Swiper className='carrossel carrossel4'
-                    slidesPerView={slidesPorVez}
+                    slidesPerView={1}
                     pagination={{ clickable: true }}
                     navigation
                     modules={[Autoplay]}
@@ -173,14 +172,16 @@ export default function Projetos() {
                     }}
                     loop={true}
                 >
-                    <SwiperSlide>
-
-                    </SwiperSlide>
+                    {carrossel4.map(item => (
+                        <SwiperSlide key={item.id} className='item-carrossel'>
+                            <img src={item.img} alt="" />
+                        </SwiperSlide>
+                    ))}
                 </Swiper>
 
 
                 <Swiper className='carrossel carrossel5'
-                    slidesPerView={slidesPorVez}
+                    slidesPerView={1}
                     pagination={{ clickable: true }}
                     navigation
                     modules={[Autoplay]}
@@ -190,9 +191,11 @@ export default function Projetos() {
                     }}
                     loop={true}
                 >
-                    <SwiperSlide>
-
-                    </SwiperSlide>
+                    {carrossel5.map(item => (
+                        <SwiperSlide key={item.id} className='item-carrossel'>
+                            <img src={item.img} alt="" />
+                        </SwiperSlide>
+                    ))}
                 </Swiper>
 
 
