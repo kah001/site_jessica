@@ -1,8 +1,8 @@
 import './index.scss';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-
 export default function Cabecalho() {
+
     const [isOpen, setIsOpen] = useState(false);
 
     function toggleMenu() {
@@ -10,7 +10,7 @@ export default function Cabecalho() {
     }
 
     return (
-        <div className="comps-cabecalho">
+        <div className="comp-cabecalho">
 
             <div class="logo">
                 <Link to='/'>

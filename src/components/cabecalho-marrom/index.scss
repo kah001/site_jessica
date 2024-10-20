@@ -1,4 +1,4 @@
-.comps-cabecalho {
+.comp-cabecalho {
     display: flex;
     justify-content: space-around;
     gap: 20px;
@@ -36,12 +36,8 @@
 }
 
 @media (max-width: 887px) {
-    .comps-cabecalho {
+    .comp-cabecalho {
         justify-content: space-between;
-
-        .logo {
-
-        }
         
         .nav {
 
@@ -122,5 +118,4 @@
         }
 
     }
-
 }

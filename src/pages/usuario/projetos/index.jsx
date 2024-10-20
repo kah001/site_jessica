@@ -1,8 +1,9 @@
 import './index.scss'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Pagination, Navigation } from 'swiper/modules'
 import { motion } from 'framer-motion'
+import Cabecalho from '../../../components/cabecalho-marrom'
 
 import Cabecalho from '../../../components/cabecalho-marrom'
 
@@ -27,6 +28,7 @@ import car6img2 from '../../../images/carrossel6-2.jpg'
 import car6img3 from '../../../images/carrossel6-3.jpg'
 import car6img4 from '../../../images/carrossel6-4.jpg'
 import car6img5 from '../../../images/carrossel6-5.jpg'
+
 
 export default function Projetos() {
     const [slidesPorVez, setSlidesPorVez] = useState(null)
@@ -74,51 +76,56 @@ export default function Projetos() {
     ]
 
 
+
     return (
         <div className='pagina-projetos'>
             <Cabecalho />
             <section className='construcao'>
                 <h1>CONSTRUÇÃO</h1>
 
-                <Swiper className='carrossel-construcao'
-                    slidesPerView={1}
-                    pagination={{ clickable: true }}
-                    navigation
-                    modules={[Autoplay, Pagination, Navigation]}
-                    autoplay={{
-                        delay: 2500,
-                        disableOnInteraction: false
-                    }}
-                    loop={true}
-                >
-                    {carrosselConstrucao.map((item) => (
-                        <SwiperSlide className='item-construcao' key={item.id}>
-                            <img src={item.img} alt="" />
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
+                <motion.div>
+                    <Swiper className='carrossel-construcao'
+                        slidesPerView={1}
+                        pagination={{ clickable: true }}
+                        navigation
+                        modules={[Autoplay, Pagination, Navigation]}
+                        autoplay={{
+                            delay: 2500,
+                            disableOnInteraction: false
+                        }}
+                        loop={true}
+                    >
+                        {carrosselConstrucao.map((item) => (
+                            <SwiperSlide className='item-construcao' key={item.id}>
+                                <img src={item.img} alt="" />
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+                </motion.div>
             </section>
 
             <section className='interiores'>
                 <h1>INTERIORES</h1>
 
-                <Swiper className='carrossel carrossel1'
-                    slidesPerView={1}
-                    pagination={{ clickable: true }}
-                    navigation
-                    modules={[Autoplay, Pagination, Navigation]}
-                    autoplay={{
-                        delay: 2500,
-                        disableOnInteraction: false
-                    }}
-                    loop={true}
-                >
-                    {carrossel1.map(item => (
-                        <SwiperSlide className='item-carrossel' key={item.id}>
-                            <img src={item.img} alt="" />
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
+                <motion.div>
+                    <Swiper className='carrossel carrossel1'
+                        slidesPerView={1}
+                        pagination={{ clickable: true }}
+                        navigation
+                        modules={[Autoplay, Pagination, Navigation]}
+                        autoplay={{
+                            delay: 2500,
+                            disableOnInteraction: false
+                        }}
+                        loop={true}
+                    >
+                        {carrossel1.map(item => (
+                            <SwiperSlide className='item-carrossel' key={item.id}>
+                                <img src={item.img} alt="" />
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+                </motion.div>
 
 
                 <Swiper className='carrossel carrossel2'

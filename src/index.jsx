@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.scss';
-import Navegacao from './routes.jsx';
+import Navegacao from './routes';
 
+//importações do swiper
 import 'swiper/css' 
 import 'swiper/css/navigation' //importando modulos das setas da navegacao
 import 'swiper/css/pagination' //importando as bolinhas
