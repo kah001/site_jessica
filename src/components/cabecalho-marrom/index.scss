@@ -1,4 +1,4 @@
-.comps-cabecalho {
+.comp-cabecalho {
     display: flex;
     flex-direction: row;
 
@@ -30,5 +30,11 @@
     .interface {
         border: 0px solid #000;
         height: 400px;
+    }
+}
+
+@media (max-width: 580px) {
+    .comp-cabecalho {
+        
     }
 }
