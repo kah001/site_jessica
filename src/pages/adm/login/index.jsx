@@ -28,27 +28,32 @@ export default function Login() {
 
     return (
         <div className='pagina-login'>
-            <img src="assets/images/image-login.png" alt="" />
-            
+
+            <img src="assets/images/backlogin.png" alt="" />
+
             <section className='bloco'>
-                <div className='titulo'>
-                    <h1>Seja muito Bem-vindo(a)!</h1>
+
+                <div className='bloco1'>
+
+                    <h1>Bem-Vindo(a)!</h1>
+
+                    <label> NOME: </label>
+                    <input type="text" />
+
+                    <label> SENHA: </label>
+                    <input type="password" />
+
                 </div>
 
-                <div className='info'>
-                    <div>
-                        <p>Nome:</p>
-                        <input type="text" value={nome} onChange={a => setNome(a.target.value)} />
-                    </div>
-                    <div>
-                        <p>Senha:</p>
-                        <input type="password" placeholder='********' value={senha} onChange={a => setSenha(a.target.value)} /> 
-                    </div>
-                </div>
+                <div className='bloco2'>
 
-                <div className='botao' onClick={entrar}>ENTRAR</div>
+                 <img src="assets/images/logo-tcc.png" />
+
+                </div>
 
             </section>
+
+
         </div>
     )
 }
