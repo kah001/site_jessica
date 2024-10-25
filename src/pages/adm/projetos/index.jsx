@@ -29,7 +29,13 @@ export default function ProjetosAdm() {
             local: local
         }
 
-        // const url = 
+        // n tem token (n vai dar tempo de eu fazer o role de pegar o token da localstorage)
+        const url = `http://localhost:5010/andamento?x-access-token=${'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJubV9hZG0iOiJmZWxwcyIsImlhdCI6MTcyOTg2ODA2NX0.BoDLeZ4hnTowwObEVBgUJYF3fdDhfT15ET2w9Tz0yxI'}`; 
+        let response = await axios.post(url, paramObj);
+        let id = response.data.novoId
+
+        
+        console.log(id)
     }
 
     return (
@@ -52,6 +58,8 @@ export default function ProjetosAdm() {
                     <label> LOCAL: </label>
                     <input type="text" value={local} onChange={e => setLocal(e.target.value)} />
                 </div>
+
+                <button onClick={inserirProjetoAndamento}> Inserir</button>
             </form>
 
             {imagem &&
