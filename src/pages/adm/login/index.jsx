@@ -1,6 +1,6 @@
 import './index.scss'
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import axios from 'axios'
 
 export default function Login() {
@@ -28,32 +28,26 @@ export default function Login() {
 
     return (
         <div className='pagina-login'>
-
             <img src="assets/images/backlogin.png" alt="" />
 
             <section className='bloco'>
-
                 <div className='bloco1'>
-
+                    <Link to='/'><img src="/assets/images/seta.png" alt="" /></Link>
                     <h1>Bem-Vindo(a)!</h1>
 
                     <label> NOME: </label>
-                    <input type="text" />
+                    <input type="text" value={nome} onChange={a => setNome(a.target.value)} />
 
                     <label> SENHA: </label>
-                    <input type="password" />
+                    <input type="password" placeholder="********" value={senha} onChange={a => setSenha(a.target.value)} />
 
+                    <div className='botao' onClick={entrar}>ENTRAR</div>
                 </div>
 
                 <div className='bloco2'>
-
-                 <img src="assets/images/logo-tcc.png" />
-
+                    <img src="assets/images/logo-tcc.png" />
                 </div>
-
             </section>
-
-
         </div>
     )
 }

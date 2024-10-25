@@ -1,0 +1,114 @@
+.comp-cabecalho-adm {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    background-color: #A6896B;
+
+    .nav {
+        align-items: center;
+        flex-direction: row;
+        display: flex;
+        width: 100%;
+    }
+
+    a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .logo {
+        padding-left: 30px;
+    }
+
+    .item {
+        text-align: center;
+        font-family: 'Inter';
+        font-weight: 400;
+        flex-grow: 1;
+        font-size: 20px;
+        margin: 12px 0px;
+        padding: 0px 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .comp-cabecalho {
+        justify-content: space-between;
+        
+        .nav {
+            .item {
+                display: none;
+                text-align: center;
+                font-family: 'Inter';
+                font-weight: 400;
+                flex-grow: 1;
+                font-size: 20px;
+                margin: 12px 0px;
+                padding: 0px 12px;
+            }
+        }
+
+        .nav.open {
+            flex-direction: column;
+            position: absolute;
+            position: fixed;
+            top: 0px;
+            right: 0px;
+            box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.59);
+            background-color: transparentize($color: #A6896B, $amount: 0.3);
+            width: 40%;
+            height: 100%;
+            gap: 0px;
+            padding: 0px;
+            padding: 125px 5px;
+            line-height: 0px;
+
+            .item {
+                display: flex;
+                padding: 10px;
+            }
+        }
+
+        .menu-icon {
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 5px;
+
+            .menu {
+                box-shadow: 0px 3px 5px 1px rgba(0,0,0,0.59);
+                padding: 3px;
+                border-radius: 15px;
+                width: 60px;
+                background-color: #fff;
+                margin: 10px;
+            }
+
+            .menu.toggle {
+                transform: rotate(45deg);
+                border: 0px;
+                box-shadow: none;
+                position: absolute;
+                position: fixed;
+                padding: 2px;
+                top: 30px;
+                right: 10px;
+                background-color: #fff;
+            }
+
+            .menu.toggle:nth-child(2) {
+                opacity: 0;
+            }
+
+            .menu.toggle:nth-child(3) {
+                transform: rotate(-45deg);
+            }
+        }
+
+        .menu-icon:hover {
+            text-transform: uppercase;
+        }
+
+    }
+}

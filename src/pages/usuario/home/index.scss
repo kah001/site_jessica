@@ -1,315 +1,42 @@
 .pagina-home {
-
-    .secao-1 {
-
-        img {
-            position: relative;
-        }
-
-        .cabecalho {
-
-            display: flex;
-            justify-content: space-around;
-            gap: 20px;
-
-
-            background-color: transparent;
-            padding: 10px;
-            width: 100%;
-
-            position: absolute;
-            top: 0px;
-            left: 0px;
-
-            .logo {
-                padding-left: 30px;
-            }
-
-            .nav {
-                align-items: center;
-                flex-direction: row;
-                display: flex;
-                width: 100%;
-                align-items: center;
-
-                a {
-                    text-decoration: none;
-                    color: #fff;
-                }
-
-
-                .item {
-                    text-align: center;
-                    font-family: 'Inter';
-                    font-weight: 400;
-                    flex-grow: 1;
-                    font-size: 20px;
-                    margin: 12px 0px;
-                    padding: 0px 12px;
-                }
-            }
-        }
-
-        .text-block {
-            background-color: transparentize($color: #A6896B, $amount: 0.3);
-            position: absolute;
-            width: 50%;
-
-            top: 19dvw;
-            left: 12dvw;
-
-            .text {
-                padding: 35px;
-                color: #fff;
-
-                h1 {
-                    font-size: 55px;
-                    font-weight: 600;
-                    line-height: 60px;
-                }
-
-                h2 {
-                    margin-top: 10px;
-                    font-size: 40px;
-                    font-weight: 400;
-                }
-            }
-        }
-    }
-
-    .secao-2 {
-        h1 {
-            padding: 50px;
-            margin: 30px 0px;
-            font-size: 50px;
-            font-weight: 500;
-
-            text-align: center;
-        }
-
-        .beneficios {
-
-            .linha {
-                border: 2px solid #000;
-                width: 90%;
-            }
-
-            .justify-center {
-                display: flex;
-                justify-content: center;
-            }
-
-            .itens {
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: center;
-
-                gap: 20px;
-                margin: 30px 0px;
-
-                .item {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    padding: 10px;
-                    flex-direction: column;
-
-                    width: 400px;
-
-
-                    .text {
-                        text-align: center;
-                        width: 330px;
-
-                        h2 {
-                            font-size: 30px;
-                            font-weight: 500;
-                        }
-
-                        p {
-                            margin-top: 10px;
-                            font-size: 25px;
-                        }
-
-                    }
-
-
-                }
-
-
-            }
-
-
-        }
-
-        .destaque {
-
-            .itens {
-                display: flex;
-                justify-content: center;
-                flex-wrap: wrap;
-                align-items: center;
-                gap: 50px;
-
-                .item {
-                    width: 400px;
-                    padding: 10px;
-
-                    text-align: center;
-
-                    h1 {
-                        font-size: 50px;
-                        font-weight: 500;
-                        margin: 30px 0px;
+    .slogan {
+        .carrossel {
+            .bloco {
+                position: relative;
+                .img {
+                    img {
+                        width: 100%;
                     }
                 }
-            }
-        }
-    }
-}
-
-@media (max-width: 768px) {
-    .pagina-home {
-        .secao-1 {
-            .text-block {
-                width: 60%;
-
-                .text {
-                    padding: 35px;
-                    color: #fff;
-
-                    h1 {
-                        font-size: 45px;
-                        font-weight: 600;
-                        line-height: 40px;
-                    }
-
-                    h2 {
-                        margin-top: 10px;
-                        font-size: 20px;
-                        font-weight: 400;
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media (max-width: 580px) {
-    .pagina-home {
-        .secao-1 {
-
-            .cabecalho {
-                justify-content: space-between;
-            }
-
-            .nav {
-
-                .item {
-                    display: none;
-                    text-align: center;
-                    font-family: 'Inter';
-                    font-weight: 400;
-                    flex-grow: 1;
-                    font-size: 20px;
-                    margin: 12px 0px;
-                    padding: 0px 12px;
-                }
-            }
-
-            .nav.open {
-                position: absolute;
-                position: fixed;
-                flex-direction: column;
-                
-                top: 0px;
-                right: 0px;
-                
-                box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.59);
-                background-color: transparentize($color: #A6896B, $amount: 0.3);
-                width: 35%;
-                height: 100%;
-
-                gap: 0px;
-                padding: 0px;
-                padding: 125px 5px;
-                line-height: 0px;
-
-                .item {
-                    display: flex;
-                    padding: 10px;
-                }
-            }
-
-            .menu-icon {
-                position: absolute;
-                position: fixed;
-
-                top: 30px;
-                right: 10px;
-
-                cursor: pointer;
-                padding: 10px;
-                border-radius: 5px;
-
-                .menu {
-                    box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.59);
-                    padding: 1.5px;
-                    width: 45px;
-                    background-color: #fff;
-                    margin: 8px;
-                }
-
-                .menu.toggle {
-                    transform: rotate(45deg);
-                    box-shadow: none;
-                    border: 0px;
+                .texto {
                     position: absolute;
-                    position: fixed;
-                    padding: 2px;
-                    top: 30px;
-                    right: 10px;
-                    background-color: #fff;
-                }
-
-                .menu.toggle:nth-child(2) {
-                    opacity: 0;
-                }
-
-                .menu.toggle:nth-child(3) {
-                    transform: rotate(-45deg);
-                }
-            }
-
-            .menu-icon:hover {
-                text-transform: uppercase;
-            }
-
-            .text-block {
-                width: 50%;
-                margin: 10px;
-
-                top: 120px;
-
-                .text {
-                    padding: 25px;
-                    color: #fff;
+                    top: 78%;
+                    left: 50px;
 
                     h1 {
-                        font-size: 27px;
-                        font-weight: 600;
-                        line-height: 30px;
+                        font-size: 35px;
+                        font-weight: 500;
+                        color: #fff;
                     }
+                    .botoes {
+                        display: flex;
+                        gap: 20px;
 
-                    h2 {
-                        margin-top: 10px;
-                        font-size: 16px;
-                        font-weight: 400;
+                        .botao {
+                            border: 3px #fff solid;
+                            text-align: center;
+                            color: #fff;
+                            font-weight: 600;
+                            text-decoration: none;
+                            cursor: pointer;
+                            padding: 10px;
+                            width: 200px;
+                            margin: 10px 0px;
+                            border-radius: 20px;
+                        }
                     }
                 }
             }
-
         }
     }
 }

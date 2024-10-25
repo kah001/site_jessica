@@ -20,6 +20,8 @@ export default function NovoProjeto() {
         setDataInicio('')
         setTipoProjeto('')
         setDescricao('')
+        setValorTotalEstimado('')
+        setFormaPagamento('')
     }
 
     function inserirTarefa() {
@@ -27,48 +29,70 @@ export default function NovoProjeto() {
         setTarefa('')
     }
 
+
     return (
         <div className='pagina-novo-projeto'>
-            <h1>Inserir um Novo Projeto</h1>
 
-            <label>NOME DO PROJETO:</label>
-            <input type="text" value={nomeProjeto} onChange={a => setNomeProjeto(a.target.value)}/>
+            <h1 className='titulo'>Inserir um Novo Projeto</h1>
 
-            <label>NOME DO CLIENTE:</label>
-            <input type="text" value={nomeCliente} onChange={a => setNomeCliente(a.target.value)}/>
+            <div className='info'>
 
-            <label>CONTATO CLIENTE:</label>
-            <input type="text" value={contatoCliente} onChange={a => setContatoCliente(a.target.value)} />
+                <div className='item'>
+                    <label>NOME DO PROJETO:</label>
+                    <input type="text" value={nomeProjeto} onChange={a => setNomeProjeto(a.target.value)} />
+                </div>
 
-            <label>DATA DE INÍCIO:</label>
-            <input type="date" value={dataInicio} onChange={a => setDataInicio(a.target.value)} />
+                <div className='item'>
+                    <label>NOME DO CLIENTE:</label>
+                    <input type="text" value={nomeCliente} onChange={a => setNomeCliente(a.target.value)} />
+                </div>
 
-            <label>TIPO DO PROJETO:</label>
-            <input type="text" value={tipoProjeto} onChange={a => setTipoProjeto(a.target.value)} />
-        
-            <label>DESCRIÇÃO DO PROJETO:</label>
-            <textarea value={descricao} onChange={a => setDescricao(a.target.value)}></textarea>
+                <div className='item'>
+                    <label>CONTATO CLIENTE:</label>
+                    <input type="text" value={contatoCliente} onChange={a => setContatoCliente(a.target.value)} />
+
+                </div>
+
+                <div className='item'>
+                    <label>DATA DE INÍCIO:</label>
+                    <input type="date" value={dataInicio} onChange={a => setDataInicio(a.target.value)} />
+                </div>
+
+                <div className='item'>
+                    <label>TIPO DO PROJETO:</label>
+                    <input type="text" value={tipoProjeto} onChange={a => setTipoProjeto(a.target.value)} />
+                </div>
+
+                <div className='item'>
+                    <label>DESCRIÇÃO DO PROJETO:</label>
+                    <textarea value={descricao} onChange={a => setDescricao(a.target.value)}></textarea>
+                </div>
+            </div>
 
 
-            <h1>TAREFAS</h1>
-            <hr />
+            <div className='tarefas'>
+                <h1>TAREFAS</h1>
+                <hr />
 
-            <label>INSIRA UMA TAREFA:</label>
-            <input type="text" value={tarefa} onChange={a => setTarefa(a.target.value)} />
+                <label>INSIRA UMA TAREFA:</label>
+                <input type="text" value={tarefa} onChange={a => setTarefa(a.target.value)} />
 
-            <div className='botao' onClick={inserirTarefa}>INSERIR</div>
+                <div className='botao' onClick={inserirTarefa}>INSERIR</div>
+            </div>
 
 
-            <h1>PAGAMENTO</h1>
-            <hr />
+            <div className='pagamento'>
+                <h1>PAGAMENTO</h1>
+                <hr />
 
-            <label>VALOR TOTAL OU ESTIMADO:</label>
-            <input type="text" value={valorTotalEstimado} onChange={a => setValorTotalEstimado(a.target.value)}/>
+                <label>VALOR TOTAL OU ESTIMADO:</label>
+                <input type="text" value={valorTotalEstimado} onChange={a => setValorTotalEstimado(a.target.value)} />
 
-            <label>FORMA DE PAGAMENTO:</label>
-            <input type="text" value={formaPagamento} onChange={a => setFormaPagamento(a.target.value)} />
+                <label>FORMA DE PAGAMENTO:</label>
+                <input type="text" value={formaPagamento} onChange={a => setFormaPagamento(a.target.value)} />
 
-            <div className='botao' onClick={inserirProjeto}>INSERIR NOVO PROJETO</div>
+                <div className='botao' onClick={inserirProjeto}>INSERIR NOVO PROJETO</div>
+            </div>
         </div>
     )
 }

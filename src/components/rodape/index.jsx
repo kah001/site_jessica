@@ -4,7 +4,7 @@ export default function Rodape() {
 
 
     return (
-        <div className='comps-rodape'>
+        <div className='comp-rodape'>
 
             <div className="pages">
 

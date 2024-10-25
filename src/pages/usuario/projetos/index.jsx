@@ -129,7 +129,7 @@ export default function Projetos() {
                     slidesPerView={1}
                     pagination={{ clickable: true }}
                     navigation
-                    modules={[Autoplay]}
+                    modules={[Autoplay, Pagination, Navigation]}
                     autoplay={{
                         delay: 5000,
                         disableOnInteraction: false
@@ -148,7 +148,7 @@ export default function Projetos() {
                     slidesPerView={1}
                     pagination={{ clickable: true }}
                     navigation
-                    modules={[Autoplay]}
+                    modules={[Autoplay, Pagination, Navigation]}
                     autoplay={{
                         delay: 2500,
                         disableOnInteraction: false
@@ -167,7 +167,7 @@ export default function Projetos() {
                     slidesPerView={1}
                     pagination={{ clickable: true }}
                     navigation
-                    modules={[Autoplay]}
+                    modules={[Autoplay, Navigation, Pagination]}
                     autoplay={{
                         delay: 5000,
                         disableOnInteraction: false
@@ -186,7 +186,7 @@ export default function Projetos() {
                     slidesPerView={1}
                     pagination={{ clickable: true }}
                     navigation
-                    modules={[Autoplay]}
+                    modules={[Autoplay, Navigation, Pagination]}
                     autoplay={{
                         delay: 5000,
                         disableOnInteraction: false
