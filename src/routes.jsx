@@ -19,9 +19,7 @@ export default function Navegacao() {
                 <Route path="/projetos" element={<Projetos />} />
 
                 <Route path="/adm/alteracoes" element={<AlteracoesAdm />} />
-                {/* <Route path="/adm/novoProjeto" element={<ProjetosAdm />} /> */}
                 <Route path="/adm/projetos" element={<ProjetosAdm />} />
-                {/* <Route path="/adm/lucroTotal" element={<ProjetosAdm />} /> */}
 
                 <Route path="*" element={<NaoEncontrado />}/>
             </Routes>

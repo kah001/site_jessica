@@ -18,7 +18,7 @@ export default function Login() {
         const url = `http://localhost:5010/adm/entrar`
         let resp = await axios.post(url, paramCorpo)
 
-        if (resp.data.erro != undefined) {
+        if (resp.data.erro !== undefined) {
             alert(resp.data.erro)
         } else {
             localStorage.setItem('USUARIO', resp.data.token)

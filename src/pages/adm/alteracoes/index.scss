@@ -1,0 +1,39 @@
+.pagina-alteracoes-adm {
+
+    .secao-01 {
+        background-color: #d9d9d9;
+
+        .titulo {
+            background-color: #c7c6c6;
+            color: #000;
+
+            width: 100%;
+            text-align: center;
+            font-size: 25px;
+            font-weight: 600;
+            padding: 20px;
+        }
+
+        .espaço-imagem {
+            align-items: center;
+
+            .imagem {
+                width: 971px;
+                height: 377px;
+            }
+        }
+    }
+
+    .secao-02 {
+
+        .titulo {
+            background-color: #665441;
+            color: #fff;
+
+            width: 100%;
+            text-align: center;
+            font: 200 25px 'Verdana';
+            padding: 20px;
+        }
+    }
+}
