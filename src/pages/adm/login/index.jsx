@@ -22,7 +22,7 @@ export default function Login() {
             alert(resp.data.erro)
         } else {
             localStorage.setItem('USUARIO', resp.data.token)
-            navigate('/projetos/adm')
+            navigate('/adm/projetos')
         }
     }
 

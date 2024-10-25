@@ -3,7 +3,9 @@ import Home from "./pages/usuario/home";
 import Login from "./pages/adm/login";
 import Dicas from "./pages/usuario/dicas";
 import Projetos from "./pages/usuario/projetos";
+
 import ProjetosAdm from "./pages/adm/projetos";
+import AlteracoesAdm from "./pages/adm/alteracoes";
 
 import NaoEncontrado from "./pages/usuario/naoEncontrado";
 
@@ -15,7 +17,11 @@ export default function Navegacao() {
                 <Route path="/dicas" element={<Dicas />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/projetos" element={<Projetos />} />
+
+                <Route path="/adm/alteracoes" element={<AlteracoesAdm />} />
+                {/* <Route path="/adm/novoProjeto" element={<ProjetosAdm />} /> */}
                 <Route path="/adm/projetos" element={<ProjetosAdm />} />
+                {/* <Route path="/adm/lucroTotal" element={<ProjetosAdm />} /> */}
 
                 <Route path="*" element={<NaoEncontrado />}/>
             </Routes>
