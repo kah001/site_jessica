@@ -1,8 +1,17 @@
 .pagina-home {
     .slogan {
         .carrossel {
+            .swiper-pagination-bullet {
+                background-color: #cecece;
+                padding: 8px;
+                opacity: 1;
+            }
+            .swiper-pagination-bullet-active {
+                background-color: #665441;
+            }
             .bloco {
                 position: relative;
+
                 .img {
                     img {
                         width: 100%;
@@ -15,7 +24,7 @@
 
                     h1 {
                         font-size: 35px;
-                        font-weight: 500;
+                        font-weight: 600;
                         color: #fff;
                     }
                     .botoes {
@@ -23,10 +32,11 @@
                         gap: 20px;
 
                         .botao {
-                            border: 3px #fff solid;
+                            border: 3px #665441 solid;
                             text-align: center;
-                            color: #fff;
+                            color: #665441;
                             font-weight: 600;
+                            font-size: 20px;
                             text-decoration: none;
                             cursor: pointer;
                             padding: 10px;
@@ -38,5 +48,53 @@
                 }
             }
         }
+    }
+
+    .tecnologia {
+        display: flex;
+
+        .imagem {
+            img {
+                width: 500px;
+            }
+        }
+        .info {
+            h1 {
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media (max-width: 580px) {
+    .pagina-home {
+        .slogan {
+            .carrossel {
+                .swiper-pagination-bullet {
+                    padding: 6px;
+                }
+                .bloco {
+                    .img {
+                        img {
+                            width: 100%;
+                            height: 320px;
+                        }
+                    }
+                    .texto {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .tecnologia {
+
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .pagina-home {
+
     }
 }

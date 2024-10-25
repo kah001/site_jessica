@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import './index.scss';
 import Navegacao from './routes';
 import NovoProjeto from './pages/adm/novoProjeto';
-import Login from './pages/adm/login';
 
 //importações do swiper
 import 'swiper/css' 

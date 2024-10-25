@@ -1,4 +1,5 @@
 import './index.scss';
+import { useState, useEffect } from 'react';
 import Cabecalho from '../../../components/cabecalho-marrom';
 import Rodape from '../../../components/rodape';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -15,6 +16,7 @@ export default function Home() {
         { id: 2, img: img2, slogan: 'Do conceito ao concreto, fazemos acontecer' },
         { id: 3, img: img3, slogan: 'Cada detalhe conta na criação de um ambiente único' }
     ]
+
 
     return (
         <div className='pagina-home'>
@@ -60,6 +62,7 @@ export default function Home() {
                 <div className='info'>
                     <h1>Tecnologia</h1>
                     <hr />
+                    <p>Grande uso da tecnologia durante o desenvolvimentos dos projetos, você poderá  fazer um tour pela sua casa antes mesmo dela estar pronta</p>
                 </div>
             </section>
 

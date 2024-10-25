@@ -29,10 +29,8 @@ export default function NovoProjeto() {
         setTarefa('')
     }
 
-
     return (
         <div className='pagina-novo-projeto'>
-
             <h1 className='titulo'>Inserir um Novo Projeto</h1>
 
             <div className='info'>
@@ -50,7 +48,6 @@ export default function NovoProjeto() {
                 <div className='item'>
                     <label>CONTATO CLIENTE:</label>
                     <input type="text" value={contatoCliente} onChange={a => setContatoCliente(a.target.value)} />
-
                 </div>
 
                 <div className='item'>
@@ -69,27 +66,36 @@ export default function NovoProjeto() {
                 </div>
             </div>
 
-
             <div className='tarefas'>
-                <h1>TAREFAS</h1>
-                <hr />
+                <div className='tarefa'>
+                    <h1>TAREFAS</h1>
+                    <hr />
+                </div>
 
-                <label>INSIRA UMA TAREFA:</label>
-                <input type="text" value={tarefa} onChange={a => setTarefa(a.target.value)} />
+                <div className='tarefa'>
+                    <label>INSIRA UMA TAREFA:</label>
+                    <input type="text" value={tarefa} onChange={a => setTarefa(a.target.value)} />
+                </div>
 
                 <div className='botao' onClick={inserirTarefa}>INSERIR</div>
             </div>
 
+            <div className='pagamentos'>
+                <div className='pagamento'>
+                    <h1>PAGAMENTO</h1>
+                    <hr />
+                </div>
 
-            <div className='pagamento'>
-                <h1>PAGAMENTO</h1>
-                <hr />
+                <div className='pagamento'>
+                    <label>VALOR TOTAL OU ESTIMADO:</label>
+                    <input type="text" value={valorTotalEstimado} onChange={a => setValorTotalEstimado(a.target.value)} />
+                </div>
 
-                <label>VALOR TOTAL OU ESTIMADO:</label>
-                <input type="text" value={valorTotalEstimado} onChange={a => setValorTotalEstimado(a.target.value)} />
+                <div className='pagamento'>
+                    <label>FORMA DE PAGAMENTO:</label>
+                    <input type="text" value={formaPagamento} onChange={a => setFormaPagamento(a.target.value)} />
+                </div>
 
-                <label>FORMA DE PAGAMENTO:</label>
-                <input type="text" value={formaPagamento} onChange={a => setFormaPagamento(a.target.value)} />
 
                 <div className='botao' onClick={inserirProjeto}>INSERIR NOVO PROJETO</div>
             </div>

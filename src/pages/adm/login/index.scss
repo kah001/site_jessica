@@ -79,10 +79,15 @@
     }
 }
 
-@media (max-width: 580px) {
-
-}
-
 @media (max-width: 768px) {
-
+    .pagina-login {
+        .bloco {
+            .bloco1 {
+                border-radius: 20px;
+            }
+            .bloco2 {
+                display: none;
+            }
+        }
+    }
 }

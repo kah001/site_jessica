@@ -1,8 +1,11 @@
 .pagina-novo-projeto {
-    .titulo {
+    background-color: #947759;
+    
+    .titulo {   
         text-align: center;
-        background-color: #c7c6c6;
+        background-color: #44392d;
         padding: 15px;
+        color: #fff;
         margin: 15px 0px;
         font-size: 30px;
     }
@@ -11,41 +14,116 @@
         display: flex;
         padding: 20px;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
         .item {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: baseline;
+            width: 700px;
             margin: 10px;
             gap: 10px;
 
             label {
                 font-size: 20px; 
-                text-align: start;   
+                text-align: start;
             }
             input {
-                width: 350px;
+                width: 400px;
                 padding: 10px;
                 outline: none;
+                border: none;
             }
             textarea {
                 outline: none;
                 padding: 10px;
                 height: 200px;
-                width: 350px;
+                width: 400px;
+                border: none;
             }
         }
     }
 
     .tarefas {
-        h1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+        margin: 5px;
+        gap: 10px;
+
+        .tarefa {
+            padding: 10px;
+            gap: 10px;
+
+            h1 {
+                text-align: center;
+                font-weight: 500;
+            }
+            hr {
+                width: 600px;
+                margin: 5px 0px;
+                border-color: #000;
+            }
+            input {
+                width: 500px;
+                outline: none;
+                padding: 10px;
+                border: none;
+            }
+            label {
+                font-size: 20px;
+            }
+        }
+        .botao {
+            justify-self: end;
+            padding: 10px 35px;
+            margin: 10px 0px;
             text-align: center;
+            background-color: #44392d;
+            color: #fff;
+            font-size: 20px;
+            border-radius: 50px;
+            cursor: pointer;
         }
     }
 
-    .pagamento {
-        h1 {
-            text-align: center;
+    .pagamentos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .pagamento {
+            padding: 10px;
+
+            h1 {
+                text-align: center;
+                font-weight: 500;
+            }
+            hr {
+                width: 600px;
+                border-color: #000;
+            }
+            label {
+                font-size: 20px;
+            }
+            input {
+                padding: 10px;
+                width: 500px;
+                outline: none;
+                border: none;
+            }
+        }
+        .botao {
+            background-color: #44392d;
+            padding: 15px 25px;
+            font-size: 20px;
+            border-radius: 15px;
+            margin: 10px 0px;
+            color: #fff;
         }
     }
 }
