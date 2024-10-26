@@ -14,14 +14,70 @@
             padding: 20px;
         }
 
-        .espaço-imagem {
-            align-items: center;
+        form {
+            justify-self: center;
+        }
 
+        .box {
+            border: 5px solid yellow;
+            width: 1000px;
+            height: 300px;
+            display: flex;
+
+        }
+
+        .image-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid blue;
+            width: 60%;
+            height: 100%;
+            
+            background-color: #fff;
+
+            input[type="file"] {
+                display: none;
+            }
+            
             .imagem {
-                width: 971px;
-                height: 377px;
+                width: 100%;
+                
+            }
+
+            .img-icon {
+                position: absolute;
+                
             }
         }
+
+
+
+
+        .text-box {
+            display: flex;
+            border: 1px solid red;
+            width: 50%;
+            margin-left: 50px;
+
+            font-size: 25px;
+            flex-direction: column;
+            
+            input[type='text'] {
+                font-size: 25px;
+                outline: none;
+            }
+
+            label:nth-child(3) {
+                margin-top: 40px;
+            }
+
+            button {
+                justify-self: center;
+                border: 0px;
+            }
+        }
+
     }
 
     .secao-02 {

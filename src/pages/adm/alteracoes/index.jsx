@@ -5,6 +5,8 @@ import CabecalhoAdm from '../../../components/cabecalhoAdm';
 import { useNavigate } from "react-router-dom";
 
 import axios from 'axios';
+import { div } from 'framer-motion/client';
+import { px } from 'framer-motion';
 
 export default function AlteracoesAdm() {
     const [token, setToken] = useState(null);
@@ -67,27 +69,50 @@ export default function AlteracoesAdm() {
                 </div>
 
                 <form>
-                    <div>
+                    <div className='box'>
 
+                        <div className='image-box'>
+                            {imagem &&
+                                <img
+                                    src={imagem}
+                                    alt="Imagem"
+                                    className='imagem'
+                                />
+                            }
+
+                            {imagem == null ?
+                                <label for="arquivo" style={{
+                                    display: "flex",
+                                    flexDirection: 'column',
+                                    alignItems: 'center'
+                                }}>
+                                    <i class="fa-solid fa-image fa-flip-horizontal" style={{ fontSize: '70px' }} />
+                                    <label style={{ fontSize: '25px' }}>IMAGEM</label>
+                                </label>
+                                :
+                                <label for="arquivo" className='img-icon'>
+                                    <i class="fa-solid fa-image fa-flip-horizontal" style={{ fontSize: '70px' }}></i>
+                                </label>
+                            }
+                            <input
+                                type="file"
+                                id='arquivo'
+                                name='arquivo'
+                                accept='image/*'
+                                onChange={alterarImagem}
+                            />
+                            {/* <i class='fa-solid fa-trash botao' onClick={() => setImagem(null)} /> */}
+                        </div>
+
+                        <div className='text-box'>
+                            <label> TIPO: </label>
+                            <input type="text" value={tipo} onChange={e => setTipo(e.target.value)} />
+
+                            <label> LOCAL: </label>
+                            <input type="text" value={local} onChange={e => setLocal(e.target.value)} />
+                            <button onClick={inserirProjetoAndamento}> Inserir</button>
+                        </div>
                     </div>
-                    <input
-                        type="file"
-                        accept='image/*'
-                        onChange={alterarImagem}
-                    />
-                    <i class='fa-solid fa-trash botao' onClick={() => setImagem(null)} />
-
-                    <div>
-                        <label> TIPO: </label>
-                        <input type="text" value={tipo} onChange={e => setTipo(e.target.value)} />
-
-                        <label> LOCAL: </label>
-                        <input type="text" value={local} onChange={e => setLocal(e.target.value)} />
-                    </div>
-
-                    <button onClick={inserirProjetoAndamento}> Inserir</button>
-
-
                 </form>
             </section>
 
@@ -98,12 +123,13 @@ export default function AlteracoesAdm() {
 
                 <div className='inserir-imagem'>
                     {imagem &&
-                        <div className='imagem'>
-                            <img
-                                src={imagem}
-                                alt="Foto"
-                            />
-                        </div>
+
+                        <img
+                            className=''
+                            src={imagem}
+                            alt="Foto"
+                        />
+
                     }
                 </div>
 
