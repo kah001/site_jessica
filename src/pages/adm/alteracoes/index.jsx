@@ -5,8 +5,6 @@ import CabecalhoAdm from '../../../components/cabecalhoAdm';
 import { useNavigate } from "react-router-dom";
 
 import axios from 'axios';
-import { div } from 'framer-motion/client';
-import { px } from 'framer-motion';
 
 export default function AlteracoesAdm() {
     const [token, setToken] = useState(null);
@@ -32,7 +30,7 @@ export default function AlteracoesAdm() {
 
     async function inserirProjetoAndamento() {
         const paramObj = {
-            foto: imagem,
+            imagem: imagem,
             tipo: tipo,
             local: local
         }
@@ -56,11 +54,7 @@ export default function AlteracoesAdm() {
     return (
         <div className='pagina-alteracoes-adm'>
             <CabecalhoAdm />
-            <div style={{
-                backgroundColor: "#D9D9D9",
-                height: "50px"
-            }}
-            />
+            <div style={{backgroundColor: "#D9D9D9", height: "50px"}}/>
 
 
             <section className='secao-01'>
@@ -74,10 +68,10 @@ export default function AlteracoesAdm() {
                         <div className='image-box'>
                             {imagem &&
                                 <img
-                                    src={imagem}
-                                    alt="Imagem"
+                                src={imagem}
+                                alt="Imagem"
                                     className='imagem'
-                                />
+                                    />
                             }
 
                             {imagem == null ?
@@ -90,14 +84,18 @@ export default function AlteracoesAdm() {
                                     <label style={{ fontSize: '25px' }}>IMAGEM</label>
                                 </label>
                                 :
-                                <label for="arquivo" className='img-icon'>
-                                    <i class="fa-solid fa-image fa-flip-horizontal" style={{ fontSize: '70px' }}></i>
+                                <label for="arquivo" className='img-icon' style={{
+                                    display: "flex",
+                                    flexDirection: 'column',
+                                    alignItems: 'center'
+                                }}>
+                                    <i class="fa-solid fa-image fa-flip-horizontal" style={{ fontSize: '70px', color: '#fff' }}></i>
+                                    <label for="arquivo" style={{ fontSize: '25px', color: '#fff' , fontWeight: '700'}}>ALTERAR</label>
                                 </label>
                             }
                             <input
                                 type="file"
                                 id='arquivo'
-                                name='arquivo'
                                 accept='image/*'
                                 onChange={alterarImagem}
                             />
@@ -105,15 +103,27 @@ export default function AlteracoesAdm() {
                         </div>
 
                         <div className='text-box'>
-                            <label> TIPO: </label>
-                            <input type="text" value={tipo} onChange={e => setTipo(e.target.value)} />
 
-                            <label> LOCAL: </label>
-                            <input type="text" value={local} onChange={e => setLocal(e.target.value)} />
-                            <button onClick={inserirProjetoAndamento}> Inserir</button>
+                            <div className='text'>
+
+                                <div>
+                                    <label> TIPO: </label>
+                                    <input type="text" value={tipo} onChange={e => setTipo(e.target.value)} />
+                                </div>
+
+                                <div>
+                                    <label> LOCAL: </label>
+                                    <input type="text" value={local} onChange={e => setLocal(e.target.value)} />
+                                </div>
+                            </div>
+
+                            <div className="button">
+                                <button onClick={inserirProjetoAndamento}> INSERIR </button>
+                            </div>
                         </div>
                     </div>
                 </form>
+                                <div style={{backgroundColor: "#D9D9D9", height: "50px"}}   />  
             </section>
 
             <section className='secao-02'>
@@ -121,15 +131,13 @@ export default function AlteracoesAdm() {
                     <h1>PROJETO EM ANDAMENTO</h1>
                 </div>
 
-                <div className='inserir-imagem'>
+                <div className='-imagem'>
                     {imagem &&
-
                         <img
                             className=''
                             src={imagem}
                             alt="Foto"
                         />
-
                     }
                 </div>
 
