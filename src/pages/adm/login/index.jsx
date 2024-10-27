@@ -33,7 +33,7 @@ export default function Login() {
             <section className='bloco'>
                 <div className='bloco1'>
                     <Link to='/'><img src="/assets/images/seta.png" alt="" /></Link>
-                    <h1>Bem-Vindo(a)!</h1>
+                    <h1>Bem-Vinda!</h1>
 
                     <label> NOME: </label>
                     <input type="text" value={nome} onChange={a => setNome(a.target.value)} />

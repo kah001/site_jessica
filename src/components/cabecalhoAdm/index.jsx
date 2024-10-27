@@ -20,7 +20,7 @@ export default function CabecalhoAdm() {
 
             <nav className={`nav ${isOpen ? 'open' : ''} `}>
                 <div class="item"><Link to='/adm/alteracoes'><a href="">Alterações</a></Link></div>
-                <div class="item"><Link to='/adm/novoProjeto'><a href="">Novo Projeto</a></Link></div>
+                <div class="item"><Link to='/adm/projetos/novo'><a href="">Novo Projeto</a></Link></div>
                 <div class="item"><Link to='/adm/projetos'><a href="">Projetos</a></Link></div>
                 <div class="item"><Link to='/adm/lucroTotal'><a href="">Lucro Total</a></Link></div>
             </nav>
