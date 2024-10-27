@@ -82,6 +82,8 @@
                     border: 3px solid #665441;
                     border-radius: 10px;
                     padding: 7px;
+                    border: none;
+                    padding: 10px;
                 }
 
             }
@@ -112,6 +114,7 @@
                 button:hover {
                     background-color: #665441;
                     color: #fff;
+                    cursor: pointer;
                 }
             }
         }

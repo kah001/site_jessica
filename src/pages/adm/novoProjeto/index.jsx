@@ -1,4 +1,5 @@
 import './index.scss'
+import CabecalhoAdm from '../../../components/cabecalhoAdm'
 import { useState } from 'react'
 
 export default function NovoProjeto() {
@@ -31,6 +32,8 @@ export default function NovoProjeto() {
 
     return (
         <div className='pagina-novo-projeto'>
+            <CabecalhoAdm />
+            
             <h1 className='titulo'>Inserir um Novo Projeto</h1>
 
             <div className='info'>
