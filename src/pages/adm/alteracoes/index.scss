@@ -1,172 +1,173 @@
 .pagina-alteracoes-adm {
 
-    .secao-01 {
-        background-color: #d9d9d9;
+  .secao-01 {
+    background-color: #d9d9d9;
+    justify-content: center;
+    padding-bottom: 20px;
+
+    .titulo {
+      display: inline-block;
+      background-color: #c7c6c6;
+      color: #000;
+
+      width: 100%;
+      text-align: center;
+      font-size: 25px;
+      font-weight: 600;
+      padding: 20px;
+    }
+
+    form {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 140px;
+
+      .box {
         justify-content: center;
-        padding-bottom: 20px;
-
-        .titulo {
-            display: inline-block;
-            background-color: #c7c6c6;
-            color: #000;
-
-            width: 100%;
-            text-align: center;
-            font-size: 25px;
-            font-weight: 600;
-            padding: 20px;
-        }
-
-        form {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 140px;
-
-            .box {
-                justify-content: center;
-                margin: 50px;
-                background-color: #d9d9d9;
-                width: 1000px;
-                height: 270px;
-                display: flex;
-
-                flex-wrap: wrap;
-            }
-
-        }
-
-        .image-box {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            border-radius: 50px;
-            width: 51%;
-            overflow: hidden;
-            background-color: #fff;
-
-            input[type="file"] {
-                display: none;
-            }
-
-            .imagem {
-                width: 100%;
-            }
-
-            .img-icon {
-                position: absolute;
-            }
-        }
-
-        .text-box {
-            flex-direction: column;
-            margin-left: 50px;
-
-            .text {
-                gap: 30px;
-                height: 60%;
-                display: flex;
-                font-size: 25px;
-                flex-direction: column;
-
-                input[type='text'] {
-                    font-size: 20px;
-                    width: 100%;
-                    outline: none;
-                    border: 0px;
-                    transition: 0.2s;
-                    padding: 5px;
-                }
-
-                input[type='text']:focus {
-                    border: 3px solid #665441;
-                    border-radius: 10px;
-                    padding: 7px;
-                    border: none;
-                    padding: 10px;
-                }
-
-            }
-
-            label:nth-child(3) {
-                margin-top: 30px;
-            }
-
-            .button {
-                width: 100%;
-                height: 40%;
-                align-content: end;
-
-                button {
-                    display: flex;
-                    justify-self: end;
-                    align-self: end;
-                    font-size: 25px;
-
-                    border: 0px;
-                    border-radius: 100px;
-                    padding: 10px 90px;
-                    background-color: #8c8c8c;
-                    color: #000;
-                    transition: 0.5s;
-                }
-
-                button:hover {
-                    background-color: #665441;
-                    color: #fff;
-                    cursor: pointer;
-                }
-            }
-        }
-    }
-
-    .secao-02 {
+        margin: 50px;
         background-color: #d9d9d9;
-        border: 3px solid green;
+        width: 1000px;
+        height: 270px;
+        display: flex;
 
-        .titulo {
-            background-color: #665441;
-            color: #fff;
+        flex-wrap: wrap;
+      }
 
-            width: 100%;
-            text-align: center;
-            font: 200 30px 'Verdana';
-            padding: 20px;
-        }
-
-        .form {
-            border: 1px solid rebeccapurple;
-            display: flex;
-            justify-content: center; 
-            margin-bottom: 140px;
-            
-            .box {
-                align-items: center;
-                flex-direction: column;
-                justify-content: center;
-                
-                background-color: #d9d9d9;
-                border: 1px solid rgb(15, 187, 255);
-                
-                margin: 50px;
-                width: 1000px;
-
-            }
-        }
-        .image-box {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            border-radius: 50px;
-            width: 70%;
-            overflow: hidden;
-            background-color: #fff;
-
-            .imagem {
-                align-self: center;
-                width: 100%;
-            }
-        }
     }
+
+    .image-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      border-radius: 50px;
+      width: 51%;
+      overflow: hidden;
+      background-color: #fff;
+
+      input[type="file"] {
+        display: none;
+      }
+
+      .imagem {
+        width: 100%;
+      }
+
+      .img-icon {
+        position: absolute;
+      }
+    }
+
+    .text-box {
+      flex-direction: column;
+      margin-left: 50px;
+
+      .text {
+        gap: 30px;
+        height: 60%;
+        display: flex;
+        font-size: 25px;
+        flex-direction: column;
+
+        input[type='text'] {
+          font-size: 20px;
+          width: 100%;
+          outline: none;
+          border: 0px;
+          transition: 0.2s;
+          padding: 5px;
+        }
+
+        input[type='text']:focus {
+          border: 3px solid #665441;
+          border-radius: 10px;
+          padding: 7px;
+          border: none;
+          padding: 10px;
+        }
+
+      }
+
+      label:nth-child(3) {
+        margin-top: 30px;
+      }
+
+      .button {
+        width: 100%;
+        height: 40%;
+        align-content: end;
+
+        button {
+          display: flex;
+          justify-self: end;
+          align-self: end;
+          font-size: 25px;
+
+          border: 0px;
+          border-radius: 100px;
+          padding: 10px 90px;
+          background-color: #8c8c8c;
+          color: #000;
+          transition: 0.5s;
+        }
+
+        button:hover {
+          background-color: #665441;
+          color: #fff;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .secao-02 {
+    background-color: #d9d9d9;
+    border: 3px solid green;
+
+    .titulo {
+      background-color: #665441;
+      color: #fff;
+
+      width: 100%;
+      text-align: center;
+      font: 200 30px 'Verdana';
+      padding: 20px;
+    }
+
+    .form {
+      border: 1px solid rebeccapurple;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 140px;
+
+      .box {
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+        background-color: #d9d9d9;
+        border: 1px solid rgb(15, 187, 255);
+
+        margin: 50px;
+        width: 1000px;
+
+      }
+    }
+
+    .image-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      border-radius: 50px;
+      width: 70%;
+      overflow: hidden;
+      background-color: #fff;
+
+      .imagem {
+        align-self: center;
+        width: 100%;
+      }
+    }
+  }
 }
