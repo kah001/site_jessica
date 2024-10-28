@@ -69,14 +69,14 @@ export default function AlteracoesAdm() {
     }
 
     useEffect(() => {
-        const token = localStorage.getItem('USUARIO');
-        setToken(token);
+        let usu = localStorage.getItem('USUARIO');
+        setToken(usu);
 
-        if (token === 'null' || token === undefined) {
+        if (usu === null || usu === undefined) {
             navigate('/')
         }
         consultar(token)
-    }, [navigate])
+    }, [])
 
     return (
         <div className='pagina-alteracoes-adm'>
