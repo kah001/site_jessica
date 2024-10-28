@@ -34,22 +34,27 @@ export default function AlteracoesAdm() {
 
     async function inserir(e) {
         e.preventDefault() // faz a tela n recarregar quando insere
+        try {
 
-        const paramObj = {
-            imagem: imagem,
-            tipo: tipo,
-            local: local
+            const paramObj = {
+                imagem: imagem,
+                tipo: tipo,
+                local: local
+            }
+
+            const url = `http://localhost:5010/projeto/andamento?x-access-token=${token}`;
+            let response = await axios.post(url, paramObj);
+            let id = response.data.novoId
+
+            alert(`Novo Projeto em andamento adcionado. Id: ${id}`);
+            setImagem(null);
+            setTipo('');
+            setLocal('');
+            consultar(token);
         }
-
-        const url = `http://localhost:5010/projeto/andamento?x-access-token=${token}`;
-        let response = await axios.post(url, paramObj);
-        let id = response.data.novoId
-
-        alert(`Novo Projeto em andamento adcionado. Id: ${id}`);
-        setImagem(null);
-        setTipo('');
-        setLocal('');
-        consultar();
+        catch (err) {
+            alert(`Erro: ${err.message}`)
+        }
     }
 
     async function consultar(token) {
