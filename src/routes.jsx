@@ -7,6 +7,7 @@ import Projetos from "./pages/usuario/projetos";
 import ProjetosAdm from "./pages/adm/projetos";
 import AlteracoesAdm from "./pages/adm/alteracoes";
 import NovoProjeto from "./pages/adm/novoProjeto";
+import Formularios from "./pages/adm/formularios";
 
 import NaoEncontrado from "./pages/usuario/naoEncontrado";
 
@@ -22,6 +23,7 @@ export default function Navegacao() {
                 <Route path="/adm/alteracoes" element={<AlteracoesAdm />} />
                 <Route path="/adm/projetos" element={<ProjetosAdm />} />
                 <Route path="/adm/projetos/novo" element={<NovoProjeto />} />
+                <Route path="/adm/formularios" element={<Formularios />} />
 
                 <Route path="*" element={<NaoEncontrado />}/>
             </Routes>

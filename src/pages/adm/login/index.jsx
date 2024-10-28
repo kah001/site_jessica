@@ -10,22 +10,24 @@ export default function Login() {
     const navigate = useNavigate()
 
     async function entrar() {
-        const paramCorpo = {
-            "nome": nome,
-            "senha": senha
-        }
-
-        const url = `http://localhost:5010/adm/entrar`
-        let resp = await axios.post(url, paramCorpo)
-
-        if (resp.data.erro !== undefined) {
-            alert(resp.data.erro)
-        } else {
-            localStorage.setItem('USUARIO', resp.data.token)
-            navigate('/adm/projetos')
+        if (nome !== '' && senha !== '') {
+            const paramCorpo = {
+                "nome": nome,
+                "senha": senha
+            }
+    
+            const url = `http://localhost:5010/adm/entrar`
+            let resp = await axios.post(url, paramCorpo)
+    
+            if (resp.data.erro !== undefined) {
+                alert(resp.data.erro)
+            } else {
+                localStorage.setItem('USUARIO', resp.data.token)
+                navigate('/adm/projetos')
+            }
         }
     }
-
+    
     return (
         <div className='pagina-login'>
             <img src="assets/images/backlogin.png" alt="" />

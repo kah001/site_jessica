@@ -1,4 +1,6 @@
 .pagina-home {
+    background-color: #A6896B;
+
     .slogan {
         .carrossel {
             .swiper-pagination-bullet {
@@ -63,7 +65,7 @@
             justify-content: center;
 
             img {
-                width: 500px;
+                width: 90%;
                 margin: 15px;
             }
         }
@@ -95,11 +97,56 @@
         }
     }
 
+    .infos {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 30px 0px;
+        gap: 25px;
+
+        .fa-solid {
+            color: #fff;
+            font-size: 40px;
+        }
+
+        .dinheiro {
+            width: 450px;
+            padding: 25px;
+            border: #fff solid 3px;
+
+            h1 {
+                color: #fff;
+                font-size: 35px;
+            }
+            p {
+                color: #fff;
+                font-size: 20px;
+                padding: 10px 0px;
+            }
+        }
+        .projeto {
+            width: 450px;
+            padding: 25px;
+            border: #fff solid 3px;
+
+            h1 {
+                color: #fff;
+                font-size: 35px;
+            }
+            p {
+                color: #fff;
+                font-size: 20px;
+                padding: 10px 0px;
+            }
+        }
+    }
+
     .softwares {
         display: flex;
         flex-direction: column;
         align-items: center;
         padding: 100px 5px;
+        background-color: #fff;
 
         h1 {
             font-size: 30px;
@@ -127,6 +174,9 @@
         background-color: #A6896B;
         padding: 30px 10px;
 
+        .erro {
+            color: #af0000;
+        }
         h1 {
             font-size: 30px;
             color: #fff;
@@ -174,7 +224,6 @@
             box-shadow: #332e28 0px 0px 5px 0px;
         }
     }
-
 }
 
 @media (max-width: 580px) {
@@ -189,13 +238,21 @@
                     .img {
                         img {
                             width: 100%;
-                            height: 320px;
                         }
                     }
                     .texto {
                         display: none;
                     }
                 }
+            }
+        }
+
+        .infos {
+            .dinheiro {
+                width: 400px;
+            }
+            .projeto {
+                width: 400px;
             }
         }
 
@@ -229,6 +286,9 @@
                     width: 90%;
                 }
             }
+            .info {
+                margin: 0px 20px;
+            }
         }
         .softwares {
             padding: 75px 0px;
@@ -238,7 +298,7 @@
             }
             .imagens {
                 flex-direction: column;
-                padding: 10px 0px;
+                padding: 20px 0px;
 
                 img {
                     width: 350px;

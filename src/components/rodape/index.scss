@@ -3,113 +3,155 @@
 
 .comp-rodape {
     background-color: #665441;
-    width: 100%;
 
-    .pages {
+    .bloco {
         display: flex;
-        justify-content: space-around;
-        padding: 50px;
-        flex-wrap: wrap;
+        justify-content: center;
+        gap: 65px;
+        padding: 25px 0px;
 
-        .Paginas {
+        .icones {
             display: flex;
             flex-direction: column;
-            padding: 20px;
-            
-            .Titulo1{
-                color: #FFFFFF;
-                font-family:'Krona One';
-                margin-bottom: 10px;
+            align-items: center;
+            gap: 20px;
+
+            .idiomas {
+                select {
+                    padding: 5px 15px;
+                    outline: none;
+                    background-color: #665441;
+                    border: none;
+                    color: #fff;
+                    font-size: 18px;
+                }
             }
-            
-            .Links {
+            .contatos {
                 display: flex;
-                flex-direction: column;
+                gap: 30px;
                 
-                .Link1 {
-                    text-decoration: none;
-                    font-family: 'Poppins';
-                    color: #FFFFFF;
-                    font-size: 18px;
-                    margin-bottom: 15px;
+                .icon1:hover{
+                    color: #ff0080;
+                    text-transform: uppercase;
+                    transition: transform 0.5s;
+                    transform: scale(1.2);
                 }
-    
-                .Link2 {
-                    text-decoration: none;
-                    font-family: 'Poppins';
-                    color: #FFFFFF;
-                    font-size: 18px;
-                    margin-bottom: 15px;
+                .icon2:hover{
+                    color: #00d400;
+                    text-transform: uppercase;
+                    transition: transform 0.5s;
+                    transform: scale(1.2);
                 }
-    
-                .Link3 {
-                    text-decoration: none;
-                    font-family: 'Poppins';
-                    color: #FFFFFF;
-                    font-size: 18px;
-                    margin-bottom: 15px;
+                .icon3:hover{
+                    color: #ff3434;
+                    text-transform: uppercase;
+                    transition: transform 0.5s;
+                    transform: scale(1.2);
                 }
-    
-                .Link4 {
-                    text-decoration: none;
-                    font-family: 'Poppins';
-                    color: #FFFFFF;
-                    font-size: 18px;
+                .fa-brands {
+                    color: #fff;
+                    font-size: 50px;
+                    cursor: pointer;
+                }
+                .fa-regular {
+                    color: #fff;
+                    font-size: 50px;
+                    cursor: pointer;
                 }
             }
-        }   
+        }
 
-        .Minha-Conta {
+        .blocos {
             display: flex;
-            flex-direction: column;
+            align-items: start;
+            gap: 65px;
 
-            .Titulo1{
-                color: #FFFFFF;
-                font-family:'Krona One';
-                padding-top: 60px;
-            }
-            
-            .Links {
+            .paginas {
                 display: flex;
                 flex-direction: column;
-                margin-top: 30px;
-
-                .Link1 {
-                    text-decoration: none;
-                    font-family: 'Poppins';
-                    color: #FFFFFF;
-                    font-size: 18px;
-                    margin-bottom: 15px;
+        
+                h1 {
+                    margin: 5px 0px;
+                    color: #fff;
+                    font-family: 'Krona one';
                 }
-    
-                .Link2 {
+                .link {
                     text-decoration: none;
-                    font-family: 'Poppins';
-                    color: #FFFFFF;
-                    font-size: 18px;
+                    color: #fff;
+                    font-size: 20px;
+                    margin: 5px 0px;
+                }
+            }
+            .politica {
+                display: flex;
+                flex-direction: column;
+        
+                h1 {
+                    margin: 5px 0px;
+                    color: #fff;
+                    font-family: 'Krona one';
+                }
+                .link {
+                    text-decoration: none;
+                    color: #fff;
+                    font-size: 20px;
+                    margin: 5px 0px;
                 }
             }
         }
     }
 
-    .Espaço-Linha {
-        
-        .Linha-Branca {
-            background-color: #FFFFFF;
-            width: 100%;
-            height: 2px;
+    .bloco2 {
+        .info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 5px 20px;
+
+            .img {
+                img {
+                    width: 65px;
+                }
+            }
+            .copy {
+                p {
+                    color: #fff;
+                }
+            }
         }
     }
+}
 
-    .Icones-Contato {
-        padding: 30px;
-
-        .icon-instagram {
-            margin-right: 30px;
+@media (max-width: 580px) {
+    .comp-rodape {
+        .bloco {
+            .blocos {
+                .paginas {
+                    h1 {
+                        font-size: 25px;
+                    }
+                    .link {
+                        font-size: 18px;
+                    }
+                }
+                .politica {
+                    h1 {
+                        font-size: 25px;
+                    }
+                    .link {
+                        font-size: 18px;
+                    }
+                }
+            }
         }
+    }
+}
 
-        .icon-whatsapp {
-            margin-right: 30px;
+@media (max-width: 768px) {
+    .comp-rodape {
+        .bloco {
+            flex-direction: column;
+            align-items: center;
         }
     }
 }

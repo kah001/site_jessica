@@ -1,6 +1,7 @@
 import './index.scss'
 import CabecalhoAdm from '../../../components/cabecalhoAdm'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export default function NovoProjeto() {
     const [nomeProjeto, setNomeProjeto] = useState('')
@@ -12,6 +13,9 @@ export default function NovoProjeto() {
     const [tarefa, setTarefa] = useState('')
     const [valorTotalEstimado, setValorTotalEstimado] = useState('')
     const [formaPagamento, setFormaPagamento] = useState('')
+    const [token, setToken] = useState(null)
+
+    const navigate = useNavigate()
 
     function inserirProjeto() {
 
@@ -29,6 +33,15 @@ export default function NovoProjeto() {
 
         setTarefa('')
     }
+
+    useEffect (() => {
+        let usu = localStorage.getItem('USUARIO')
+        setToken(usu)
+
+        if (usu == undefined) {
+            navigate('/')
+        }
+    }, [])
 
     return (
         <div className='pagina-novo-projeto'>

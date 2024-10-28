@@ -1,37 +1,56 @@
 import './index.scss';
+import { Link } from 'react-router-dom';
 
 export default function Rodape() {
 
-
     return (
         <div className='comp-rodape'>
+            <div className='bloco'>
+                <div className='icones'>
+                    <div className='idiomas'>
+                        <select>
+                            <option>Português (Brasil)</option>
+                            <option>English</option>
+                        </select>
+                    </div>
 
-            <div className="pages">
-
-                <div className='Espaço-Logo'>
-                    <img src="/assets/images/logo-tcc.png" alt="Logo da Empresa" height={210} width={218} />
+                    <div className='contatos'>
+                        <a href="https://www.instagram.com/jessicalima.sa/"><i className='fa-brands fa-instagram icon1'></i></a>
+                        <a href="https://wa.me/353831022713"><i className='fa-brands fa-whatsapp icon2'></i></a>
+                        <i className='fa-regular fa-envelope icon3'></i>
+                    </div>
                 </div>
 
-                <div className="Paginas">
-                    <h1 className='Titulo1'>Páginas</h1>
-                    
-                    <div className='Links'>
-                        <a className='Link1' href=""> Início </a>
-                        <a className='Link2' href=""> Sobre Mim </a>
-                        <a className='Link3' href=""> Dicas </a>
-                        <a className='Link4' href=""> Projetos </a>
+                <div className='blocos'>
+                <div className='paginas'>
+                        <h1>Páginas</h1>
+                        <Link className='link' to='/'>Início</Link>
+                        <Link className='link' to='/sobre'>Sobre mim</Link>
+                        <Link className='link' to='/projetos'>Projetos</Link>
+                        <Link className='link' to='/dicas'>Dicas</Link>
+                    </div>
+
+                    <div className='politica'>
+                        <h1>Política</h1>
+                        <Link className='link'>Política de Privacidade</Link>
                     </div>
                 </div>
             </div>
 
-            <div className='Espaço-Linha'>
-                <div className="Linha-Branca"></div>
-            </div>
+            <div className='bloco2'>
+                <div className='linha'>
+                    <hr />
+                </div>
 
-            <div className="Icones-Contato">
-                <img className='icon-instagram' src="/assets/images/instagram.png" alt="Logo da Empresa" height={48} width={49.23} />
-                <img className='icon-whatsapp' src="/assets/images/whatsapp.png" alt="Logo da Empresa" height={48} width={49.23} />
-                <img className='icon-email' src="/assets/images/email.png" alt="Logo da Empresa" height={48} width={49.23} />
+                <div className='info'>
+                    <div className='img'>
+                        <img src="assets/images/logo-tcc.png" alt="" />
+                    </div>
+
+                    <div className='copy'>
+                        <p>&copy; Copyright</p>
+                    </div>
+                </div>
             </div>
         </div>
     )
