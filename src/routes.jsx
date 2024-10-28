@@ -17,7 +17,7 @@ export default function Navegacao() {
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/sobreMim" element={<SobreMim />} />
+                <Route path="/sobre" element={<SobreMim />} />
                 <Route path="/dicas" element={<Dicas />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/projetos" element={<Projetos />} />

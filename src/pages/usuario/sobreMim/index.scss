@@ -3,87 +3,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Mada:wght@200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 .pagina-sobre-mim {
-
-
-    .sobreMim {
+    .sobre-mim {
         display: flex;
-        flex-direction: row;
-        justify-content: center;
+        justify-content: space-between;
+        width: 100%;
 
         .biografia {
-            background-color: #CCCCCC;
+            background-color: #d9d9d9;
+            padding: 20px 10px;
+            width: 65%;
+            display: flex;
+            flex-direction: column;
             justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 136px 0px 0px 0px;
-            width: 100%;
 
-            .sub-titulo {
-                font: 300 30px 'Mada';
-                padding: 0px 25px 0px 0px;
+            h3 {
+                font: 400 25px 'Mada';
+                text-align: center;
+                padding: 10px 0px;
             }
-
-            .titulo {
-                font: 700 60px 'Mada';
-                padding: 0px 30px 32px 0px;
+            h1 {
+                font: 700 40px 'Poppins';
+                text-align: center;
             }
-
-            .p1 {
-                font: 400 18px 'Poppins';
-                padding: 0px 220px 15px 220px;
-            }
-
-            .p2 {
-                font: 400 18px 'Poppins';
-                padding: 0px 220px 15px 220px;
-            }
-
-            .p3 {
-                font: 400 18px 'Poppins';
-                padding: 0px 243px 0px 236px;
+            p {
+                padding: 20px;
+                text-align: center;
+                font-size: 18px;
             }
         }
-
-        .imageJessica {
-            width: 1030px;
-            height: 780px;
-
-            .Jessica {
+        .img {
+            width: 35%;
+            img {
                 width: 100%;
                 height: 100%;
             }
         }
     }
-
-    .textos {
-        height: 470px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-
-        .texto1 {
-            width: 100%;
-            
-            p {
-                font: 400 17px 'Poppins';
-                width: 485px;
-                justify-self: center;
-                margin-left: 380px;
-            }
-        }
-
-        .texto2 {
-            width: 100%;
-
-            p {
-                font: 400 17px 'Poppins';
-                width: 460px;
-                justify-self: center;
-                margin-right: 100px;
-            }
-        }
-    }
-
+ 
     .mapaFrase {
         display: flex;
         justify-content: center;
@@ -92,16 +48,54 @@
         .mapa {
             position: relative;
             width: 100%;
-            height: 100%;
         }
-
         .frase {
             position: absolute;
 
             h1 {
-                font: 300 64px 'Julius Sans One';
-                width: 855px;
+                font: 300 45px 'Julius Sans One';
+                width: 460px;
                 text-align: center;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .pagina-sobre-mim {
+        .sobre-mim {
+            flex-direction: column;
+
+            .biografia {
+                width: 100%;
+            }
+            .img {
+                width: 100%;
+            }
+        }
+        .mapaFrase {
+            .mapa {
+                height: 450px;
+            }
+            .frase {
+                h1 {
+                    font-size: 35px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 580px) {
+    .pagina-sobre-mim {
+        .mapaFrase {
+            .mapa {
+                height: 350px;
+            }
+            .frase {
+                h1 {
+                    font: 30px;
+                }
             }
         }
     }

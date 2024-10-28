@@ -1,7 +1,6 @@
 import './index.scss'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Pagination, Navigation } from 'swiper/modules'
-import { motion } from 'framer-motion'
 import Cabecalho from '../../../components/cabecalho-marrom'
 
 
@@ -80,11 +79,10 @@ export default function Projetos() {
             <section className='construcao'>
                 <h1>CONSTRUÇÃO</h1>
 
-                <motion.div>
+                <div>
                     <Swiper className='carrossel-construcao'
                         slidesPerView={1}
                         pagination={{ clickable: true }}
-                        navigation
                         modules={[Autoplay, Pagination, Navigation]}
                         autoplay={{
                             delay: 2500,
@@ -98,17 +96,16 @@ export default function Projetos() {
                             </SwiperSlide>
                         ))}
                     </Swiper>
-                </motion.div>
+                </div>
             </section>
 
             <section className='interiores'>
                 <h1>INTERIORES</h1>
 
-                <motion.div>
+                <div>
                     <Swiper className='carrossel carrossel1'
                         slidesPerView={1}
                         pagination={{ clickable: true }}
-                        navigation
                         modules={[Autoplay, Pagination, Navigation]}
                         autoplay={{
                             delay: 2500,
@@ -122,13 +119,12 @@ export default function Projetos() {
                             </SwiperSlide>
                         ))}
                     </Swiper>
-                </motion.div>
+                </div>
 
 
                 <Swiper className='carrossel carrossel2'
                     slidesPerView={1}
                     pagination={{ clickable: true }}
-                    navigation
                     modules={[Autoplay, Pagination, Navigation]}
                     autoplay={{
                         delay: 5000,
@@ -147,7 +143,6 @@ export default function Projetos() {
                 <Swiper className='carrossel carrossel3'
                     slidesPerView={1}
                     pagination={{ clickable: true }}
-                    navigation
                     modules={[Autoplay, Pagination, Navigation]}
                     autoplay={{
                         delay: 2500,
@@ -166,7 +161,6 @@ export default function Projetos() {
                 <Swiper className='carrossel carrossel4'
                     slidesPerView={1}
                     pagination={{ clickable: true }}
-                    navigation
                     modules={[Autoplay, Navigation, Pagination]}
                     autoplay={{
                         delay: 5000,
@@ -185,7 +179,6 @@ export default function Projetos() {
                 <Swiper className='carrossel carrossel5'
                     slidesPerView={1}
                     pagination={{ clickable: true }}
-                    navigation
                     modules={[Autoplay, Navigation, Pagination]}
                     autoplay={{
                         delay: 5000,
@@ -204,7 +197,6 @@ export default function Projetos() {
                 <Swiper className='carrossel carrossel6'
                     slidesPerView={1}
                     pagination={{ clickable: true }}
-                    navigation
                     modules={[Autoplay, Pagination, Navigation]}
                     autoplay={{
                         delay: 2500,
@@ -220,7 +212,6 @@ export default function Projetos() {
                 </Swiper>
 
             </section>
-
         </div>
     )
 }

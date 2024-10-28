@@ -89,7 +89,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -50 }}
-                transition={{ duration: 1, type: 'tween', stiffness: 100, delay: 0.3 }}
+                transition={{ duration: 1, type: 'tween', stiffness: 100, delay: 0.5 }}
             >
                 <div className='imagem'>
                     <img src="assets/images/jessica-tecnologias.jpg" alt="" />
