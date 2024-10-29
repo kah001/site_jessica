@@ -22,12 +22,12 @@ export default function Formularios() {
         let usu = localStorage.getItem('USUARIO')
         setToken(usu)
 
-        if (usu === undefined) {
+        if (usu === undefined || usu === null) {
             navigate('/')
         }
 
         pesquisarFormulario()
-    })
+    }, [])
 
     return (
         <div className='pagina-formularios'>
