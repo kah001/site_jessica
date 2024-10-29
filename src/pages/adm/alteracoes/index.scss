@@ -82,7 +82,6 @@
           border: 3px solid #665441;
           border-radius: 10px;
           padding: 7px;
-          border: none;
           padding: 10px;
         }
 
@@ -121,46 +120,59 @@
   }
 
   .secao-02 {
-    background-color: #d9d9d9;
-    border: 3px solid green;
-
+    
     .titulo {
       background-color: #665441;
       color: #fff;
-
+      
       width: 100%;
       text-align: center;
-      font: 200 30px 'Verdana';
+      font: 200 30px 'inter';
       padding: 20px;
     }
-
+    
     .form {
-      border: 1px solid rebeccapurple;
-      display: flex;
-      justify-content: center;
-      margin-bottom: 140px;
-
+      background-color: #fff;
+      
       .box {
-        align-items: center;
+        justify-self: center;
         flex-direction: column;
-        justify-content: center;
 
-        background-color: #d9d9d9;
-        border: 1px solid rgb(15, 187, 255);
+        background-color: #fff;
 
         margin: 50px;
         width: 1000px;
+        
+        .img-recente-box {
+          height: 400px;
+          min-width: -webkit-fill-available;
+          background-color: #D9D9D9;
+      
+        }
+      }
 
+      .acoes {
+        background-color: #D9D9D9;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        
+        div {
+          width: 150px;
+          justify-content: space-between;
+          display: flex;
+          margin-right: 50px;
+        }
       }
     }
 
     .image-box {
       display: flex;
-      justify-content: center;
-      align-items: center;
+      justify-self: center;
+      height: 100%;
 
-      border-radius: 50px;
-      width: 70%;
+      width: 100%;
       overflow: hidden;
       background-color: #fff;
 
@@ -170,4 +182,17 @@
       }
     }
   }
+
+  #tipo {
+    margin-top: 10px;
+    font-size: 20px;
+  }
+  
+  #local {
+    margin-top: 10px;
+    font-size: 30px;
+    font-weight: 100;
+    justify-self: flex-end;
+  }
+
 }

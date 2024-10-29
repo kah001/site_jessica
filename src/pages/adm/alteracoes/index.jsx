@@ -2,16 +2,19 @@ import './index.scss';
 import { useEffect, useState } from "react";
 
 import CabecalhoAdm from '../../../components/cabecalhoAdm';
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 import axios from 'axios';
 
 export default function AlteracoesAdm() {
   const [token, setToken] = useState(null);
 
+  const [idRecente, setIdRecente] = useState(0);
   const [imagemRecente, setImagemRecente] = useState('');
   const [tipoRecente, setTipoRecente] = useState('');
   const [localRecente, setLocalRecente] = useState('');
+
+  const { id } = useParams();
 
   const navigate = useNavigate();
 
@@ -33,7 +36,6 @@ export default function AlteracoesAdm() {
   }
 
   async function inserir(e) {
-    e.preventDefault() // faz a tela n recarregar quando insere
     try {
 
       const paramObj = {
@@ -62,14 +64,46 @@ export default function AlteracoesAdm() {
       const url = `http://localhost:5010/projeto/andamento/recente?x-access-token=${token}`;
       const resp = await axios.get(url);
       let dados = resp.data
-      console.log(dados)
-
+      
+      setIdRecente(dados.id)
       setImagemRecente(dados.imagem)
       setTipoRecente(dados.tipo)
       setLocalRecente(dados.local)
     }
-    catch (error) {
-      console.error('Erro ao consultar:', error.message);
+    catch (err) {
+      alert(`Erro: ${err.message}`)
+    }
+  }
+  
+  async function alterarRecente(){
+    try {
+      const paramObj = {
+        imagem: imagem,
+        tipo: tipo,
+        local: local
+      }
+
+      const url = `http://localhost:5010/projeto/andamento/${idRecente}?x-access-token=${token}`
+      let resp = await axios.put(url, paramObj)
+
+      alert(`Projeto em andamento do Id: ${idRecente} Editador com Sucesso`)
+      consultar(token);
+    } 
+    catch (err) {
+      alert(`Erro: ${err.message}`);
+    }
+  }
+
+  async function deletarRecente() {
+    try {
+      const url = `http://localhost:5010/projeto/andamento/${idRecente}?x-access-token=${token}`;
+      let resp = await axios.delete(url);
+
+      alert(`Projeto em andamento do Id: ${idRecente} Deletado com Sucesso`)
+      consultar(token)
+    }
+    catch (err) {
+      alert('Nenhum registro encontrado')
     }
   }
 
@@ -89,12 +123,12 @@ export default function AlteracoesAdm() {
       <div style={{ backgroundColor: "#D9D9D9", height: "50px" }} />
 
 
-      <section className='secao-01'>
+      <section className='secao-01' id='inserir'>
         <div className="titulo">
           <h1>Página - PROJETOS</h1>
         </div>
 
-        <form>
+        <form >
           <div className='box'>
 
             <div className='image-box'>
@@ -125,7 +159,12 @@ export default function AlteracoesAdm() {
                   cursor: 'pointer'
                 }}>
                   <i class="fa-solid fa-image fa-flip-horizontal" style={{ fontSize: '70px', color: '#fff' }}></i>
-                  <label for="arquivo" style={{ fontSize: '25px', color: '#fff', fontWeight: '700', cursor: 'pointer' }}>ALTERAR</label>
+                  <label for="arquivo" style={{
+                    fontSize: '25px',
+                    color: '#fff',
+                    fontWeight: '700',
+                    cursor: 'pointer'
+                  }}>ALTERAR</label>
                 </label>
               }
               <input
@@ -134,7 +173,6 @@ export default function AlteracoesAdm() {
                 accept='image/*'
                 onChange={alterarImagem}
               />
-              {/* <i class='fa-solid fa-trash botao' onClick={() => setImagem(null)} /> */}
             </div>
 
             <div className='text-box'>
@@ -152,7 +190,7 @@ export default function AlteracoesAdm() {
               </div>
 
               <div className="button">
-                <button onClick={inserir} required> INSERIR </button>
+                <button onClick={id ? alterarRecente : inserir} > {id ? 'EDITAR' : 'INSERIR'} </button>
               </div>
             </div>
           </div>
@@ -171,27 +209,31 @@ export default function AlteracoesAdm() {
 
           <div className="box">
 
+            <div className='image-box'>
+              {!imagemRecente &&
 
-            <div className="">
+                <div className='img-recente-box'>
+                </div>
 
-              <div className='image-box'>
-
-                <img className='imagem' src={imagemRecente} alt={imagemRecente} />
-              </div>
-              <div><h2>TIPO {tipoRecente}</h2>
-              </div>
-              <div>
-                <h1>LOCAL {localRecente}</h1>
-              </div>
+              }
+              <img className='imagem' src={imagemRecente} alt={imagemRecente} />
             </div>
 
-
+            <div id='tipo'>
+              <h2>TIPO {tipoRecente}</h2>
+            </div>
+            <div id='local'>
+              <h1>LOCAL {localRecente}</h1>
+            </div>
           </div>
 
-          <div>
-            <i className="fa-solid fa-trash-can"></i>
-
-            <i className="fa-solid fa-pen-to-square"></i>
+          <div className='acoes'>
+            <div>
+              <i className="fa-solid fa-trash-can" style={{ fontSize: '70px' }} onClick={deletarRecente} ></i>
+              <Link to={`/adm/alteracoes/${idRecente}`} style={{color: '#000'}} >
+                <i className="fa-solid fa-pen-to-square" style={{ fontSize: '70px' }} ></i>
+              </Link>
+            </div>
           </div>
         </div>
       </section>

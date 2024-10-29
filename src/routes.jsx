@@ -23,6 +23,7 @@ export default function Navegacao() {
                 <Route path="/projetos" element={<Projetos />} />
 
                 <Route path="/adm/alteracoes" element={<AlteracoesAdm />} />
+                <Route path="/adm/alteracoes/:id" element={<AlteracoesAdm />} />
                 <Route path="/adm/projetos" element={<ProjetosAdm />} />
                 <Route path="/adm/projetos/novo" element={<NovoProjeto />} />
                 <Route path="/adm/formularios" element={<Formularios />} />
