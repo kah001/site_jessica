@@ -2,6 +2,9 @@ import './index.scss'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Pagination, Navigation } from 'swiper/modules'
 import Cabecalho from '../../../components/cabecalho-marrom'
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+import Rodape from '../../../components/rodape'
 
 
 import image1 from '../../../images/construcao1.jpg'
@@ -28,6 +31,9 @@ import car6img5 from '../../../images/carrossel6-5.jpg'
 
 
 export default function Projetos() {
+    const [imagemRecente, setImagemRecente] = useState('');
+    const [tipoRecente, setTipoRecente] = useState('');
+    const [localRecente, setLocalRecente] = useState('');
 
     const carrosselConstrucao = [
         { id: 1, img: image1 },
@@ -71,6 +77,27 @@ export default function Projetos() {
         { id: 5, img: car6img5 }
     ]
 
+    async function consultar() {
+        try {
+            const url = `http://localhost:5010/projeto/andamento/recente`;
+            const resp = await axios.get(url);
+
+            let dados = resp.data
+
+            if (dados && dados.id) {
+                setImagemRecente(dados.imagem);
+                setTipoRecente(dados.tipo);
+                setLocalRecente(dados.local);
+            }
+        }
+        catch (err) {
+        }
+    }
+
+    useEffect(() => {
+
+        consultar();
+    }, [])
 
     return (
         <div className='pagina-projetos'>
@@ -212,6 +239,43 @@ export default function Projetos() {
                 </Swiper>
 
             </section>
+
+            <section className='projeto-andamento'>
+                <div className='titulo'>
+                    <h1>PROJETO EM ANDAMENTO</h1>
+                </div>
+
+                <div className='form'>
+
+                    <div className="box">
+
+                        <div className='image-box'>
+                            {!imagemRecente &&
+
+                                <div className='img-recente-box' style={{
+                                    display: 'flex',
+                                    justifyContent: 'center',
+                                    alignItems: 'center',
+                                    fontSize: '15px'
+                                }}>
+                                    <p><b>Nenhum projeto em andamento no momento</b></p>
+                                </div>
+
+                            }
+                            <img className='imagem' src={imagemRecente} alt={imagemRecente} />
+                        </div>
+
+                        <div id='tipo'>
+                            <h2>TIPO : {tipoRecente.toLocaleUpperCase()}</h2>
+                        </div>
+                        <div id='local'>
+                            <h1>LOCAL : {localRecente.toLocaleUpperCase()}</h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <Rodape />
         </div>
     )
 }
