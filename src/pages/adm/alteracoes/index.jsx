@@ -48,7 +48,6 @@ export default function AlteracoesAdm() {
       let response = await axios.post(url, paramObj);
       let id = response.data.novoId
 
-      alert(`Novo Projeto em andamento adcionado. Id: ${id}`);
       setImagem(null);
       setTipo('');
       setLocal('');
@@ -114,6 +113,7 @@ export default function AlteracoesAdm() {
     if (usu === null || usu === undefined) {
       navigate('/')
     }
+    
     consultar(usu)
   }, [])
 

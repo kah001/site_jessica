@@ -9,6 +9,7 @@ import ProjetosAdm from "./pages/adm/projetos";
 import AlteracoesAdm from "./pages/adm/alteracoes";
 import NovoProjeto from "./pages/adm/novoProjeto";
 import Formularios from "./pages/adm/formularios";
+import PoliticaPrivacidade from "./pages/usuario/politica";
 
 import NaoEncontrado from "./pages/usuario/naoEncontrado";
 
@@ -28,6 +29,7 @@ export default function Navegacao() {
                 <Route path="/adm/projetos/novo" element={<NovoProjeto />} />
                 <Route path="/adm/formularios" element={<Formularios />} />
 
+                <Route path="/politica" element={<PoliticaPrivacidade />} />
                 <Route path="*" element={<NaoEncontrado />}/>
             </Routes>
         </BrowserRouter>

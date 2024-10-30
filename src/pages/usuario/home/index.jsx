@@ -1,22 +1,24 @@
 import './index.scss';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Cabecalho from '../../../components/cabecalho-marrom';
 import Rodape from '../../../components/rodape';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import { motion } from 'framer-motion';
+import { i18n } from '../../../translate/i18n';
 
 import img1 from '../../../images/construcao3.jpg'
 import img2 from '../../../images/construcao2.jpg'
 import img3 from '../../../images/construcao1.jpg'
-import { Link } from 'react-router-dom';
+
 
 export default function Home() {
     const imagens = [
-        { id: 1, img: img1, slogan: 'Desenhando o futuro, construindo o presente' },
-        { id: 2, img: img2, slogan: 'Do conceito ao concreto, fazemos acontecer' },
-        { id: 3, img: img3, slogan: 'Cada detalhe conta na criação de um ambiente único' }
+        { id: 1, img: img1, slogan: i18n.t('home.slogan1') },
+        { id: 2, img: img2, slogan: i18n.t('home.slogan2') },
+        { id: 3, img: img3, slogan: i18n.t('home.slogan3') }
     ]
 
     const [nome, setNome] = useState('')
@@ -45,7 +47,7 @@ export default function Home() {
             setMensagem('')
             setErro('')
         } else {
-            let mensagem = '*Preencha o formulário de contato com as informações solicitadas'
+            let mensagem = i18n.t('home.formError')
             setErro(mensagem)
         }
     }
@@ -76,7 +78,7 @@ export default function Home() {
                                     <h1>{item.slogan}</h1>
 
                                     <div className='botoes'>
-                                        <Link to='/projetos' className='botao'><div>Ver Projetos</div></Link>
+                                        <Link to='/projetos' className='botao'><div>{i18n.t('home.button')}</div></Link>
                                     </div>
                                 </div>
                             </div>
@@ -96,9 +98,9 @@ export default function Home() {
                 </div>
 
                 <div className='info'>
-                    <h1>Tecnologia</h1>
+                    <h1>{i18n.t('home.techTitle')}</h1>
                     <hr />
-                    <p>Grande uso da tecnologia durante o desenvolvimento dos projetos, você poderá  fazer um tour pela sua casa antes mesmo dela estar pronta</p>
+                    <p>{i18n.t('home.techText')}</p>
                 </div>
             </motion.section>
 
@@ -110,8 +112,8 @@ export default function Home() {
                     transition={{ duration: 1, delay: 0.3 }}
                 >
                     <i className='fa-solid fa-money-bill-transfer'></i>
-                    <h1>Preços</h1>
-                    <p>Acesso a todos os preços, desde o início até o fim do projeto, também durante o desenvolvimento do mesmo</p>
+                    <h1>{i18n.t('home.priceTitle')}</h1>
+                    <p>{i18n.t('home.priceText')}</p>
                 </motion.div>
 
                 <motion.div className='projeto'
@@ -121,8 +123,8 @@ export default function Home() {
                     transition={{ duration: 1.5, delay: 0.3 }}
                 >
                     <i className='fa-solid fa-user-pen'></i>
-                    <h1>Projeto</h1>
-                    <p>O projeto de arquitetura é feito para você, cada detalhe escolhido por nossos clientes é essencial </p>
+                    <h1>{i18n.t('home.projectTitle')}</h1>
+                    <p>{i18n.t('home.projectText')}</p>
                 </motion.div>
             </section>
 
@@ -132,7 +134,7 @@ export default function Home() {
                     whileInView={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -50 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
-                >Softwares Utilizados</motion.h1>
+                >{i18n.t('home.software')}</motion.h1>
 
                 <motion.div className='imagens'
                     initial={{ opacity: 0, y: 50 }}
@@ -152,21 +154,21 @@ export default function Home() {
                 exit={{ opacity: 0, y: -50 }}
                 transition={{ duration: 0.5, type: 'tween', stiffness: 100, delay: 0.2 }}
             >
-                <h1>FORMULÁRIO DE CONTATO</h1>
+                <h1>{i18n.t('home.formTitle')}</h1>
 
-                <input type="text" placeholder='Insira seu nome' value={nome} onChange={a => setNome(a.target.value)} />
-                <input type="text" placeholder='Insira seu email' value={email} onChange={a => setEmail(a.target.value)} />
-                <input type="text" placeholder='Insira seu telefone' value={telefone} onChange={a => setTelefone(a.target.value)} />
+                <input type="text" placeholder={i18n.t('home.formName')} value={nome} onChange={a => setNome(a.target.value)} />
+                <input type="text" placeholder={i18n.t('home.formEmail')} value={email} onChange={a => setEmail(a.target.value)} />
+                <input type="text" placeholder={i18n.t('home.formPhoneNumber')} value={telefone} onChange={a => setTelefone(a.target.value)} />
                 <select value={pais} onChange={a => setPais(a.target.value)}>
-                    <option value="">Selecione o seu país</option>
-                    <option value="Brasil">Brasil</option>
-                    <option value="Estados Unidos">Estados Unidos</option>
-                    <option value="Irlanda do Norte">Irlanda do Norte</option>
-                    <option value="Irlanda do Sul">Irlanda do Sul</option>
+                    <option value="">{i18n.t('home.formCountry')}</option>
+                    <option value="Brasil">{i18n.t('home.option1')}</option>
+                    <option value="Estados Unidos">{i18n.t('home.option2')}</option>
+                    <option value="Irlanda do Norte">{i18n.t('home.option3')}</option>
+                    <option value="Irlanda do Sul">{i18n.t('home.option4')}</option>
                 </select>
-                <textarea placeholder='Insira sua mensagem' value={mensagem} onChange={a => setMensagem(a.target.value)}></textarea>
+                <textarea placeholder={i18n.t('home.formMessage')} value={mensagem} onChange={a => setMensagem(a.target.value)}></textarea>
 
-                <div className='botao' onClick={enviar}>ENVIAR</div>
+                <div className='botao' onClick={enviar}>{i18n.t('home.formButton')}</div>
                 {erro &&
                     <p className='erro'>{erro}</p>
                 }
