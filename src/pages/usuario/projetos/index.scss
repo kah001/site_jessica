@@ -154,10 +154,9 @@
             margin-top: 10px;
             font-size: 20px;
         }
-
         #local {
             margin-top: 10px;
-            font-size: 30px;
+            font-size: 20px;
             font-weight: 100;
             justify-self: flex-end;
         }
@@ -173,7 +172,6 @@
                 .swiper-button-prev {
                     display: none;
                 }
-
                 .item-construcao {
                     img {
                         width: 90%;
@@ -185,12 +183,10 @@
 
         .interiores {
             .carrossel {
-
                 .swiper-button-next,
                 .swiper-button-prev {
                     display: none;
                 }
-
                 .item-carrossel {
                     img {
                         width: 450px;
@@ -206,7 +202,6 @@
             #tipo {
                 font-size: 15px;
             }
-
             #local {
                 font-size: 20px;
             }

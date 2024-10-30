@@ -13,33 +13,58 @@ export default function NovoProjeto() {
     const [descricao, setDescricao] = useState('')
     const [tarefa, setTarefa] = useState('')
     const [valorTotalEstimado, setValorTotalEstimado] = useState('')
+    const [valorPago, setValorPago] = useState('')
     const [formaPagamento, setFormaPagamento] = useState('')
     const [token, setToken] = useState(null)
+    const [erroProjeto, setErroProjeto] = useState('')
+    const [erroTarefa, setErroTarefa] = useState('')
 
     const navigate = useNavigate()
 
     async function inserirProjeto() {
-        const url = `http://localhost:5010/projeto`
-        let resp = await axios.post(url)
+        if (nomeProjeto !== '' && nomeCliente !== '' && contatoCliente !== '' && dataInicio !== '' && tipoProjeto !== '' && descricao !== '' && valorTotalEstimado !== '' && valorPago !== '' && formaPagamento !== '') {
+            const paramCorpo = {
+                "nome": nomeProjeto,
+                "cliente": nomeCliente,
+                "contato": contatoCliente,
+                "inicio": dataInicio,
+                "tipo": tipoProjeto,
+                "descricao": descricao,
+                "valor": valorTotalEstimado,
+                "pago": valorPago,
+                "pagamento": formaPagamento
+            }
 
-        setNomeProjeto('')
-        setNomeCliente('')
-        setContatoCliente('')
-        setDataInicio('')
-        setTipoProjeto('')
-        setDescricao('')
-        setValorTotalEstimado('')
-        setFormaPagamento('')
+            const url = `http://localhost:5010/projeto?x-access-token=${token}`
+            await axios.post(url, paramCorpo)
+
+            setNomeProjeto('')
+            setNomeCliente('')
+            setContatoCliente('')
+            setDataInicio('')
+            setTipoProjeto('')
+            setDescricao('')
+            setValorTotalEstimado('')
+            setFormaPagamento('')
+        } else {
+            let mensagem = '*Preencha os campos solicitados'
+            setErroProjeto(mensagem)
+        }
     }
 
     async function inserirTarefa() {
-        const url = `http://localhost:5010/tarefa`
-        let resp = await axios.post(url, tarefa)
+        if (tarefa != '') {
+            const url = `http://localhost:5010/tarefa`
+            await axios.post(url, tarefa)
 
-        setTarefa('')
+            setTarefa('')
+        } else {
+            let mensagem = '*Insira as informações solicitadas'
+            setErroTarefa(mensagem)
+        }
     }
 
-    useEffect (() => {
+    useEffect(() => {
         let usu = localStorage.getItem('USUARIO')
         setToken(usu)
 
@@ -51,7 +76,7 @@ export default function NovoProjeto() {
     return (
         <div className='pagina-novo-projeto'>
             <CabecalhoAdm />
-            
+
             <h1 className='titulo'>Inserir um Novo Projeto</h1>
 
             <div className='info'>
@@ -113,10 +138,14 @@ export default function NovoProjeto() {
                 </div>
 
                 <div className='pagamento'>
+                    <label>VALOR PAGO:</label>
+                    <input type="text" value={valorPago} onChange={a => setValorPago(a.target.value)} />
+                </div>
+
+                <div className='pagamento'>
                     <label>FORMA DE PAGAMENTO:</label>
                     <input type="text" value={formaPagamento} onChange={a => setFormaPagamento(a.target.value)} />
                 </div>
-
 
                 <div className='botao' onClick={inserirProjeto}>INSERIR NOVO PROJETO</div>
             </div>

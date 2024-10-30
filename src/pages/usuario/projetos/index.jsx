@@ -2,9 +2,10 @@ import './index.scss'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Pagination, Navigation } from 'swiper/modules'
 import Cabecalho from '../../../components/cabecalho-marrom'
+import Rodape from '../../../components/rodape'
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import Rodape from '../../../components/rodape'
+import { i18n } from '../../../translate/i18n'
 
 
 import image1 from '../../../images/construcao1.jpg'
@@ -104,7 +105,7 @@ export default function Projetos() {
             <Cabecalho />
 
             <section className='construcao'>
-                <h1>CONSTRUÇÃO</h1>
+                <h1>{i18n.t('projects.title1')}</h1>
 
                 <div>
                     <Swiper className='carrossel-construcao'
@@ -127,7 +128,7 @@ export default function Projetos() {
             </section>
 
             <section className='interiores'>
-                <h1>INTERIORES</h1>
+                <h1>{i18n.t('projects.title2')}</h1>
 
                 <div>
                     <Swiper className='carrossel carrossel1'
@@ -242,13 +243,12 @@ export default function Projetos() {
 
             <section className='projeto-andamento'>
                 <div className='titulo'>
-                    <h1>PROJETO EM ANDAMENTO</h1>
+                    <h1>{i18n.t('projects.title3')}</h1>
                 </div>
 
                 <div className='form'>
 
                     <div className="box">
-
                         <div className='image-box'>
                             {!imagemRecente &&
 
@@ -258,7 +258,7 @@ export default function Projetos() {
                                     alignItems: 'center',
                                     fontSize: '15px'
                                 }}>
-                                    <p><b>Nenhum projeto em andamento no momento</b></p>
+                                    <p><b>{i18n.t('projects.message')}</b></p>
                                 </div>
 
                             }
@@ -266,10 +266,10 @@ export default function Projetos() {
                         </div>
 
                         <div id='tipo'>
-                            <h2>TIPO : {tipoRecente.toLocaleUpperCase()}</h2>
+                            <h2>{i18n.t('projects.type')} {tipoRecente.toLocaleUpperCase()}</h2>
                         </div>
                         <div id='local'>
-                            <h1>LOCAL : {localRecente.toLocaleUpperCase()}</h1>
+                            <h1>{i18n.t('projects.locale')} {localRecente.toLocaleUpperCase()}</h1>
                         </div>
                     </div>
                 </div>

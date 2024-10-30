@@ -12,4 +12,4 @@ i18n
         resources: messages
     })
 
-export {i18n}
+export { i18n }

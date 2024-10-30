@@ -33,11 +33,19 @@ const messages = {
                 formError: '*Preencha o formulário de contato com as informações solicitadas'
             },
             about: {
-                subtitle: 'ARQUITETA'
+                subtitle: 'ARQUITETA',
+                paragraph1: 'Jéssica tem atualmente 31 anos, é casada com Fernando há 8 anos, ambos são cristãos e tem a fé como ponto principal em suas vidas.',
+                paragraph2: 'Ela se formou em Arquitetura e Urbanismo em setembro de 2018, durante o curso e após a conclusão, trabalhou em três prestigiados escritórios de Sorocaba, onde aprendeu desde como iniciar o atendimento ao cliente até os detalhes de documentação para a prefeitura.',
+                paragraph3: 'Com todo o aprendizado nesses escritórios, ela foi criando seu próprio jeito de desenvolver seus projetos e atender seus clientes.',
+                slogan: 'ARQUITETURA QUE VIAJA: INSPIRADA POR CULTURAS E CRIADA PARA O MUNDO'
             },
             projects: {
                 title1: 'CONSTRUÇÃO',
-                title2: 'INTERIORES'
+                title2: 'INTERIORES',
+                title3: 'PROJETO EM ANDAMENTO',
+                type: 'TIPO:',
+                locale: 'LOCAL:',
+                message: 'Nenhum projeto em andamento no momento'
             },
             advices: {
 
@@ -62,13 +70,9 @@ const messages = {
             policy: {
                 title: 'POLÍTICA DE PRIVACIDADE',
                 topic1: 'Bem-vindo!',
-                text1: '',
                 topic2: 'Informações que são coletadas',
-                text2: '',
                 topic3: 'Como suas informações são utilizadas',
-                text3: '',
-                topic4: 'Como suas informações são protegidas',
-                text4: ''
+                topic4: 'Como suas informações são protegidas'
             }
         }
     }
