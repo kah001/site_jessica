@@ -67,9 +67,9 @@ export default function AlteracoesAdm() {
     }
   }
 
-  async function consultar(token) {
+  async function consultar() {
     try {
-      const url = `http://localhost:5010/projeto/andamento/recente?x-access-token=${token}`;
+      const url = `http://localhost:5010/projeto/andamento/recente`;
       const resp = await axios.get(url);
 
       let dados = resp.data
