@@ -1,5 +1,5 @@
 import './index.scss';
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 import CabecalhoAdm from '../../../components/cabecalhoAdm';
 import { Link, useNavigate, useParams } from "react-router-dom";
@@ -15,6 +15,9 @@ export default function AlteracoesAdm() {
   const [localRecente, setLocalRecente] = useState('');
 
   const { id } = useParams();
+
+  const insertSectionRef = useRef(null);
+  const [editando, setEditando] = useState(false)
 
   const navigate = useNavigate();
 
@@ -36,8 +39,8 @@ export default function AlteracoesAdm() {
   }
 
   async function inserir(e) {
+    e.preventDefault();
     try {
-
       const paramObj = {
         imagem: imagem,
         tipo: tipo,
@@ -48,14 +51,19 @@ export default function AlteracoesAdm() {
       let response = await axios.post(url, paramObj);
       let id = response.data.novoId
 
-      alert(`Novo Projeto em andamento adcionado. Id: ${id}`);
       setImagem(null);
       setTipo('');
       setLocal('');
+
       consultar(token);
+      alert(`Novo Projeto em andamento adcionado. Id: ${id}`);
     }
     catch (err) {
-      alert(`Erro: ${err.message}`)
+      if (err.response && err.response.data && err.response.data.erro) {
+        alert(err.response.data.erro); // Mensagem de erro do backend
+    } else {
+        alert('Erro desconhecido ao inserir projeto'); // Mensagem genérica
+    }
     }
   }
 
@@ -63,19 +71,42 @@ export default function AlteracoesAdm() {
     try {
       const url = `http://localhost:5010/projeto/andamento/recente?x-access-token=${token}`;
       const resp = await axios.get(url);
+
       let dados = resp.data
-      
-      setIdRecente(dados.id)
-      setImagemRecente(dados.imagem)
-      setTipoRecente(dados.tipo)
-      setLocalRecente(dados.local)
+
+      if (dados && dados.id) { 
+        setIdRecente(dados.id);
+        setImagemRecente(dados.imagem);
+        setTipoRecente(dados.tipo);
+        setLocalRecente(dados.local);
+      } 
+      else {
+        console.log('Tabela de registros em andamento vazia');
+      }
     }
     catch (err) {
-      alert(`Erro: ${err.message}`)
+      alert(`Erro: ${`Tabela de registros em andamentos vazia`}`)
     }
   }
+
+  async function consultarPorId(id) {
+    try {
+      const url = `http://localhost:5010/projetos/andamento/${id}?x-access-token=${token}`;
+      const resp = await axios.get(url);
   
-  async function alterarRecente(){
+      let dados = resp.data;
+  
+      setImagem(dados.imagem);
+      setTipo(dados.tipo);
+      setLocal(dados.local);
+
+    } catch (err) {
+      alert(`Erro ao carregar projeto: ${err.message}`);
+    }
+  }
+
+  async function alterarRecente(e) {
+    e.preventDefault();
     try {
       const paramObj = {
         imagem: imagem,
@@ -83,12 +114,19 @@ export default function AlteracoesAdm() {
         local: local
       }
 
-      const url = `http://localhost:5010/projeto/andamento/${idRecente}?x-access-token=${token}`
+      const url = `http://localhost:5010/projeto/andamento/${id}?x-access-token=${token}`
       let resp = await axios.put(url, paramObj)
 
-      alert(`Projeto em andamento do Id: ${idRecente} Editador com Sucesso`)
+      alert(`Projeto em andamento do Id: ${id} Editado com Sucesso`)
+      navigate('/adm/alteracoes')
+
       consultar(token);
-    } 
+
+      setEditando(false)
+      setImagem(null);
+      setTipo('');
+      setLocal('');
+    }
     catch (err) {
       alert(`Erro: ${err.message}`);
     }
@@ -114,16 +152,33 @@ export default function AlteracoesAdm() {
     if (usu === null || usu === undefined) {
       navigate('/')
     }
-    consultar(usu)
-  }, [])
+    
+    const carregarDados = async () => {
+      if (id) {
+        await consultarPorId(id);
+      } else {
+        await consultar(usu);
+      }
+    };
+
+    carregarDados()
+  }, [id])
+
+  const scrollToInsertSection = () => {
+    if (insertSectionRef.current) {
+      insertSectionRef.current.scrollIntoView({
+        behavior: 'smooth', // Rolagem suave
+      });
+    }
+  };
 
   return (
-    <div className='pagina-alteracoes-adm'>
+    <div className='pagina-alteracoes-adm' >
       <CabecalhoAdm />
       <div style={{ backgroundColor: "#D9D9D9", height: "50px" }} />
 
 
-      <section className='secao-01' id='inserir'>
+      <section className='secao-01' id='inserir' ref={insertSectionRef}>
         <div className="titulo">
           <h1>Página - PROJETOS</h1>
         </div>
@@ -190,7 +245,7 @@ export default function AlteracoesAdm() {
               </div>
 
               <div className="button">
-                <button onClick={id ? alterarRecente : inserir} > {id ? 'EDITAR' : 'INSERIR'} </button>
+                <button onClick={editando ? alterarRecente : inserir} > {id ? 'EDITAR' : 'INSERIR'} </button>
               </div>
             </div>
           </div>
@@ -220,17 +275,21 @@ export default function AlteracoesAdm() {
             </div>
 
             <div id='tipo'>
-              <h2>TIPO {tipoRecente}</h2>
+              <h2>TIPO : {tipoRecente.toLocaleUpperCase()}</h2>
             </div>
             <div id='local'>
-              <h1>LOCAL {localRecente}</h1>
+              <h1>LOCAL : {localRecente.toLocaleUpperCase()}</h1>
             </div>
           </div>
 
           <div className='acoes'>
             <div>
               <i className="fa-solid fa-trash-can" style={{ fontSize: '70px' }} onClick={deletarRecente} ></i>
-              <Link to={`/adm/alteracoes/${idRecente}`} style={{color: '#000'}} >
+              <Link to={`/adm/alteracoes/${idRecente}`} style={{ color: '#000' }} onClick={ () => {
+                scrollToInsertSection(); 
+                consultarPorId(idRecente);
+                setEditando(true);
+              }} >
                 <i className="fa-solid fa-pen-to-square" style={{ fontSize: '70px' }} ></i>
               </Link>
             </div>
