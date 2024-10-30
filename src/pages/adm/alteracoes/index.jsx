@@ -101,7 +101,7 @@ export default function AlteracoesAdm() {
       setLocal(dados.local);
 
     } catch (err) {
-      alert(`Erro ao carregar projeto: ${err.message}`);
+      alert(`Erro ao carregar automaticamento projeto recente: ${`Não há projetos recentes`}`);
     }
   }
 
