@@ -1,16 +1,25 @@
 import './index.scss';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { i18n } from '../../translate/i18n';    
 
 export default function Rodape() {
+    const I18N_STORAGE_KEY = 'i18nextLng'
+    const [idioma] = useState(localStorage.getItem(I18N_STORAGE_KEY))
+
+    function alterarIdioma(event) {
+        localStorage.setItem(I18N_STORAGE_KEY, event.target.value)
+        window.location = window.location
+    }
 
     return (
         <div className='comp-rodape'>
             <div className='bloco'>
                 <div className='icones'>
                     <div className='idiomas'>
-                        <select>
-                            <option>Português (Brasil)</option>
-                            <option>English</option>
+                        <select onChange={alterarIdioma} value={idioma}>
+                            <option value='pt-BR'>{i18n.t('footer.language1')}</option>
+                            <option value='en-US'>{i18n.t('footer.language2')}</option>
                         </select>
                     </div>
 
@@ -23,16 +32,16 @@ export default function Rodape() {
 
                 <div className='blocos'>
                 <div className='paginas'>
-                        <h1>Páginas</h1>
-                        <Link className='link' to='/'>Início</Link>
-                        <Link className='link' to='/sobre'>Sobre mim</Link>
-                        <Link className='link' to='/projetos'>Projetos</Link>
-                        <Link className='link' to='/dicas'>Dicas</Link>
+                        <h1>{i18n.t('footer.title1')}</h1>
+                        <Link className='link' to='/'>{i18n.t('footer.page1')}</Link>
+                        <Link className='link' to='/sobre'>{i18n.t('footer.page2')}</Link>
+                        <Link className='link' to='/projetos'>{i18n.t('footer.page3')}</Link>
+                        <Link className='link' to='/dicas'>{i18n.t('footer.page4')}</Link>
                     </div>
 
                     <div className='politica'>
-                        <h1>Política</h1>
-                        <Link className='link'>Política de Privacidade</Link>
+                        <h1>{i18n.t('footer.title2')}</h1>
+                        <Link className='link' to='/politica'>{i18n.t('footer.policy')}</Link>
                     </div>
                 </div>
             </div>

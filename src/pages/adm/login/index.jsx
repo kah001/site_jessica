@@ -2,6 +2,7 @@ import './index.scss'
 import { useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import axios from 'axios'
+import { i18n } from '../../../translate/i18n'
 
 export default function Login() {
     const [nome, setNome] = useState('')
@@ -35,15 +36,15 @@ export default function Login() {
             <section className='bloco'>
                 <div className='bloco1'>
                     <Link to='/'><img src="/assets/images/seta.png" alt="" /></Link>
-                    <h1>Bem-Vinda!</h1>
+                    <h1>{i18n.t('login.title')}</h1>
 
-                    <label> NOME: </label>
+                    <label>{i18n.t('login.name')}</label>
                     <input type="text" value={nome} onChange={a => setNome(a.target.value)} />
 
-                    <label> SENHA: </label>
+                    <label>{i18n.t('login.password')}</label>
                     <input type="password" placeholder="********" value={senha} onChange={a => setSenha(a.target.value)} />
 
-                    <div className='botao' onClick={entrar}>ENTRAR</div>
+                    <div className='botao' onClick={entrar}>{i18n.t('login.button')}</div>
                 </div>
 
                 <div className='bloco2'>
