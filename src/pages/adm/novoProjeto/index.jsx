@@ -2,6 +2,7 @@ import './index.scss'
 import CabecalhoAdm from '../../../components/cabecalhoAdm'
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import axios from 'axios'
 
 export default function NovoProjeto() {
     const [nomeProjeto, setNomeProjeto] = useState('')
@@ -17,7 +18,9 @@ export default function NovoProjeto() {
 
     const navigate = useNavigate()
 
-    function inserirProjeto() {
+    async function inserirProjeto() {
+        const url = `http://localhost:5010/projeto`
+        let resp = await axios.post(url)
 
         setNomeProjeto('')
         setNomeCliente('')
@@ -29,7 +32,9 @@ export default function NovoProjeto() {
         setFormaPagamento('')
     }
 
-    function inserirTarefa() {
+    async function inserirTarefa() {
+        const url = `http://localhost:5010/tarefa`
+        let resp = await axios.post(url, tarefa)
 
         setTarefa('')
     }
@@ -38,10 +43,10 @@ export default function NovoProjeto() {
         let usu = localStorage.getItem('USUARIO')
         setToken(usu)
 
-        if (usu == undefined) {
+        if (!usu) {
             navigate('/')
         }
-    }, [])
+    }, [navigate])
 
     return (
         <div className='pagina-novo-projeto'>

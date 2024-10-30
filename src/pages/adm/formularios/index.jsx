@@ -29,7 +29,6 @@ export default function Formularios() {
         } else {
             pesquisarFormulario()
         }
-        console.log('Token:', usu)
     }, [navigate])
 
     useEffect(() => {
