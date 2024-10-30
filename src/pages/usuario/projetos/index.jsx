@@ -89,9 +89,6 @@ export default function Projetos() {
                 setTipoRecente(dados.tipo);
                 setLocalRecente(dados.local);
             }
-            else {
-                console.log('Tabela de registros em andamento vazia');
-            }
         }
         catch (err) {
         }
