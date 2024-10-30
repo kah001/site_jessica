@@ -94,7 +94,6 @@ export default function Projetos() {
             }
         }
         catch (err) {
-            alert(`Erro: ${`Tabela de registros em andamentos vazia`}`)
         }
     }
 
