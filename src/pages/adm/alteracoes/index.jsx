@@ -135,7 +135,7 @@ export default function AlteracoesAdm() {
   async function deletarRecente() {
     try {
       const url = `http://localhost:5010/projeto/andamento/${idRecente}?x-access-token=${token}`;
-      let resp = await axios.delete(url);
+      await axios.delete(url);
 
       alert(`Projeto em andamento do Id: ${idRecente} Deletado com Sucesso`)
       consultar(token)
