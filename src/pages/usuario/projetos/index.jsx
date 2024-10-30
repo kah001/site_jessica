@@ -256,7 +256,13 @@ export default function Projetos() {
                         <div className='image-box'>
                             {!imagemRecente &&
 
-                                <div className='img-recente-box'>
+                                <div className='img-recente-box' style={{
+                                    display: 'flex',
+                                    justifyContent: 'center',
+                                    alignItems: 'center',
+                                    fontSize: '15px'
+                                }}>
+                                    <p><b>Nenhum projeto em andamento no momento</b></p>
                                 </div>
 
                             }

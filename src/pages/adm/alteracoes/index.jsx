@@ -61,9 +61,9 @@ export default function AlteracoesAdm() {
     catch (err) {
       if (err.response && err.response.data && err.response.data.erro) {
         alert(err.response.data.erro); // Mensagem de erro do backend
-    } else {
+      } else {
         alert('Erro desconhecido ao inserir projeto'); // Mensagem genérica
-    }
+      }
     }
   }
 
@@ -74,18 +74,15 @@ export default function AlteracoesAdm() {
 
       let dados = resp.data
 
-      if (dados && dados.id) { 
-        setIdRecente(dados.id);
-        setImagemRecente(dados.imagem);
-        setTipoRecente(dados.tipo);
-        setLocalRecente(dados.local);
-      } 
-      else {
-        console.log('Tabela de registros em andamento vazia');
-      }
+
+      setIdRecente(dados.id);
+      setImagemRecente(dados.imagem);
+      setTipoRecente(dados.tipo);
+      setLocalRecente(dados.local);
+
     }
     catch (err) {
-      alert(`Erro: ${`Tabela de registros em andamentos vazia`}`)
+      alert(`Erro ao carregar automaticamento projeto recente: Não há projetos recentes`)
     }
   }
 
@@ -93,9 +90,9 @@ export default function AlteracoesAdm() {
     try {
       const url = `http://localhost:5010/projetos/andamento/${id}?x-access-token=${token}`;
       const resp = await axios.get(url);
-  
+
       let dados = resp.data;
-  
+
       setImagem(dados.imagem);
       setTipo(dados.tipo);
       setLocal(dados.local);
@@ -152,7 +149,7 @@ export default function AlteracoesAdm() {
     if (usu === null || usu === undefined) {
       navigate('/')
     }
-    
+
     const carregarDados = async () => {
       if (id) {
         await consultarPorId(id);
@@ -285,8 +282,8 @@ export default function AlteracoesAdm() {
           <div className='acoes'>
             <div>
               <i className="fa-solid fa-trash-can" style={{ fontSize: '70px' }} onClick={deletarRecente} ></i>
-              <Link to={`/adm/alteracoes/${idRecente}`} style={{ color: '#000' }} onClick={ () => {
-                scrollToInsertSection(); 
+              <Link to={`/adm/alteracoes/${idRecente}`} style={{ color: '#000' }} onClick={() => {
+                scrollToInsertSection();
                 consultarPorId(idRecente);
                 setEditando(true);
               }} >
