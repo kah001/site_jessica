@@ -24,6 +24,25 @@ import car1img8 from '../../../images/carrossel1-8.jpg'
 import car1img9 from '../../../images/carrossel1-9.jpg'
 import car1img10 from '../../../images/carrossel1-10.jpg'
 
+import car2img1 from '../../../images/carrossel2-1.jpg'
+import car2img2 from '../../../images/carrossel2-2.jpg'
+import car2img3 from '../../../images/carrossel2-3.jpg'
+import car2img4 from '../../../images/carrossel2-4.jpg'
+import car2img5 from '../../../images/carrossel2-5.jpg'
+import car2img6 from '../../../images/carrossel2-6.jpg'
+
+import car3img1 from '../../../images/carrossel3-1.jpg'
+import car3img2 from '../../../images/carrossel3-2.jpg'
+import car3img3 from '../../../images/carrossel3-3.jpg'
+import car3img4 from '../../../images/carrossel3-4.jpg'
+import car3img5 from '../../../images/carrossel3-5.jpg'
+import car3img6 from '../../../images/carrossel3-6.jpg'
+import car3img7 from '../../../images/carrossel3-7.jpg'
+
+import car4img1 from '../../../images/carrossel4-1.jpg'
+import car4img2 from '../../../images/carrossel4-2.jpg'
+import car4img3 from '../../../images/carrossel4-3.jpg'
+
 import car6img1 from '../../../images/carrossel6-1.jpg'
 import car6img2 from '../../../images/carrossel6-2.jpg'
 import car6img3 from '../../../images/carrossel6-3.jpg'
@@ -56,16 +75,26 @@ export default function Projetos() {
         { id: 10, img: car1img10 }
     ]
     const carrossel2 = [
-        { id: 1 },
-        { id: 2 }
+        { id: 1, img: car2img1 },
+        { id: 2, img: car2img2 },
+        { id: 3, img: car2img3 },
+        { id: 4, img: car2img4 },
+        { id: 5, img: car2img5 },
+        { id: 6, img: car2img6 }
     ]
     const carrossel3 = [
-        { id: 1 },
-        { id: 2 }
+        { id: 1, img: car3img1 },
+        { id: 2, img: car3img2 },
+        { id: 3, img: car3img3 },
+        { id: 4, img: car3img4 },
+        { id: 5, img: car3img5 },
+        { id: 6, img: car3img6 },
+        { id: 7, img: car3img7}
     ]
     const carrossel4 = [
-        { id: 1 },
-        { id: 2 }
+        { id: 1, img: car4img1 },
+        { id: 2, img: car4img2 },
+        { id: 3, img: car4img3 }
     ]
     const carrossel5 = [
 
@@ -155,7 +184,7 @@ export default function Projetos() {
                     pagination={{ clickable: true }}
                     modules={[Autoplay, Pagination, Navigation]}
                     autoplay={{
-                        delay: 5000,
+                        delay: 2500,
                         disableOnInteraction: false
                     }}
                     loop={true}
@@ -191,7 +220,7 @@ export default function Projetos() {
                     pagination={{ clickable: true }}
                     modules={[Autoplay, Navigation, Pagination]}
                     autoplay={{
-                        delay: 5000,
+                        delay: 2500,
                         disableOnInteraction: false
                     }}
                     loop={true}
@@ -209,7 +238,7 @@ export default function Projetos() {
                     pagination={{ clickable: true }}
                     modules={[Autoplay, Navigation, Pagination]}
                     autoplay={{
-                        delay: 5000,
+                        delay: 2500,
                         disableOnInteraction: false
                     }}
                     loop={true}

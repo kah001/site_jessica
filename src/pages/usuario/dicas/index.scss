@@ -1,0 +1,71 @@
+.pagina-dicas {
+    .inicio {
+        width: 100%;
+
+        img {
+            position: relative;
+            width: 100%;
+        }
+        h1  {
+            position: absolute;
+            top: 80%;
+            color: #fff;
+            width: 650px;
+            left: 10%;
+            font-size: 40px;
+            text-shadow:  2px 2px 5px 3px #000;
+            font-weight: 700;
+        }
+    }
+    .intro {
+        display: flex;
+        flex-direction: column;
+        background-color: #A6896B;
+        padding: 50px 10px;
+
+        h1 {
+            text-align: center;
+            font-size: 35px;
+            padding: 10px 0px;
+            color: #fff;
+        }
+        p {
+            font-size: 20px;
+            color: #fff;
+            padding: 0px 25px;
+        }
+    }
+    .dicas {
+        background-color: #947759;
+        color: #fff;
+        padding: 30px 10px;
+
+        .dica {
+            padding: 25px 20px;
+
+            h1 {
+                font-size: 30px;
+            }
+            p {
+                font-size: 20px;
+            }
+        }
+    }
+    .frase {
+        background-color: #A6896B;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        color: #fff;
+        padding: 60px 45px;
+
+        h1 {
+            font-size: 40px;
+        }
+        h1:nth-child(2) {
+            font-size: 25px;
+            font-weight: 400;
+        }
+    }
+}
