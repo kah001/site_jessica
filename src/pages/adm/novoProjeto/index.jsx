@@ -102,17 +102,17 @@ export default function NovoProjeto() {
 
                     <div className='item'>
                         <label>NOME DO PROJETO:</label>
-                        <input type="text" value={nomeProjeto} onChange={a => setNomeProjeto(a.target.value)} />
+                        <input type="text" placeholder='Projeto...' value={nomeProjeto} onChange={a => setNomeProjeto(a.target.value)} />
                     </div>
 
                     <div className='item'>
                         <label>NOME DO CLIENTE:</label>
-                        <input type="text" value={nomeCliente} onChange={a => setNomeCliente(a.target.value)} />
+                        <input type="text" placeholder='Cliente...' value={nomeCliente} onChange={a => setNomeCliente(a.target.value)} />
                     </div>
 
                     <div className='item'>
                         <label>CONTATO CLIENTE:</label>
-                        <input type="text" value={contatoCliente} onChange={a => setContatoCliente(a.target.value)} />
+                        <input type="text" placeholder='+12 (34) 56789...' value={contatoCliente} onChange={a => setContatoCliente(a.target.value)} />
                     </div>
 
                     <div className='item'>
@@ -122,12 +122,12 @@ export default function NovoProjeto() {
 
                     <div className='item'>
                         <label>TIPO DO PROJETO:</label>
-                        <input type="text" value={tipoProjeto} onChange={a => setTipoProjeto(a.target.value)} />
+                        <input type="text" placeholder='Casa, Apartamento...' value={tipoProjeto} onChange={a => setTipoProjeto(a.target.value)} />
                     </div>
 
                     <div className='item'>
                         <label>DESCRIÇÃO DO PROJETO:</label>
-                        <textarea value={descricao} onChange={a => setDescricao(a.target.value)}></textarea>
+                        <textarea value={descricao} placeholder='Um pouco sobre o projeto...' onChange={a => setDescricao(a.target.value)}></textarea>
                     </div>
                 </div>
             </div>
@@ -144,10 +144,10 @@ export default function NovoProjeto() {
 
                 <div className='tarefa'>
                     <label>DESCRIÇÃO DA TAREFA:</label>
-                    <input type="text" value={descricaoTarefa} onChange={a => setDescricaoTarefa(a.target.value)} />
+                    <input type="text" placeholder='Terminar de escrev...' value={descricaoTarefa} onChange={a => setDescricaoTarefa(a.target.value)} />
 
                     <label>ID DO PROJETO:</label>
-                    <input type="text" value={idProjeto} onChange={a => setIdProjeto(a.target.value)} />
+                    <input type="text" placeholder='0, 1...' onChange={a => setIdProjeto(a.target.value)} />
                 </div>
 
                 <div className='botao' onClick={inserirTarefa}>INSERIR TAREFA</div>
@@ -169,17 +169,17 @@ export default function NovoProjeto() {
                 <div>
                     <div className='pagamento'>
                         <label>VALOR TOTAL OU ESTIMADO:</label>
-                        <input type="text" value={valorTotalEstimado} onChange={a => setValorTotalEstimado(a.target.value)} />
+                        <input type="text" placeholder='R$ 1.000,00' value={valorTotalEstimado} onChange={a => setValorTotalEstimado(a.target.value)} />
                     </div>
 
                     <div className='pagamento'>
                         <label>VALOR PAGO:</label>
-                        <input type="text" value={valorPago} onChange={a => setValorPago(a.target.value)} />
+                        <input type="text" placeholder='R$ 700,00' value={valorPago} onChange={a => setValorPago(a.target.value)} />
                     </div>
 
                     <div className='pagamento'>
                         <label>FORMA DE PAGAMENTO:</label>
-                        <input type="text" value={formaPagamento} onChange={a => setFormaPagamento(a.target.value)} />
+                        <input type="text" placeholder='Débito, Crédito...' value={formaPagamento} onChange={a => setFormaPagamento(a.target.value)} />
                     </div>
                 </div>
 
