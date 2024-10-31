@@ -58,7 +58,7 @@ export default function NovoProjeto() {
 
     async function inserirTarefa() {
 
-        if (descricaoTarefa != '' && idProjeto != '') {
+        if (descricaoTarefa !== '' && idProjeto !== '') {
             let tarefa = {
                 descricao: descricaoTarefa,
                 projeto: idProjeto
