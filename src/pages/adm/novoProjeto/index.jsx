@@ -166,12 +166,12 @@ export default function NovoProjeto() {
                 <div>
                     <div className='pagamento'>
                         <label>VALOR TOTAL OU ESTIMADO:</label>
-                        <input type="text" placeholder='R$ 1.000,00' value={valorTotalEstimado} onChange={a => setValorTotalEstimado(a.target.value)} />
+                        <input type="text" placeholder='R$ 1.000,00...' value={valorTotalEstimado} onChange={a => setValorTotalEstimado(a.target.value)} />
                     </div>
 
                     <div className='pagamento'>
                         <label>VALOR PAGO:</label>
-                        <input type="text" placeholder='R$ 700,00' value={valorPago} onChange={a => setValorPago(a.target.value)} />
+                        <input type="text" placeholder='R$ 700,00...' value={valorPago} onChange={a => setValorPago(a.target.value)} />
                     </div>
 
                     <div className='pagamento'>
