@@ -21,9 +21,6 @@ export default function NovoProjeto() {
     const [valorPago, setValorPago] = useState('')
     const [formaPagamento, setFormaPagamento] = useState('')
 
-    const [erroProjeto, setErroProjeto] = useState('')
-    const [erroTarefa, setErroTarefa] = useState('')
-
     const navigate = useNavigate()
 
     async function inserirProjeto() {
@@ -54,8 +51,8 @@ export default function NovoProjeto() {
             setFormaPagamento('')
             alert(`Novo Projeto adcionado. Id: ${resp.data.novoId}`)
         } else {
-            let mensagem = '*Preencha os campos solicitados'
-            setErroProjeto(mensagem)
+            let mensagem = 'Preencha os campos solicitados'
+            alert(mensagem)
         }
     }
 
@@ -73,8 +70,8 @@ export default function NovoProjeto() {
             setIdProjeto('')
             alert(`Nova Tarefa adcionada. Id: ${resp.data.novoId}`)
         } else {
-            let mensagem = '*Insira as informações solicitadas'
-            setErroTarefa(mensagem)
+            let mensagem = 'Preencha os campos solicitados'
+            alert(mensagem)
         }
     }
 
