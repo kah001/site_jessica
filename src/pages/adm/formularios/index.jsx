@@ -11,13 +11,18 @@ export default function Formularios() {
     const navigate = useNavigate()
 
     async function pesquisarFormulario() {
-        const url = pais 
-        ? `http://localhost:5010/formulario/${pais}?x-access-token=${token}`
-        : `http://localhost:5010/formulario?x-access-token=${token}`
-        let resp = await axios.get(url)
-        console.log('%cTESTE', 'background-Color: #000; color: #fff')
-
-        setFormularios(resp.data)
+        try {
+            
+            const url = pais 
+            ? `http://localhost:5010/formulario/${pais}?x-access-token=${token}`
+            : `http://localhost:5010/formulario?x-access-token=${token}`
+            let resp = await axios.get(url)
+    
+            setFormularios(resp.data)
+        } 
+        catch (err) {
+            
+        }
     }
     
 
