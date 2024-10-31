@@ -48,7 +48,19 @@ const messages = {
                 message: 'Nenhum projeto em andamento no momento'
             },
             advices: {
-
+                title1: 'PONTOS IMPORTANTES NA HORA DE ESCOLHER UM TERRENO',
+                title2: 'Veja abaixo dicas que podem te ajudar',
+                paragraph1: 'Escolher um terreno para construir não é uma tarefa tão simples como talvez possa parecer.',
+                paragraph2: 'Alguns pontos são mais óbvios, como a localização, se existe comércios ou escolas por perto, se o local tem fácil acesso, se é uma região segura.',
+                paragraph3: 'Mas existem outros pontos de extrema importância que muitas vezes o cliente não tem o conhecimento técnico para avaliar. Vou dar alguns exemplos a seguir:',
+                topic1: 'Estrutura da casa',
+                text1: 'Se você quer fazer uma casa aproveitando um nível inferior você precisa de um terreno em declive, se você quer uma casa mais elevada, daquelas onde a garagem está no nível acima, você precisa de um terreno em aclive.',
+                text2: 'Mas se você quer uma casa térrea, inteira no nível da rua e comprar um terreno em aclive ou declive, você terá um gasto muito alto e desnecessário com a retirada ou colocação da terra, com muros de arrimo, com muita estrutura extra que não seria necessária se fosse comprado um terreno adequado para o projeto desejado.',
+                topic2: 'Posição do sol',
+                text3: 'Verificar a posição do sol com relação ao terreno também é um ponto importante para ser observado na escolha do terreno. Dependendo da posição do terreno, a relação da casa com o sol pode ser muito diferente. Caso você queira fazer uma piscina nos fundos, por exemplo, comprar um terreno onde praticamente nunca se tem o sol no quintal, pode ser um grande problema',
+                topic3: 'Localidade',
+                text4: 'Ainda falando sobre estrutura, é importante ver se não existe alguma nascente, rio ou corrego próximo ao terreno, pois a presença de águas nas proximidades pode impactar completamente na dureza do solo. Quanto menos resistente ao solo, mais será necessário gastar com a estrutura da fundação, que em geral já é o momento em que boa parte do orçamento é gasto. Uma dica útil é conversar com vizinhos que já tenham construído para saber como foi sobre a dureza do solo, ou saber se até mesmo algum deles pagou para fazer o estudo de solo.',
+                phrase: 'Para todos essas questões, é importante ter o auxílio de um profissional. Então antes mesmo de fechar a compra do terreno, já é o momento onde o relacionamento com o arquiteto se faz necessário iniciar'
             },
             login: {
                 title: 'Bem-vinda!',
