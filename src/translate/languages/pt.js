@@ -75,7 +75,7 @@ const messages = {
                 page3: 'Projetos',
                 page4: 'Dicas',
                 title2: 'Política',
-                policy: 'Política de Privacidade',
+                policy: 'Privacidade',
                 language1: 'Português (Brasil)',
                 language2: 'Inglês'
             },
