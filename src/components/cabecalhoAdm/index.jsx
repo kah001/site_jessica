@@ -14,7 +14,7 @@ export default function CabecalhoAdm() {
 
             <div class="logo">
                 <Link to='/'>
-                    <img src="/assets/images/logo-tcc.png" alt="" height="100px" />
+                    <img src="/assets/images/logo-tcc.png" alt="logo" height="80px" />
                 </Link>
             </div>
 
