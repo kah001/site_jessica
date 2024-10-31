@@ -107,7 +107,7 @@ export default function NovoProjeto() {
 
                     <div className='item'>
                         <label>NOME DO CLIENTE:</label>
-                        <input type="text" placeholder='Cliente...' value={nomeCliente} onChange={a => setNomeCliente(a.target.value)} />
+                        <input type="text" placeholder='Fulano...' value={nomeCliente} onChange={a => setNomeCliente(a.target.value)} />
                     </div>
 
                     <div className='item'>
