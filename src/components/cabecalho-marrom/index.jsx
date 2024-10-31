@@ -15,7 +15,7 @@ export default function Cabecalho() {
 
             <div class="logo">
                 <Link to='/'>
-                    <img src="/assets/images/logo-tcc.png" alt="" height="100px" />
+                    <img src="/assets/images/logo-tcc.png" alt="logo" height="100px" />
                 </Link>
             </div>
 
