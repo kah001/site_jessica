@@ -1,7 +1,7 @@
 .pagina-novo-projeto {
     background-color: #dddddd;
-    
-    .titulo {   
+
+    .titulo {
         text-align: center;
         background-color: #777777;
         padding: 15px;
@@ -21,26 +21,40 @@
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            width: 700px;
+            flex-wrap: wrap;
             margin: 10px;
             gap: 10px;
 
             label {
-                font-size: 20px; 
+                font-size: 20px;
                 text-align: start;
             }
+
             input {
                 width: 400px;
                 padding: 10px;
                 outline: none;
                 border: none;
+                transition: 0.2s;
             }
+
+            input[type='text']:focus {
+                border: 3px solid #665441;
+                border-radius: 10px;
+            }
+
             textarea {
                 outline: none;
                 padding: 10px;
                 height: 200px;
                 width: 400px;
                 border: none;
+                transition: 0.2s;
+            }
+
+            textarea:focus {
+                border: 3px solid #665441;
+                border-radius: 10px;
             }
         }
     }
@@ -52,31 +66,39 @@
         align-items: center;
         padding: 5px;
         margin: 5px;
+        text-align: center;
+
         gap: 10px;
 
         .tarefa {
             padding: 10px;
+            width: 400px;
             gap: 10px;
 
             h1 {
                 text-align: center;
                 font-weight: 500;
             }
-            hr {
-                width: 600px;
-                margin: 5px 0px;
-                border-color: #000;
-            }
+
             input {
-                width: 500px;
+                margin: 10px;
+                width: 100%;
                 outline: none;
                 padding: 10px;
                 border: none;
+                transition: 0.2s;
             }
+
+            input[type='text']:focus {
+                border: 3px solid #665441;
+                border-radius: 10px;
+            }
+
             label {
                 font-size: 20px;
             }
         }
+
         .botao {
             justify-self: end;
             padding: 10px 35px;
@@ -87,44 +109,110 @@
             font-size: 20px;
             border-radius: 50px;
             cursor: pointer;
+
+            transition: 0.5s;
+        }
+
+        .botao:hover {
+            background-color: #665441;
+            color: #fff;
+            cursor: pointer;
         }
     }
 
     .pagamentos {
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
 
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+
+            input {
+                margin: 5px;
+            }
+        }
+
         .pagamento {
-            padding: 10px;
+            width: 50%;
 
             h1 {
                 text-align: center;
                 font-weight: 500;
             }
-            hr {
-                width: 600px;
-                border-color: #000;
-            }
+
             label {
                 font-size: 20px;
             }
+
             input {
+                width: 100%;
                 padding: 10px;
-                width: 500px;
                 outline: none;
                 border: none;
+                transition: 0.2s;
+            }
+
+            input[type='text']:focus {
+                border: 3px solid #665441;
+                border-radius: 10px;
             }
         }
+
         .botao {
             background-color: #000;
             padding: 15px 25px;
             font-size: 20px;
+            width: 30%;
+
             border-radius: 15px;
             margin: 10px 0px;
             color: #fff;
             cursor: pointer;
+            transition: 0.5s;
         }
+
+        .botao:hover {
+            background-color: #665441;
+            color: #fff;
+            cursor: pointer;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .pagina-novo-projeto {
+
+        .info {
+
+            div {
+
+                .item {
+                    justify-content: center;
+                }
+            }
+        }
+
+        .tarefa {
+            text-align: center;
+        }
+
+        .pagamentos {
+
+            .pagamento {
+                text-align: center;
+
+            }
+
+
+            .botao {
+                width: 60%;
+            }
+        }
+
     }
 }

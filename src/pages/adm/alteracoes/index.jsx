@@ -60,9 +60,9 @@ export default function AlteracoesAdm() {
     }
     catch (err) {
       if (err.response && err.response.data && err.response.data.erro) {
-        alert(err.response.data.erro); // Mensagem de erro do backend
+        alert(err.response.data.erro); 
       } else {
-        alert('Erro desconhecido ao inserir projeto'); // Mensagem genérica
+        alert('Erro desconhecido ao inserir projeto');
       }
     }
   }
@@ -74,15 +74,12 @@ export default function AlteracoesAdm() {
 
       let dados = resp.data
 
-
       setIdRecente(dados.id);
       setImagemRecente(dados.imagem);
       setTipoRecente(dados.tipo);
       setLocalRecente(dados.local);
-
     }
     catch (err) {
-      alert(`Erro ao carregar automaticamento projeto recente: Não há projetos recentes`)
     }
   }
 
@@ -98,7 +95,7 @@ export default function AlteracoesAdm() {
       setLocal(dados.local);
 
     } catch (err) {
-      alert(`Erro ao carregar automaticamento projeto recente: ${`Não há projetos recentes`}`);
+      alert(err.response.data.erro);
     }
   }
 
@@ -125,7 +122,11 @@ export default function AlteracoesAdm() {
       setLocal('');
     }
     catch (err) {
-      alert(`Erro: ${err.message}`);
+      if (err.response && err.response.data && err.response.data.erro) {
+        alert(err.response.data.erro);
+      } else {
+        alert('Erro desconhecido ao inserir projeto'); 
+      }
     }
   }
 
@@ -139,6 +140,9 @@ export default function AlteracoesAdm() {
     }
     catch (err) {
       alert('Nenhum registro encontrado')
+      setImagemRecente(null);
+      setTipoRecente('');
+      setLocalRecente('');
     }
   }
 
@@ -264,7 +268,13 @@ export default function AlteracoesAdm() {
             <div className='image-box'>
               {!imagemRecente &&
 
-                <div className='img-recente-box'>
+                <div className='img-recente-box' style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  fontSize: '15px'
+                }}>
+                  <p><b>Nenhum Projeto Recente no Momento</b></p>
                 </div>
 
               }
