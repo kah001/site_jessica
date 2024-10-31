@@ -95,7 +95,7 @@ export default function AlteracoesAdm() {
       setLocal(dados.local);
 
     } catch (err) {
-      alert(err.response.data.erro);
+      
     }
   }
 
@@ -163,7 +163,7 @@ export default function AlteracoesAdm() {
     };
 
     carregarDados()
-  }, [id, navigate])
+  }, [id])
 
   const scrollToInsertSection = () => {
     if (insertSectionRef.current) {
