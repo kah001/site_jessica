@@ -37,7 +37,7 @@ export default function NovoProjeto() {
                 "pagamento": formaPagamento
             }
 
-            const url = `http://localhost:5010/projeto?x-access-token=${token}`
+            const url = `http://4.172.207.208:5030/projeto?x-access-token=${token}`
             let resp = await axios.post(url, paramCorpo)
 
             setNomeProjeto('')
@@ -62,7 +62,7 @@ export default function NovoProjeto() {
                 descricao: descricaoTarefa,
                 projeto: idProjeto
             }
-            const url = `http://localhost:5010/tarefa?x-access-token=${token}`
+            const url = `http://4.172.207.208:5030/tarefa?x-access-token=${token}`
             let resp = await axios.post(url, tarefa)
 
             setDescricaoTarefa('')
