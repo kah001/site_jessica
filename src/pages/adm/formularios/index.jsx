@@ -12,10 +12,9 @@ export default function Formularios() {
 
     async function pesquisarFormulario() {
         try {
-            
             const url = pais 
-            ? `http://localhost:5010/formulario/${pais}?x-access-token=${token}`
-            : `http://localhost:5010/formulario?x-access-token=${token}`
+            ? `http://4.172.207.208:5030/formulario/${pais}?x-access-token=${token}`
+            : `http://4.172.207.208:5030/formulario?x-access-token=${token}`
             let resp = await axios.get(url)
     
             setFormularios(resp.data)

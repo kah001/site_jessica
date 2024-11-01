@@ -4,14 +4,23 @@ import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 export default function DetalhesProjeto(props) {
+    
+    const [detalhes, setDetalhes] = useState([])
     const [token, setToken] = useState(null)
     const [tarefas, setTarefas] = useState([])
-    const [token, setToken] = useState(null)
+    const navigate = useNavigate()
 
-    async function buscarTarefas() {
-        const url = `http://4.172.207.208:5030/tarefa/${props.idProjeto}?x-access-token=${token}`
+    async function buscarDetalhes(id) {
+        const url = `http://4.172.207.208:5030/projeto/${id}?x-access-token=${token}`
         let resp = await axios.get(url)
 
+        setDetalhes(resp.data)
+    }
+    async function buscarTarefas(id) {
+        try {
+            const url = `http://4.172.207.208:5030/tarefa/${id}?x-access-token=${token}`
+            let resp = await axios.get(url)
+    
             setTarefas(resp.data)
         }
         catch (err) {
@@ -33,7 +42,7 @@ export default function DetalhesProjeto(props) {
         }
         catch (err) {
         }
-    }, [navigate, buscarDetalhes, buscarTarefas])
+    }, [navigate, buscarTarefas])
 
     return (
         <div className='comp-detalhes-projeto'>
