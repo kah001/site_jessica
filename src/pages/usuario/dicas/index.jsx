@@ -11,7 +11,6 @@ export default function Dicas() {
 
             <div className='inicio'>
                 <img className='fundo' src="assets/images/dicas.jpg" alt="" />
-                <h1 className='titulo'>{i18n.t('advices.title1')}</h1>
             </div>
 
             <section className='intro'>

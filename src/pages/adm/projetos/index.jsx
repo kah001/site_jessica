@@ -1,11 +1,8 @@
 import './index.scss';
 import CabecalhoAdm from '../../../components/cabecalhoAdm';
-import ProjetoAdm from '../../../components/projeto';
-
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-
 
 export default function ProjetosAdm() {
     const [projetos, setProjetos] = useState([])
@@ -18,6 +15,7 @@ export default function ProjetosAdm() {
 
         setProjetos(resp.data)
     }
+
 
     useEffect(() => {
         let usu = localStorage.getItem('USUARIO')
@@ -32,11 +30,10 @@ export default function ProjetosAdm() {
         <div className='pagina-projetos-adm'>
             <CabecalhoAdm />
 
-            {projetos.map(item => (
-                <ProjetoAdm 
-                    key={item.id} 
-                    id={item.id} //propriedade
-                />
+            {projetos.map((item, pos) => (
+                <div key={pos}>
+                    <h1>Projeto {item.id}</h1>
+                </div>
             ))}
             
         </div>

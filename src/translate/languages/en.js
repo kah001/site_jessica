@@ -81,10 +81,14 @@ const messages = {
             },
             policy: {
                 title: 'Privacy Policy',
-                topic1: 'Welcome!',
-                topic2: 'Information collected',
-                topic3: 'How your information are used',
-                topic4: 'How your information are protected'
+                title1: 'Welcome!',
+                text1: 'Here you will have access to the privacy policy of this platform, having information on what information is collected about you, how and for what purpose we use it and also how your information is protected safely.Here you will have access to the privacy policy of this platform, having information on what information is collected about you, how and for what purpose we use it and also how your information is protected safely. It is important that you read this policy to know how your data is used and how it is protected.',
+                title2: 'Information collected',
+                text2: 'The only information that is collected is the information provided by you when filling out the contact form, where you provide us with your name, email, phone number, country in which you live and enter your message.',
+                title3: 'How your information are used',
+                text3: 'All this information that has been collected is used by the professional in order to offer a personalized service to its customers. That is, all the information provided by you is stored and used in order to offer you the best possible service.',
+                title4: 'How your information are protected',
+                text4: 'We use certain measures to help protect your information. All your information is stored, and we use encryption, to protect it, so that only the professional has access to it, in order to provide a more personalized service to its customers. That is, administrative access control is imposed to limit who will have access and who will not have access to your information.'
             }
         }
     }

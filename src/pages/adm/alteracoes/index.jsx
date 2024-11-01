@@ -1,10 +1,9 @@
 import './index.scss';
 import { useEffect, useState, useRef } from "react";
-
 import CabecalhoAdm from '../../../components/cabecalhoAdm';
 import { Link, useNavigate, useParams } from "react-router-dom";
-
 import axios from 'axios';
+
 
 export default function AlteracoesAdm() {
   const [token, setToken] = useState(null);
@@ -150,7 +149,7 @@ export default function AlteracoesAdm() {
     let usu = localStorage.getItem('USUARIO');
     setToken(usu);
 
-    if (usu === null || usu === undefined) {
+    if (!usu) {
       navigate('/')
     }
 
@@ -177,7 +176,6 @@ export default function AlteracoesAdm() {
     <div className='pagina-alteracoes-adm' >
       <CabecalhoAdm />
       <div style={{ backgroundColor: "#D9D9D9", height: "50px" }} />
-
 
       <section className='secao-01' id='inserir' ref={insertSectionRef}>
         <div className="titulo">
@@ -232,7 +230,6 @@ export default function AlteracoesAdm() {
             </div>
 
             <div className='text-box'>
-
               <div className='text'>
                 <div>
                   <label> TIPO: </label>
@@ -274,7 +271,7 @@ export default function AlteracoesAdm() {
                   alignItems: 'center',
                   fontSize: '15px'
                 }}>
-                  <p><b>Nenhum Projeto Recente no Momento</b></p>
+                  <p><b>Nenhum projeto em andamento no momento</b></p>
                 </div>
 
               }
@@ -291,13 +288,13 @@ export default function AlteracoesAdm() {
 
           <div className='acoes'>
             <div>
-              <i className="fa-solid fa-trash-can" style={{ fontSize: '70px' }} onClick={deletarRecente} ></i>
+              <i className="fa-solid fa-trash-can" style={{ fontSize: '45px' }} onClick={deletarRecente} ></i>
               <Link to={`/adm/alteracoes/${idRecente}`} style={{ color: '#000' }} onClick={() => {
                 scrollToInsertSection();
                 consultarPorId(idRecente);
                 setEditando(true);
               }} >
-                <i className="fa-solid fa-pen-to-square" style={{ fontSize: '70px' }} ></i>
+                <i className="fa-solid fa-pen-to-square" style={{ fontSize: '45px' }} ></i>
               </Link>
             </div>
           </div>

@@ -81,10 +81,14 @@ const messages = {
             },
             policy: {
                 title: 'POLÍTICA DE PRIVACIDADE',
-                topic1: 'Bem-vindo!',
-                topic2: 'Informações que são coletadas',
-                topic3: 'Como suas informações são utilizadas',
-                topic4: 'Como suas informações são protegidas'
+                title1: 'Bem-vindo!',
+                text1: 'Aqui você terá acesso à política de privacidade dessa plataforma, tendo informações de quais informações suas são coletadas, como e para que fim as utilizamos e também como as suas informações são protegias com segurança. É importante que você leia esta política, para saber como os seus dados são utilizados e como eles são protegidos.',
+                title2: 'Informações que são coletadas',
+                text2: 'As únicas informações que são coletadas, são as informações fornecidas por você durante o preenchimento do formulário de contato, onde você nos informa seu nome, email, número de telefone, país em que mora e insere a sua mensagem.',
+                title3: 'Como suas informações são utilizadas',
+                text3: 'Todas essas informações que foram coletadas são utilizadas pela profissional a fim de oferecer um serviço personalizado aos seus clientes. Ou seja, todas as informações fornecidas por você são armazenadas e utilizadas a fim de te oferecer o melhor atendimento possível.',
+                title4: 'Como suas informações são protegidas',
+                text4: 'Utilizamos algumas medidas para ajudar a proteger as suas informações. Todas as uas informações são armazenadas, e utilizamos criptografia, para protegê-las, para que apenas a profissional tenha acesso a elas, a fim de prestar um serviço mais personalizado aos seus clientes. Ou seja, é imposto um controle de acesso administrativo, para limitar quem terá acesso e quem não terá acesso às suas informações.'
             }
         }
     }
