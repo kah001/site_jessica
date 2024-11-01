@@ -82,7 +82,7 @@ export default function AlteracoesAdm() {
     }
   }
 
-  async function consultarPorId(id) {
+  async function consultarPorId(id, token) {
     try {
       const url = `http://localhost:5010/projetos/andamento/${id}?x-access-token=${token}`;
       const resp = await axios.get(url);
@@ -94,7 +94,7 @@ export default function AlteracoesAdm() {
       setLocal(dados.local);
 
     } catch (err) {
-      alert(err.response.data.erro);
+      
     }
   }
 
@@ -108,7 +108,7 @@ export default function AlteracoesAdm() {
       }
 
       const url = `http://localhost:5010/projeto/andamento/${id}?x-access-token=${token}`
-      let resp = await axios.put(url, paramObj)
+      await axios.put(url, paramObj)
 
       alert(`Projeto em andamento do Id: ${id} Editado com Sucesso`)
       navigate('/adm/alteracoes')
@@ -155,7 +155,7 @@ export default function AlteracoesAdm() {
 
     const carregarDados = async () => {
       if (id) {
-        await consultarPorId(id);
+        await consultarPorId(id, usu);
       } else {
         await consultar(usu);
       }
