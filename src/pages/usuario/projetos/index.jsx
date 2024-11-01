@@ -80,7 +80,7 @@ export default function Projetos() {
 
     async function consultar() {
         try {
-            const url = `http://localhost:5010/projeto/andamento/recente`;
+            const url = `http://4.172.207.208:5030/projeto/andamento/recente`;
             const resp = await axios.get(url);
 
             let dados = resp.data

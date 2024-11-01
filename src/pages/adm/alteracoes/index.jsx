@@ -47,7 +47,7 @@ export default function AlteracoesAdm() {
         local: local
       }
 
-      const url = `http://localhost:5010/projeto/andamento?x-access-token=${token}`;
+      const url = `http://4.172.207.208:5030/projeto/andamento?x-access-token=${token}`;
       let response = await axios.post(url, paramObj);
       let id = response.data.novoId
 
@@ -69,7 +69,7 @@ export default function AlteracoesAdm() {
 
   async function consultar() {
     try {
-      const url = `http://localhost:5010/projeto/andamento/recente`;
+      const url = `http://4.172.207.208:5030/projeto/andamento/recente`;
       const resp = await axios.get(url);
 
       let dados = resp.data
@@ -88,7 +88,7 @@ export default function AlteracoesAdm() {
 
   async function consultarPorId(id) {
     try {
-      const url = `http://localhost:5010/projetos/andamento/${id}?x-access-token=${token}`;
+      const url = `http://4.172.207.208:5030/projetos/andamento/${id}?x-access-token=${token}`;
       const resp = await axios.get(url);
 
       let dados = resp.data;
@@ -111,7 +111,7 @@ export default function AlteracoesAdm() {
         local: local
       }
 
-      const url = `http://localhost:5010/projeto/andamento/${id}?x-access-token=${token}`
+      const url = `http://4.172.207.208:5030/projeto/andamento/${id}?x-access-token=${token}`
       let resp = await axios.put(url, paramObj)
 
       alert(`Projeto em andamento do Id: ${id} Editado com Sucesso`)
@@ -131,7 +131,7 @@ export default function AlteracoesAdm() {
 
   async function deletarRecente() {
     try {
-      const url = `http://localhost:5010/projeto/andamento/${idRecente}?x-access-token=${token}`;
+      const url = `http://4.172.207.208:5030/projeto/andamento/${idRecente}?x-access-token=${token}`;
       await axios.delete(url);
 
       alert(`Projeto em andamento do Id: ${idRecente} Deletado com Sucesso`)

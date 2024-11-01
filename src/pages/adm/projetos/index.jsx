@@ -13,7 +13,7 @@ export default function ProjetosAdm() {
     const navigate = useNavigate()
 
     async function buscarProjeto() {
-        const url = `http://localhost:5010/projeto?x-access-token=${token}`
+        const url = `http://4.172.207.208:5030/projeto?x-access-token=${token}`
         let resp = await axios.get(url)
 
         setProjetos(resp.data)

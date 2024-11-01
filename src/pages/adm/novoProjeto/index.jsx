@@ -16,9 +16,6 @@ export default function NovoProjeto() {
     const [valorPago, setValorPago] = useState('')
     const [formaPagamento, setFormaPagamento] = useState('')
     const [token, setToken] = useState(null)
-    const [erroProjeto, setErroProjeto] = useState('')
-    const [erroTarefa, setErroTarefa] = useState('')
-
     const navigate = useNavigate()
 
     async function inserirProjeto() {
@@ -35,7 +32,7 @@ export default function NovoProjeto() {
                 "pagamento": formaPagamento
             }
 
-            const url = `http://localhost:5010/projeto?x-access-token=${token}`
+            const url = `http://4.172.207.208:5030/projeto?x-access-token=${token}`
             await axios.post(url, paramCorpo)
 
             setNomeProjeto('')
@@ -54,7 +51,7 @@ export default function NovoProjeto() {
 
     async function inserirTarefa() {
         if (tarefa != '') {
-            const url = `http://localhost:5010/tarefa`
+            const url = `http://4.172.207.208:5030/tarefa`
             await axios.post(url, tarefa)
 
             setTarefa('')

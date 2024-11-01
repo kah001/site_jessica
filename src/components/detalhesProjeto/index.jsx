@@ -9,7 +9,7 @@ export default function DetalhesProjeto(props) {
     const [token, setToken] = useState(null)
 
     async function buscarTarefas() {
-        const url = `http://localhost:5010/tarefa/${props.idProjeto}?x-access-token=${token}`
+        const url = `http://4.172.207.208:5030/tarefa/${props.idProjeto}?x-access-token=${token}`
         let resp = await axios.get(url)
 
         setTarefas(resp.data)
