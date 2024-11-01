@@ -1,0 +1,73 @@
+.pagina-dicas {
+    .intro {
+        display: flex;
+        flex-direction: column;
+        background-color: #947759;
+        padding-bottom: 45px;
+
+        .img {
+            display: flex;
+            justify-content: center;
+
+            img {
+                width: 100%;
+            }
+        }
+        h1 {
+            text-align: center;
+            font-size: 35px;
+            padding: 20px 10px;
+            color: #fff;
+        }
+        p {
+            font-size: 20px;
+            color: #fff;
+            padding: 0px 25px;
+        }
+    }
+    .dicas {
+        background-color: #A6896B;
+        color: #fff;
+        padding: 30px 10px;
+
+        .dica {
+            padding: 25px 20px;
+
+            h1 {
+                font-size: 30px;
+            }
+            p {
+                font-size: 20px;
+            }
+        }
+    }
+    .frase {
+        background-color: #947759;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        color: #fff;
+        padding: 60px 45px;
+
+        h1 {
+            font-size: 40px;
+        }
+        h1:nth-child(2) {
+            font-size: 25px;
+            font-weight: 400;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .pagina-dicas {
+        .frase {
+            padding: 35px 15px;
+
+            h1:nth-child(2) {
+                font-size: 20px;
+            }
+        }
+    }
+}

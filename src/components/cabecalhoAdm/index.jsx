@@ -14,7 +14,7 @@ export default function CabecalhoAdm() {
 
             <div class="logo">
                 <Link to='/'>
-                    <img src="/assets/images/logo-tcc.png" alt="" height="100px" />
+                    <img src="/assets/images/logo-tcc.png" alt="logo" height="80px" />
                 </Link>
             </div>
 
@@ -22,7 +22,6 @@ export default function CabecalhoAdm() {
                 <div class="item"><Link to='/adm/alteracoes'><a href="">Alterações</a></Link></div>
                 <div class="item"><Link to='/adm/projetos/novo'><a href="">Novo Projeto</a></Link></div>
                 <div class="item"><Link to='/adm/projetos'><a href="">Projetos</a></Link></div>
-                <div class="item"><Link to='/adm/lucro'><a href="">Lucro Total</a></Link></div>
                 <div class="item"><Link to='/adm/formularios'><a href="">Formulários</a></Link></div>
             </nav>
 

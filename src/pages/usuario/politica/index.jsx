@@ -9,45 +9,37 @@ export default function PoliticaPrivacidade() {
             <Cabecalho />
 
             <section className='infos'>
-                <h1>{i18n.t('policy.title')}</h1>
+                <h1 className='titulo'>{i18n.t('policy.title')}</h1>
 
                 <ol>
-                    <li><a href="#bem-vindo" className='link'>{i18n.t('policy.topic1')}</a></li>
-                    <li><a href="#informacoes-coletadas" className='link'>{i18n.t('policy.topic2')}</a></li>
-                    <li><a href="#informacoes-utilizadas" className='link'>{i18n.t('policy.topic3')}</a></li>
-                    <li><a href="#informacoes-protegidas" className='link'>{i18n.t('policy.topic4')}</a></li>
+                    <li><a href="#bem-vindo" className='link'>{i18n.t('policy.title1')}</a></li>
+                    <li><a href="#informacoes-coletadas" className='link'>{i18n.t('policy.title2')}</a></li>
+                    <li><a href="#informacoes-utilizadas" className='link'>{i18n.t('policy.title3')}</a></li>
+                    <li><a href="#informacoes-protegidas" className='link'>{i18n.t('policy.title4')}</a></li>
                 </ol>
 
-
                 <section id='bem-vindo' className='bloco'>
-                    <h1>Bem-vindo(a)!</h1>
+                    <h1>{i18n.t('policy.title1')}</h1>
                     <br />
-                    <p>Aqui você terá acesso à política de privacidade dessa plataforma, tendo informações de quais informações suas são coletadas, como e para que fim as utilizamos e também como as suas informações são protegias com segurança. É importante que você leia esta política, mas aqui abaixo, está um breve resumo:</p>
-
-                    <div className='resumo'>
-                        <ul>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                    </div>
+                    <p>{i18n.t('policy.text1')}</p>
                 </section>
 
                 <section id='informacoes-coletadas' className='bloco'>
-                    <h1>Informações coletadas</h1>
+                    <h1>{i18n.t('policy.title2')}</h1>
                     <br />
-                    <p>As únicas informações que são coletadas, são as informações fornecidas por você dutante o preenchimento do formulário de contato, onde você nos informa seu nome, email, número de telefone, país em que mora e insere a sua mensagem.</p>
+                    <p>{i18n.t('policy.text2')}</p>
                 </section>
 
                 <section id='informacoes-utilizadas' className='bloco'>
-                    <h1>Como suas informações são utilizadas</h1>
+                    <h1>{i18n.t('policy.title3')}</h1>
                     <br />
-                    <p></p>
+                    <p>{i18n.t('policy.text3')}</p>
                 </section>
 
                 <section id='informacoes-protegidas' className='bloco'>
-                    <h1>Como suas informações são protegidas</h1>
+                    <h1>{i18n.t('policy.title4')}</h1>
                     <br />
-                    <p></p>
+                    <p>{i18n.t('policy.text4')}</p>
                 </section>
             </section>
 

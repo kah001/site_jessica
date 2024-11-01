@@ -5,17 +5,22 @@ import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
 export default function NovoProjeto() {
+    const [token, setToken] = useState(null)
+    
     const [nomeProjeto, setNomeProjeto] = useState('')
     const [nomeCliente, setNomeCliente] = useState('')
     const [contatoCliente, setContatoCliente] = useState('')
     const [dataInicio, setDataInicio] = useState('')
     const [tipoProjeto, setTipoProjeto] = useState('')
     const [descricao, setDescricao] = useState('')
-    const [tarefa, setTarefa] = useState('')
+    
+    const [descricaoTarefa, setDescricaoTarefa] = useState('')
+    const [idProjeto, setIdProjeto] = useState(0)
+    
     const [valorTotalEstimado, setValorTotalEstimado] = useState('')
     const [valorPago, setValorPago] = useState('')
     const [formaPagamento, setFormaPagamento] = useState('')
-    const [token, setToken] = useState(null)
+
     const navigate = useNavigate()
 
     async function inserirProjeto() {
@@ -32,8 +37,8 @@ export default function NovoProjeto() {
                 "pagamento": formaPagamento
             }
 
-            const url = `http://4.172.207.208:5030/projeto?x-access-token=${token}`
-            await axios.post(url, paramCorpo)
+            const url = `http://localhost:5010/projeto?x-access-token=${token}`
+            let resp = await axios.post(url, paramCorpo)
 
             setNomeProjeto('')
             setNomeCliente('')
@@ -42,22 +47,30 @@ export default function NovoProjeto() {
             setTipoProjeto('')
             setDescricao('')
             setValorTotalEstimado('')
+            setValorPago('')
             setFormaPagamento('')
+            alert(`Novo Projeto adcionado. Id: ${resp.data.novoId}`)
         } else {
-            let mensagem = '*Preencha os campos solicitados'
-            setErroProjeto(mensagem)
+            let mensagem = 'Preencha os campos solicitados'
+            alert(mensagem)
         }
     }
 
     async function inserirTarefa() {
-        if (tarefa != '') {
-            const url = `http://4.172.207.208:5030/tarefa`
-            await axios.post(url, tarefa)
+        if (descricaoTarefa !== '' && idProjeto !== '') {
+            let tarefa = {
+                descricao: descricaoTarefa,
+                projeto: idProjeto
+            }
+            const url = `http://localhost:5010/tarefa?x-access-token=${token}`
+            let resp = await axios.post(url, tarefa)
 
-            setTarefa('')
+            setDescricaoTarefa('')
+            setIdProjeto('')
+            alert(`Nova Tarefa adcionada. Id: ${resp.data.novoId}`)
         } else {
-            let mensagem = '*Insira as informações solicitadas'
-            setErroTarefa(mensagem)
+            let mensagem = 'Preencha os campos solicitados'
+            alert(mensagem)
         }
     }
 
@@ -78,70 +91,90 @@ export default function NovoProjeto() {
 
             <div className='info'>
 
-                <div className='item'>
-                    <label>NOME DO PROJETO:</label>
-                    <input type="text" value={nomeProjeto} onChange={a => setNomeProjeto(a.target.value)} />
-                </div>
+                <div style={{
+                    display: 'flex',
+                    flexDirection: 'column'
+                }}>
 
-                <div className='item'>
-                    <label>NOME DO CLIENTE:</label>
-                    <input type="text" value={nomeCliente} onChange={a => setNomeCliente(a.target.value)} />
-                </div>
+                    <div className='item'>
+                        <label>NOME DO PROJETO:</label>
+                        <input type="text" placeholder='Projeto 01, 02...' value={nomeProjeto} onChange={a => setNomeProjeto(a.target.value)} />
+                    </div>
 
-                <div className='item'>
-                    <label>CONTATO CLIENTE:</label>
-                    <input type="text" value={contatoCliente} onChange={a => setContatoCliente(a.target.value)} />
-                </div>
+                    <div className='item'>
+                        <label>NOME DO CLIENTE:</label>
+                        <input type="text" placeholder='Fulano...' value={nomeCliente} onChange={a => setNomeCliente(a.target.value)} />
+                    </div>
 
-                <div className='item'>
-                    <label>DATA DE INÍCIO:</label>
-                    <input type="date" value={dataInicio} onChange={a => setDataInicio(a.target.value)} />
-                </div>
+                    <div className='item'>
+                        <label>CONTATO CLIENTE:</label>
+                        <input type="text" placeholder='+12 (34) 56789...' value={contatoCliente} onChange={a => setContatoCliente(a.target.value)} />
+                    </div>
 
-                <div className='item'>
-                    <label>TIPO DO PROJETO:</label>
-                    <input type="text" value={tipoProjeto} onChange={a => setTipoProjeto(a.target.value)} />
-                </div>
+                    <div className='item'>
+                        <label>DATA DE INÍCIO:</label>
+                        <input type="date" value={dataInicio} onChange={a => setDataInicio(a.target.value)} />
+                    </div>
 
-                <div className='item'>
-                    <label>DESCRIÇÃO DO PROJETO:</label>
-                    <textarea value={descricao} onChange={a => setDescricao(a.target.value)}></textarea>
+                    <div className='item'>
+                        <label>TIPO DO PROJETO:</label>
+                        <input type="text" placeholder='Casa, Apartamento...' value={tipoProjeto} onChange={a => setTipoProjeto(a.target.value)} />
+                    </div>
+
+                    <div className='item'>
+                        <label>DESCRIÇÃO DO PROJETO:</label>
+                        <textarea value={descricao} placeholder='Um pouco sobre o projeto...' onChange={a => setDescricao(a.target.value)}></textarea>
+                    </div>
                 </div>
             </div>
 
             <div className='tarefas'>
                 <div className='tarefa'>
                     <h1>TAREFAS</h1>
-                    <hr />
+                </div>
+                <div style={{
+                    border: '1px solid #000',
+                    width: '80%'
+                }}>
                 </div>
 
                 <div className='tarefa'>
-                    <label>INSIRA UMA TAREFA:</label>
-                    <input type="text" value={tarefa} onChange={a => setTarefa(a.target.value)} />
+                    <label>DESCRIÇÃO DA TAREFA:</label>
+                    <input type="text" placeholder='Terminar de escrev...' value={descricaoTarefa} onChange={a => setDescricaoTarefa(a.target.value)} />
+
+                    <label>ID DO PROJETO:</label>
+                    <input type="text" placeholder='0, 1...' value={idProjeto} onChange={a => setIdProjeto(a.target.value)} />
                 </div>
 
-                <div className='botao' onClick={inserirTarefa}>INSERIR</div>
+                <div className='botao' onClick={inserirTarefa}>INSERIR TAREFA</div>
             </div>
 
             <div className='pagamentos'>
                 <div className='pagamento'>
                     <h1>PAGAMENTO</h1>
-                    <hr />
+                </div>
+                <div style={{
+                    border: '1px solid #000',
+                    width: '80%',
+                    margin: '20px'
+                }}>
                 </div>
 
-                <div className='pagamento'>
-                    <label>VALOR TOTAL OU ESTIMADO:</label>
-                    <input type="text" value={valorTotalEstimado} onChange={a => setValorTotalEstimado(a.target.value)} />
-                </div>
+                <div>
+                    <div className='pagamento'>
+                        <label>VALOR TOTAL OU ESTIMADO:</label>
+                        <input type="text" placeholder='R$ 1.000,00...' value={valorTotalEstimado} onChange={a => setValorTotalEstimado(a.target.value)} />
+                    </div>
 
-                <div className='pagamento'>
-                    <label>VALOR PAGO:</label>
-                    <input type="text" value={valorPago} onChange={a => setValorPago(a.target.value)} />
-                </div>
+                    <div className='pagamento'>
+                        <label>VALOR PAGO:</label>
+                        <input type="text" placeholder='R$ 700,00...' value={valorPago} onChange={a => setValorPago(a.target.value)} />
+                    </div>
 
-                <div className='pagamento'>
-                    <label>FORMA DE PAGAMENTO:</label>
-                    <input type="text" value={formaPagamento} onChange={a => setFormaPagamento(a.target.value)} />
+                    <div className='pagamento'>
+                        <label>FORMA DE PAGAMENTO:</label>
+                        <input type="text" placeholder='Débito, Crédito...' value={formaPagamento} onChange={a => setFormaPagamento(a.target.value)} />
+                    </div>
                 </div>
 
                 <div className='botao' onClick={inserirProjeto}>INSERIR NOVO PROJETO</div>

@@ -1,10 +1,9 @@
 import './index.scss';
 import { useEffect, useState, useRef } from "react";
-
 import CabecalhoAdm from '../../../components/cabecalhoAdm';
 import { Link, useNavigate, useParams } from "react-router-dom";
-
 import axios from 'axios';
+
 
 export default function AlteracoesAdm() {
   const [token, setToken] = useState(null);
@@ -60,9 +59,9 @@ export default function AlteracoesAdm() {
     }
     catch (err) {
       if (err.response && err.response.data && err.response.data.erro) {
-        alert(err.response.data.erro); // Mensagem de erro do backend
+        alert(err.response.data.erro); 
       } else {
-        alert('Erro desconhecido ao inserir projeto'); // Mensagem genérica
+        alert('Erro desconhecido ao inserir projeto');
       }
     }
   }
@@ -74,19 +73,16 @@ export default function AlteracoesAdm() {
 
       let dados = resp.data
 
-
       setIdRecente(dados.id);
       setImagemRecente(dados.imagem);
       setTipoRecente(dados.tipo);
       setLocalRecente(dados.local);
-
     }
     catch (err) {
-      alert(`Erro ao carregar automaticamento projeto recente: Não há projetos recentes`)
     }
   }
 
-  async function consultarPorId(id) {
+  async function consultarPorId(id, token) {
     try {
       const url = `http://4.172.207.208:5030/projetos/andamento/${id}?x-access-token=${token}`;
       const resp = await axios.get(url);
@@ -98,7 +94,7 @@ export default function AlteracoesAdm() {
       setLocal(dados.local);
 
     } catch (err) {
-      alert(`Erro ao carregar automaticamento projeto recente: ${`Não há projetos recentes`}`);
+      
     }
   }
 
@@ -125,7 +121,11 @@ export default function AlteracoesAdm() {
       setLocal('');
     }
     catch (err) {
-      alert(`Erro: ${err.message}`);
+      if (err.response && err.response.data && err.response.data.erro) {
+        alert(err.response.data.erro);
+      } else {
+        alert('Erro desconhecido ao inserir projeto'); 
+      }
     }
   }
 
@@ -139,6 +139,9 @@ export default function AlteracoesAdm() {
     }
     catch (err) {
       alert('Nenhum registro encontrado')
+      setImagemRecente(null);
+      setTipoRecente('');
+      setLocalRecente('');
     }
   }
 
@@ -146,13 +149,13 @@ export default function AlteracoesAdm() {
     let usu = localStorage.getItem('USUARIO');
     setToken(usu);
 
-    if (usu === null || usu === undefined) {
+    if (!usu) {
       navigate('/')
     }
 
     const carregarDados = async () => {
       if (id) {
-        await consultarPorId(id);
+        await consultarPorId(id, usu);
       } else {
         await consultar(usu);
       }
@@ -173,7 +176,6 @@ export default function AlteracoesAdm() {
     <div className='pagina-alteracoes-adm' >
       <CabecalhoAdm />
       <div style={{ backgroundColor: "#D9D9D9", height: "50px" }} />
-
 
       <section className='secao-01' id='inserir' ref={insertSectionRef}>
         <div className="titulo">
@@ -228,7 +230,6 @@ export default function AlteracoesAdm() {
             </div>
 
             <div className='text-box'>
-
               <div className='text'>
                 <div>
                   <label> TIPO: </label>
@@ -264,7 +265,13 @@ export default function AlteracoesAdm() {
             <div className='image-box'>
               {!imagemRecente &&
 
-                <div className='img-recente-box'>
+                <div className='img-recente-box' style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  fontSize: '15px'
+                }}>
+                  <p><b>Nenhum projeto em andamento no momento</b></p>
                 </div>
 
               }
@@ -281,13 +288,13 @@ export default function AlteracoesAdm() {
 
           <div className='acoes'>
             <div>
-              <i className="fa-solid fa-trash-can" style={{ fontSize: '70px' }} onClick={deletarRecente} ></i>
+              <i className="fa-solid fa-trash-can" style={{ fontSize: '45px' }} onClick={deletarRecente} ></i>
               <Link to={`/adm/alteracoes/${idRecente}`} style={{ color: '#000' }} onClick={() => {
                 scrollToInsertSection();
                 consultarPorId(idRecente);
                 setEditando(true);
               }} >
-                <i className="fa-solid fa-pen-to-square" style={{ fontSize: '70px' }} ></i>
+                <i className="fa-solid fa-pen-to-square" style={{ fontSize: '45px' }} ></i>
               </Link>
             </div>
           </div>

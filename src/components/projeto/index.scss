@@ -1,43 +1,24 @@
-.comp-projeto-adm {
+.comp-projeto {
     display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
 
     .projeto {
-        padding: 20px;
         background-color: #44392d;
-        width: 600px;
-        margin: 25px 0px 0px 0px;
-        cursor: pointer;r
+        display: flex;
+        padding: 10px 20px;
+        margin: 20px 0px 0px 0px;
+        color: #fff;
+        width: 650px;
+        cursor: pointer;
 
         h1 {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 25px;
-            color: #fff;
-        }
-        .icon {
-            color: #000;
-            font-size: 35px;
+            font-size: 27px;
         }
     }
     .open {
-        padding: 20px;
-        background-color: #bbbb;
-        width: 600px;
-        margin: 25px 0px 0px 0px;
-
-        h1 {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: #000;
-        }
-        .icon {
-            color: #000;
-            font-size: 35px;
-            cursor: pointer;
-        }
+        background-color: #d9d9d9;
+        color: #000;
     }
 }

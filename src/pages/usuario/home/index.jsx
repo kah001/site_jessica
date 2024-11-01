@@ -62,7 +62,7 @@ export default function Home() {
                     pagination={{ clickable: true }}
                     modules={[Autoplay, Pagination, Navigation]}
                     autoplay={{
-                        delay: 3200,
+                        delay: 5200,
                         disableOnInteraction: false
                     }}
                     loop={true}

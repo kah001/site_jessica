@@ -26,7 +26,7 @@ export default function Rodape() {
                     <div className='contatos'>
                         <a href="https://www.instagram.com/jessicalima.sa/"><i className='fa-brands fa-instagram icon1'></i></a>
                         <a href="https://wa.me/353831022713"><i className='fa-brands fa-whatsapp icon2'></i></a>
-                        <i className='fa-regular fa-envelope icon3'></i>
+                        <a href="mailto:arq.jessicalima@gmail.com"><i className='fa-regular fa-envelope icon3'></i></a>
                     </div>
                 </div>
 

@@ -2,22 +2,22 @@ import './index.scss'
 import { useState } from 'react'
 import DetalhesProjeto from '../detalhesProjeto'
 
-export default function ProjetoAdm(props) {
-    const [mostrarDetalhes, setMostrarDetalhes] = useState(false)
+export default function Projeto(props) {
+    const [detalhes, setDetalhes] = useState(false)
 
-    function mostrar() {
-        setMostrarDetalhes(!mostrarDetalhes)
+    function mostrarDetalhes() {
+        setDetalhes(!detalhes)
     }
 
     return (
-        <div className='comp-projeto-adm'>
-            <div className={mostrarDetalhes ? 'open' : 'projeto'} onClick={mostrar}>
-                <h1 >
-                    Projeto {props.id} <div>{mostrarDetalhes ? <i className='fa-solid fa-x icon'></i> : ''}</div>
-                </h1>
+        <div onClick={mostrarDetalhes} className='comp-projeto'>
+            <div className={`projeto ${detalhes ? 'open' : ''}`}>
+                <h1>Projeto {props.id}</h1>
             </div>
 
-            {mostrarDetalhes && <DetalhesProjeto idProjeto={props.id} />}
+            {detalhes &&
+                <DetalhesProjeto id={props.id} />
+            }
         </div>
     )
 }
