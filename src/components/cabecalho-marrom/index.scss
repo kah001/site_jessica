@@ -35,12 +35,16 @@
         font-size: 20px;
         margin: 12px 0px;
         padding: 0px 12px;
+
+        img {
+            width: 40px;
+            height: 40px;
+        }
     }
 }
 
 @media (max-width: 768px) {
     .comp-cabecalho {
-        
         justify-content: space-between;
 
         .nav {

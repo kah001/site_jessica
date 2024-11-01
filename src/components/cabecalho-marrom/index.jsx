@@ -24,7 +24,7 @@ export default function Cabecalho() {
                 <div class="item"><Link to='/sobre'><a href="">{i18n.t('headerBrown.page2')}</a></Link></div>
                 <div class="item"><Link to='/projetos'><a href="">{i18n.t('headerBrown.page3')}</a></Link></div>
                 <div class="item"><Link to='/dicas'><a href="">{i18n.t('headerBrown.page4')}</a></Link></div>
-                <div class="item"><Link to='/login'><img src="/assets/images/person-icon.png" alt="" height="30px" /></Link></div>
+                <div class="item"><Link to='/login'><img src="assets/images/person-icon.png" alt="" height="30px" /></Link></div>
             </nav>
 
             <div className='menu-icon' onClick={toggleMenu}>

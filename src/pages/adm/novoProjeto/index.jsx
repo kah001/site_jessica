@@ -57,7 +57,6 @@ export default function NovoProjeto() {
     }
 
     async function inserirTarefa() {
-
         if (descricaoTarefa !== '' && idProjeto !== '') {
             let tarefa = {
                 descricao: descricaoTarefa,
@@ -144,15 +143,13 @@ export default function NovoProjeto() {
                     <input type="text" placeholder='Terminar de escrev...' value={descricaoTarefa} onChange={a => setDescricaoTarefa(a.target.value)} />
 
                     <label>ID DO PROJETO:</label>
-                    <input type="text" placeholder='0, 1...' onChange={a => setIdProjeto(a.target.value)} />
+                    <input type="text" placeholder='0, 1...' value={idProjeto} onChange={a => setIdProjeto(a.target.value)} />
                 </div>
 
                 <div className='botao' onClick={inserirTarefa}>INSERIR TAREFA</div>
             </div>
 
             <div className='pagamentos'>
-
-
                 <div className='pagamento'>
                     <h1>PAGAMENTO</h1>
                 </div>

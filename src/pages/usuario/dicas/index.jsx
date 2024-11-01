@@ -9,17 +9,25 @@ export default function Dicas() {
         <div className='pagina-dicas'>
             <CabecalhoMarrom />
 
-            <div className='inicio'>
-                <img className='fundo' src="assets/images/dicas.jpg" alt="" />
-            </div>
-
             <section className='intro'>
+                <motion.div className='img'
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -50 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                >
+                    <img className='fundo' src="assets/images/dicas.png" alt="" />
+                </motion.div>
+
                 <motion.h1
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -50 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
                 >{i18n.t('advices.title2')}</motion.h1>
+
+
+
                 <br />
                 <motion.p
                     initial={{ opacity: 0, y: 50 }}

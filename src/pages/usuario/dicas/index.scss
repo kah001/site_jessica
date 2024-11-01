@@ -1,19 +1,22 @@
 .pagina-dicas {
-    .inicio {
-        img {
-            width: 100%;
-        }
-    }
     .intro {
         display: flex;
         flex-direction: column;
-        background-color: #A6896B;
-        padding: 50px 10px;
+        background-color: #947759;
+        padding-bottom: 45px;
 
+        .img {
+            display: flex;
+            justify-content: center;
+
+            img {
+                width: 100%;
+            }
+        }
         h1 {
             text-align: center;
             font-size: 35px;
-            padding: 10px 0px;
+            padding: 20px 10px;
             color: #fff;
         }
         p {
@@ -23,7 +26,7 @@
         }
     }
     .dicas {
-        background-color: #947759;
+        background-color: #A6896B;
         color: #fff;
         padding: 30px 10px;
 
@@ -39,7 +42,7 @@
         }
     }
     .frase {
-        background-color: #A6896B;
+        background-color: #947759;
         display: flex;
         flex-direction: column;
         align-items: center;

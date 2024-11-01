@@ -1,0 +1,24 @@
+.comp-projeto {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    .projeto {
+        background-color: #44392d;
+        display: flex;
+        padding: 10px 20px;
+        margin: 20px 0px 0px 0px;
+        color: #fff;
+        width: 650px;
+        cursor: pointer;
+
+        h1 {
+            font-size: 27px;
+        }
+    }
+    .open {
+        background-color: #d9d9d9;
+        color: #000;
+    }
+}
