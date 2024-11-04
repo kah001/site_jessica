@@ -52,11 +52,28 @@
         }
         .frase {
             position: absolute;
+            display: flex;
+            justify-content: center;
 
             h1 {
                 font: 300 45px 'Julius Sans One';
-                width: 460px;
+                width: 85%;
                 text-align: center;
+            }
+        }
+    }
+}
+
+@media (max-width: 580px) {
+    .pagina-sobre-mim {
+        .mapaFrase {
+            .mapa {
+                height: 350px;
+            }
+            .frase {
+                h1 {
+                    font-size: 25px;
+                }
             }
         }
     }
@@ -97,17 +114,3 @@
     }
 }
 
-@media (max-width: 580px) {
-    .pagina-sobre-mim {
-        .mapaFrase {
-            .mapa {
-                height: 350px;
-            }
-            .frase {
-                h1 {
-                    font: 30px;
-                }
-            }
-        }
-    }
-}

@@ -60,7 +60,7 @@ const messages = {
                 text3: 'Verificar a posição do sol com relação ao terreno também é um ponto importante para ser observado na escolha do terreno. Dependendo da posição do terreno, a relação da casa com o sol pode ser muito diferente. Caso você queira fazer uma piscina nos fundos, por exemplo, comprar um terreno onde praticamente nunca se tem o sol no quintal, pode ser um grande problema',
                 topic3: 'Localidade',
                 text4: 'Ainda falando sobre estrutura, é importante ver se não existe alguma nascente, rio ou corrego próximo ao terreno, pois a presença de águas nas proximidades pode impactar completamente na dureza do solo. Quanto menos resistente ao solo, mais será necessário gastar com a estrutura da fundação, que em geral já é o momento em que boa parte do orçamento é gasto. Uma dica útil é conversar com vizinhos que já tenham construído para saber como foi sobre a dureza do solo, ou saber se até mesmo algum deles pagou para fazer o estudo de solo.',
-                phrase: 'Para todos essas questões, é importante ter o auxílio de um profissional. Então antes mesmo de fechar a compra do terreno, já é o momento onde o relacionamento com o arquiteto se faz necessário iniciar'
+                phrase: 'Para todas essas questões, é importante ter o auxílio de um profissional. Então antes mesmo de fechar a compra do terreno, já é o momento onde o relacionamento com o arquiteto se faz necessário iniciar'
             },
             login: {
                 title: 'Bem-vinda!',
