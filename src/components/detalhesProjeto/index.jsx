@@ -11,10 +11,15 @@ export default function DetalhesProjeto(props) {
     const navigate = useNavigate()
 
     async function buscarDetalhes(id) {
-        const url = `http://4.172.207.208:5030/projeto/${id}?x-access-token=${token}`
-        let resp = await axios.get(url)
-
-        setDetalhes(resp.data)
+        try {
+            const url = `http://4.172.207.208:5030/projeto/${id}?x-access-token=${token}`
+            let resp = await axios.get(url)
+    
+            setDetalhes(resp.data)
+        }
+        catch (err) {
+        
+        }
     }
     async function buscarTarefas(id) {
         try {
@@ -42,7 +47,7 @@ export default function DetalhesProjeto(props) {
         }
         catch (err) {
         }
-    }, [navigate, buscarTarefas])
+    }, [navigate, buscarTarefas, buscarDetalhes])
 
     return (
         <div className='comp-detalhes-projeto'>

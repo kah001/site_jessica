@@ -10,6 +10,7 @@ export default function ProjetosAdm() {
     const [token, setToken] = useState(null)
     const navigate = useNavigate()
 
+
     async function buscarProjeto() {
         try {
             const url = `http://4.172.207.208:5030/projeto?x-access-token=${token}`
@@ -36,7 +37,7 @@ export default function ProjetosAdm() {
         catch (err) {
 
         }
-    }, [navigate, buscarProjeto])
+    }, [navigate, buscarProjeto()])
 
     return (
         <div className='pagina-projetos-adm'>
