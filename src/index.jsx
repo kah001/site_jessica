@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.scss';
 import Navegacao from './routes';
-import NovoProjeto from './pages/adm/novoProjeto';
+
 
 //importações do swiper
 import 'swiper/css' 

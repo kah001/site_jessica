@@ -51,7 +51,7 @@ export default function Home() {
             setErro(mensagem)
         }
     }
-
+    
     return (
         <div className='pagina-home'>
             <Cabecalho />

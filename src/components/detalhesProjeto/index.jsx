@@ -47,7 +47,7 @@ export default function DetalhesProjeto(props) {
         }
         catch (err) {
         }
-    }, [navigate, buscarTarefas])
+    }, [navigate, buscarTarefas, buscarDetalhes])
 
     return (
         <div className='comp-detalhes-projeto'>

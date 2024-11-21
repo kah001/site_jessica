@@ -89,8 +89,18 @@ export default function Dicas() {
             </section>
 
             <section className='frase'>
-                <h1>“</h1>
-                <h1>{i18n.t('advices.phrase')}</h1>
+                <motion.h1
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -50 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                >“</motion.h1>
+                <motion.h1
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -50 }}
+                    transition={{ duration: 0.5, delay: 0.2}}
+                >{i18n.t('advices.phrase')}</motion.h1>
             </section>
 
             <Rodape />

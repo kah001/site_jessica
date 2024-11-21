@@ -28,6 +28,12 @@ export default function Login() {
             }
         }
     }
+
+    function enter(a) {
+        if (a.key == 'Enter') {
+            entrar()
+        }
+    }
     
     return (
         <div className='pagina-login'>
@@ -42,7 +48,7 @@ export default function Login() {
                     <input type="text" value={nome} onChange={a => setNome(a.target.value)} />
 
                     <label>{i18n.t('login.password')}</label>
-                    <input type="password" placeholder="********" value={senha} onChange={a => setSenha(a.target.value)} />
+                    <input type="password" placeholder="********" onKeyUp={enter} value={senha} onChange={a => setSenha(a.target.value)} />
 
                     <div className='botao' onClick={entrar}>{i18n.t('login.button')}</div>
                 </div>
