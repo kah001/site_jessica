@@ -10,8 +10,8 @@ export default function Projeto(props) {
     }
 
     return (
-        <div onClick={mostrarDetalhes} className='comp-projeto'>
-            <div className={`projeto ${detalhes ? 'open' : ''}`}>
+        <div  className='comp-projeto'>
+            <div onClick={mostrarDetalhes} className={`projeto ${detalhes ? 'open' : ''}`}>
                 <h1>Projeto {props.id}</h1>
             </div>
 

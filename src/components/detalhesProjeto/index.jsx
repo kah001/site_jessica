@@ -12,7 +12,7 @@ export default function DetalhesProjeto(props) {
 
     async function buscarDetalhes(id) {
         try {
-            const url = `http://4.172.207.208:5030/projeto/${id}?x-access-token=${token}`
+            const url = `http://localhost:5030/projeto/${id}?x-access-token=${token}`
             let resp = await axios.get(url)
     
             setDetalhes(resp.data)
@@ -23,7 +23,7 @@ export default function DetalhesProjeto(props) {
     }
     async function buscarTarefas(id) {
         try {
-            const url = `http://4.172.207.208:5030/tarefa/${id}?x-access-token=${token}`
+            const url = `http://localhost:5030/tarefa/${id}?x-access-token=${token}`
             let resp = await axios.get(url)
     
             setTarefas(resp.data)
@@ -47,7 +47,7 @@ export default function DetalhesProjeto(props) {
         }
         catch (err) {
         }
-    }, [navigate, buscarTarefas, buscarDetalhes])
+    }, [navigate, buscarDetalhes])
 
     return (
         <div className='comp-detalhes-projeto'>

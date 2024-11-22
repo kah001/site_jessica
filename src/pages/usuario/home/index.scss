@@ -23,7 +23,7 @@
 
                 .texto {
                     position: absolute;
-                    top: 78%;
+                    top: 70%;
                     left: 50px;
 
                     h1 {
@@ -280,6 +280,20 @@
 
 @media (max-width: 768px) {
     .pagina-home {
+        .slogan {
+            .carrossel {
+                .bloco {
+                    .texto {
+                        top: 60%;
+                        left: 25px;
+    
+                        h1 {
+                            font-size: 25px;
+                        }
+                    }
+                }
+            }
+        }
         .tecnologia {
             flex-direction: column;
 
