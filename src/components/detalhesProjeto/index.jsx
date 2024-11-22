@@ -15,10 +15,10 @@ export default function DetalhesProjeto(props) {
             const url = `http://localhost:5030/projeto/${id}?x-access-token=${token}`
             let resp = await axios.get(url)
     
-            setDetalhes(resp.data)
-        }
+            setDetalhes(resp.data)    
+        } 
         catch (err) {
-        
+            
         }
     }
     async function buscarTarefas(id) {

@@ -38,7 +38,7 @@ export default function Home() {
                 "pais": pais,
                 "mensagem": mensagem
             }
-            const url = `http://localhost:5010/formulario`
+            const url = `http://4.172.207.208:5030/formulario`
             await axios.post(url, paramCorpo)
 
             setNome('')

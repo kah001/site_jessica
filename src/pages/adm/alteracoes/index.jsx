@@ -16,7 +16,7 @@ export default function AlteracoesAdm() {
   const { id } = useParams();
 
   const insertSectionRef = useRef(null);
-  const [editando, setEditando] = useState(false)
+  const [editando, setEditando] = useState(false);
 
   const navigate = useNavigate();
 
@@ -46,7 +46,7 @@ export default function AlteracoesAdm() {
         local: local
       }
 
-      const url = `http://4.172.207.208:5030/projeto/andamento?x-access-token=${token}`;
+      const url = `http://4.172.207.208:5030/projeto/andamento`;
       let response = await axios.post(url, paramObj);
       let id = response.data.novoId
 
@@ -59,7 +59,7 @@ export default function AlteracoesAdm() {
     }
     catch (err) {
       if (err.response && err.response.data && err.response.data.erro) {
-        alert(err.response.data.erro); 
+        alert(err.response.data.erro);
       } else {
         alert('Erro desconhecido ao inserir projeto');
       }
@@ -79,12 +79,12 @@ export default function AlteracoesAdm() {
       setLocalRecente(dados.local);
     }
     catch (err) {
-    }
+    } 
   }
 
-  async function consultarPorId(id, token) {
+  async function consultarPorId(id) {
     try {
-      const url = `http://4.172.207.208:5030/projetos/andamento/${id}?x-access-token=${token}`;
+      const url = `http://4.172.207.208:5030/projetos/andamento/${id}`;
       const resp = await axios.get(url);
 
       let dados = resp.data;
@@ -94,7 +94,7 @@ export default function AlteracoesAdm() {
       setLocal(dados.local);
 
     } catch (err) {
-      
+
     }
   }
 
@@ -107,7 +107,7 @@ export default function AlteracoesAdm() {
         local: local
       }
 
-      const url = `http://4.172.207.208:5030/projeto/andamento/${id}?x-access-token=${token}`
+      const url = `http://4.172.207.208:5030/projeto/andamento/${id}`
       let resp = await axios.put(url, paramObj)
 
       alert(`Projeto em andamento do Id: ${id} Editado com Sucesso`)
@@ -124,14 +124,14 @@ export default function AlteracoesAdm() {
       if (err.response && err.response.data && err.response.data.erro) {
         alert(err.response.data.erro);
       } else {
-        alert('Erro desconhecido ao inserir projeto'); 
+        alert('Erro desconhecido ao inserir projeto');
       }
     }
   }
 
   async function deletarRecente() {
     try {
-      const url = `http://4.172.207.208:5030/projeto/andamento/${idRecente}?x-access-token=${token}`;
+      const url = `http://4.172.207.208:5030/projeto/andamento/${idRecente}`;
       await axios.delete(url);
 
       alert(`Projeto em andamento do Id: ${idRecente} Deletado com Sucesso`)
