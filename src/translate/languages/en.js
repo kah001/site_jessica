@@ -41,7 +41,7 @@ const messages = {
             },
             projects: {
                 title1: 'CONSTRUCTION',
-                title2: '',
+                title2: 'INDOORS',
                 title3: 'PROJECT IN PROGRESS',
                 type: 'TYPE:',
                 locale: 'LOCATION:',

@@ -13,7 +13,7 @@ export default function ProjetosAdm() {
 
     async function buscarProjeto() {
         try {
-            const url = `http://4.172.207.208:5030/projeto`
+            const url = `http://4.172.207.208:5030/projeto?x-access-token=${token}`
             let resp = await axios.get(url)
     
             setProjetos(resp.data)
